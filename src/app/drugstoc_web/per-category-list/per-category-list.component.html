@@ -1,0 +1,31 @@
+<div class="row">
+    <div *ngFor="let item of data; let i=index;" class="col-lg-3 col-md-12">
+        <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
+            <a routerLink="/company/{{item}}" class="iq-team text-center p-0">
+              <img *ngIf="!userId" src="../../../assets/images/Manufacturer Names/{{item}}.png" onerror="this.src='assets/images/drugstoc.png'" class="img-fluid mb-3 avatar-120" alt="">
+              <img *ngIf="userId" src="assets/images/medplus.jpeg" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
+              <!-- <h4 *ngIf="!userId" class="mb-0">Welcome</h4> -->
+              <h4 class="mb-0">{{item}}</h4>
+              <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">0{{user.phone}}</a>
+              <!-- <p *ngIf="!userId" class="mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->
+              <!-- <p *ngIf="userId" class="mt-1">{{user.address}}</p> -->
+              <hr>
+              <ul class="list-inline mb-0 d-flex justify-content-between">
+                <li class="list-inline-item">
+                  <!-- <h5>Blood</h5>
+                  <p class="text-success">AB+</p> -->
+                </li>
+                <li class="list-inline-item">
+                  <!-- <h5 *ngIf="!userId">Virtual Pharmacy</h5>
+                  <h5 *ngIf="userId">Licensed Pharmacy</h5> -->
+                  <!-- <p class="text-success">161cm</p> -->
+                </li>
+                <li class="list-inline-item">
+                  <!-- <h5>Weight</h5>
+                  <p class="text-success">64kg</p> -->
+                </li>
+              </ul>
+            </a>
+          </app-iq-card>
+    </div>
+</div>

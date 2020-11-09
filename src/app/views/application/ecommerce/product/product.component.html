@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="iq-card">
+        <div class="iq-card-body">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Categories</label>
+              <select class="form-control" id="exampleFormControlSelect1" (change)="changeCatgory($event.target.value)" >
+                <option selected="" disabled="">Select Category</option>
+                <option value={{cat.id}} *ngFor="let cat of categories">{{cat.name}}</option>
+              </select>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="iq-card">
+        <div class="iq-card-body">
+          <div id="js-product-list">
+            <div class="item" style="align-content: center; width: 100%;">
+              <ngx-skeleton-loader *ngIf="loading" count="6" [theme]="{
+                width: '402px',
+                'border-radius': '12px',
+                height: '400px',
+                'margin-bottom': '20px',
+                'margin-right': '20px'
+              }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+            </div>
+            <div *ngIf="!loading" class="Products">
+              <ul class="product_list gridcount grid row">
+                <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                  <div class="product-miniature">
+                    <div class="thumbnail-container">
+                      <a *ngIf="item.image === false" routerLink="/products/itemdetail/{{item.id}}"><img src="https://dummyimage.com/384x250/000/fff" alt="product-image" class="img-fluid" /> </a>
+                      <a *ngIf="item.image != false" routerLink="/products/itemdetail/{{item.id}}"><img src="data:image/jpg;base64,{{ item.image }}" alt="product-image" class="img-fluid" /> </a>
+                      <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
+                    </div>
+                    <div class="product-description">
+                      <h4>{{ item.name }}</h4>
+                      <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
+                      <div class="ratting">
+                        <ul class="ratting-item d-flex p-0 m-0">
+                          <li class="full"><i class="{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                          <li class="full"><i class="{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                          <li class="full"><i class="{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                          <li class="full"><i class="{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                          <li class="full"><i class="{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                        </ul>
+                      </div>
+                      <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="product-action">
+                          <div class="add-to-cart"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
+                          <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div>
+                        </div>
+                        <div class="product-price">
+                          <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="10" (scrolled)="onScroll()"></div>
+</div>

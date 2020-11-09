@@ -1,0 +1,120 @@
+{
+	"data": [
+    {
+      "title": "Main",
+      "isHeading": true,
+      "isActive": false,
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-separator"
+    },
+    {
+      "title": "Products",
+      "name": "products",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-home-4-line",
+      "children": [
+        {
+          "title": "Per Category",
+          "isActive": false,
+          "link": "/category",
+          "className": "",
+          "isIconClass": false,
+          "icon": ""
+        },
+        {
+          "title": "Per Company",
+          "isActive": false,
+          "link": "/company",
+          "className": "",
+          "isIconClass": false,
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "title": "New Products",
+      "name": "new products",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/new-products",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-calendar-line"
+    },
+    {
+      "title": "Promotions",
+      "name": "promotions",
+      "isHeading": false,
+      "isActive": true,
+      "link": "javascript:void(0);",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-award-line"
+    },
+    {
+      "title": "Cart",
+      "name": "cart",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/cart",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-shopping-cart-2-line"
+    },
+    {
+      "title": "My DrugStoc",
+      "name": "my drugstoc",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/my-drugstoc",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-bookmark-line"
+    },
+    {
+      "title": "My Orders",
+      "name": "dashboard",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/my-orders",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-account-pin-box-line"
+    },
+    {
+      "title": "My Invoices",
+      "name": "dashboard",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/my-invoice",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-book-open-line"
+    },
+    {
+      "title": "Report a Problem",
+      "name": "dashboard",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/report-a-problem",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-lightbulb-line"
+    },
+    {
+      "title": "Update Profile",
+      "name": "dashboard",
+      "isHeading": false,
+      "isActive": true,
+      "link": "/update-profile",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-settings-2-line"
+    }
+  ]
+}

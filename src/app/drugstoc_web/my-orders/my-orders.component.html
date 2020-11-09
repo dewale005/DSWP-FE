@@ -1,0 +1,48 @@
+<div class="col-lg-12">
+    <app-iq-card>
+      <div card-header class="iq-header-title">
+        <h4 class="card-title">Order Summary</h4>
+      </div>
+      <div card-header class="iq-card-header-toolbar d-flex align-items-center">
+        <div class="dropdown">
+          <span class="dropdown-toggle text-primary" id="dropdownMenuButton5" data-toggle="dropdown">
+            <i class="ri-more-2-fill"></i>
+          </span>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="javascript:void(0);"><i class="ri-eye-fill mr-2"></i>View</a>
+            <a class="dropdown-item" href="javascript:void(0);"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
+            <a class="dropdown-item" href="javascript:void(0);"><i class="ri-pencil-fill mr-2"></i>Edit</a>
+            <a class="dropdown-item" href="javascript:void(0);"><i class="ri-printer-fill mr-2"></i>Print</a>
+            <a class="dropdown-item" href="javascript:void(0);"><i class="ri-file-download-fill mr-2"></i>Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table mb-0 table-borderless">
+          <thead>
+          <tr>
+            <th scope="col">SO Number</th>
+            <th scope="col">Date Confirmed</th>
+            <th scope="col">Date Received</th>
+            <th scope="col">Item</th>
+            <th scope="col">Status</th>
+            <th scope="col">Total</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let order of orders; let i=index;">
+            <td>{{order.name}}</td>
+            <td>{{order.confirmation_date | date}}</td>
+            <td>{{order.date_order | date}}</td>
+            <td>{{order.order_line.length}} Items</td>
+            <td>
+              <div class="badge badge-pill badge-{{getStatus(order.state)}}">{{getOrderStatus(order.state)}}</div>
+            </td>
+            <td>₦ {{order.amount_total | number : '1.2-2'}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </app-iq-card>
+  </div>
