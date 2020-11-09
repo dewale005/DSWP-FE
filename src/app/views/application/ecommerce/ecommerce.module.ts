@@ -8,12 +8,14 @@ import { ItemDetailComponent } from './itemdetail/itemdetail.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [ProductComponent,ItemDetailComponent, CheckoutComponent],
   imports: [
     CommonModule,
     EcommerceRoutingModule,
     SofboxModule,
+    InfiniteScrollModule,
     SlickCarouselModule,
     NgxSkeletonLoaderModule
   ],

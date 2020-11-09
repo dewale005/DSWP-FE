@@ -105,7 +105,7 @@ export class HomeComponent implements OnInit {
         summary.sort((a,b) => (a.number > b.number) ? -1 : ((b.number > a.number) ? 1 : 0));
         console.log(summary.slice(0, 3));
         this.sumaryItem = summary.slice(0, 3);
-      })
+      })     
     })
   }
 

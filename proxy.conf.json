@@ -1,0 +1,10 @@
+{
+    "*": {
+      "target": "https://dewale005.github.io/DSWP-FE",
+      "secure": true,
+      "pathRewrite": {
+      "^*": ""
+    },
+      "changeOrigin": true
+    }
+  }
