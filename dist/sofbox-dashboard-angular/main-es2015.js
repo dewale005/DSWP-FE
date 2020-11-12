@@ -3135,8 +3135,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    apiEndpoint: 'http://127.0.0.1:3200',
-    // apiEndpoint: 'http://3.138.110.220:3100',
+    // apiEndpoint: 'http://127.0.0.1:3200',
+    apiEndpoint: 'http://3.138.110.220:3100',
     // apiEndpoint: 'http://localhost:3000',
     mapbox: {
         accessToken: 'pk.eyJ1IjoiZ29sZGVubWFjZWRldiIsImEiOiJjazBnYnFxb3AwNWdqM2JuNWRwazZxMWY0In0._I3zpcM9QTHNqcXWjWpD6Q',
