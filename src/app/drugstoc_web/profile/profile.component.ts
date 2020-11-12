@@ -40,11 +40,11 @@ export class ProfileComponent implements OnInit {
   onFileSelected(event) {
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();
-      reader.onload = (event: FileReaderEvent) => {
-        this.image = event.target.result;
-        this.profile.changePhoto(event.target.result)
-        console.log(this.image);
-      };
+      // reader.onload = (event: FileReaderEvent) => {
+      //   this.image = event.target.result;
+      //   this.profile.changePhoto(event.target.result)
+      //   console.log(this.image);
+      // };
       reader.readAsDataURL(event.target.files[0]);
     }
   }

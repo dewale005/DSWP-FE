@@ -33,8 +33,10 @@ export class SearchComponent implements OnInit {
 		this.data2 = res;
 	})
 		this.product.getAllProducts(this.page).subscribe((resp) => {
+			let arr: any = []
+			arr = resp;
       this.loading = false;
-      let res = resp.filter(n => n.name.toLowerCase().includes(data.toLowerCase()) || n.x_studio_field_xH9Vy.toLowerCase().includes(data.toLowerCase())) 
+      let res = arr.filter(n => n.name.toLowerCase().includes(data.toLowerCase()) || n.x_studio_field_xH9Vy.toLowerCase().includes(data.toLowerCase())) 
       console.log(res);
       
     });

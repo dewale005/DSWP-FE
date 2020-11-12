@@ -83,18 +83,22 @@ export class HomeComponent implements OnInit {
 
 		this.product.getMyInvoice(this.userId).subscribe((resp) => {
 			console.log(resp);
-			this.invoice = resp.slice(0, 5);
+			let arr: any = [];
+			arr = resp;
+			this.invoice = arr.slice(0, 5);
 		});
 
 		this.cartItem = this.product.getCatItem();
   }
   
   getSummary() {
+	  let arr: any = []
     this.product.getMyDrugstoc(this.userId).subscribe(resp => {
+		arr = resp;
       this.product.getCategory().subscribe(res => {
         let summary = [];
         for(let i = 0; i < res['length']; i++) {
-		  let m = resp.filter(a => a.categ_id[1] === res[i].name)
+		  let m = arr.filter(a => a.categ_id[1] === res[i].name)
           let data = {
             category: res[i].name,
             number: m.length,

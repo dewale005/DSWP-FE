@@ -29,6 +29,7 @@ export class PerProductsComponent implements OnInit {
       console.log(resp);
       this.data = resp;
     })
+    this.cartItem = this.product.getCatItem();
   }
 
   public check_already_in_cart(id) {
