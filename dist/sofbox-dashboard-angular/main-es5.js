@@ -5017,7 +5017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: false,
-      apiEndpoint: 'http://localhost:3200',
+      apiEndpoint: 'http://127.0.0.1:3200',
       // apiEndpoint: 'http://3.138.110.220:3100',
       // apiEndpoint: 'http://localhost:3000',
       mapbox: {
