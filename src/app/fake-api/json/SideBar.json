@@ -50,7 +50,7 @@
       "title": "Promotions",
       "name": "promotions",
       "isHeading": false,
-      "isActive": true,
+      "isActive": false,
       "link": "javascript:void(0);",
       "className": "",
       "isIconClass": true,
