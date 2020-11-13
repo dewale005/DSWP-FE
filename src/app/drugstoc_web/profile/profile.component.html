@@ -6,7 +6,6 @@
         </div>
         <img *ngIf="image == ''" src="assets/images/medplus.jpeg" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
         <img *ngIf="image !== ''" src="{{image}}" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
         <form (ngSubmit)="onSubmit()" [formGroup]="ngform">
           <div class="form-row">
               <div class="col-md-6 mb-3">

@@ -2,11 +2,11 @@
     <div class="col-lg-3 col-md-12">
         <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
             <div class="iq-team text-center p-0">
-              <img src="assets/images/drugstoc.png" style="filter: grayscale(100%);"
+              <img src="{{getImage(title)}}" 
                    class="img-fluid mb-3 avatar-120" alt="">
               <h4 class="mb-0">{{title}}</h4>
               <!-- <a *ngIf="user.phone" href="javascript:void(0);" class="d-inline-block w-100">0{{user.phone}}</a> -->
-              <p class="mt-1">Calle Aquilino de la Guardia & Calle 47, Panama City, Panama PA</p>
+              <!-- <p class="mt-1">Calle Aquilino de la Guardia & Calle 47, Panama City, Panama PA</p> -->
               <hr>
               <ul class="list-inline mb-0 d-flex justify-content-between">
                 <li class="list-inline-item">
@@ -25,8 +25,7 @@
             <div class="row">
               <div class="col-md-6 align-self-center">
                 <!-- <h2 class="text-white">Congratulations {{user.name}}</h2> -->
-                <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>
-                <button type="button" class="btn iq-bg-primary">Read More</button>
+                <p class="text-white">{{title}} is a pharmaceutical company that manufactures drugs & medical care products</p>
               </div>
               <div class="col-md-6 position-relative">
                 <div class="an-img-two">

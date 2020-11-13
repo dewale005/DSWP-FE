@@ -47,16 +47,6 @@
       "icon": "ri-calendar-line"
     },
     {
-      "title": "Promotions",
-      "name": "promotions",
-      "isHeading": false,
-      "isActive": false,
-      "link": "javascript:void(0);",
-      "className": "",
-      "isIconClass": true,
-      "icon": "ri-award-line"
-    },
-    {
       "title": "Cart",
       "name": "cart",
       "isHeading": false,
@@ -115,6 +105,34 @@
       "className": "",
       "isIconClass": true,
       "icon": "ri-settings-2-line"
+    },
+    {
+      "title": "Coming Soon",
+      "name": "Coming Soon",
+      "isHeading": false,
+      "isActive": true,
+      "link": ".",
+      "className": "",
+      "isIconClass": true,
+      "icon": "ri-award-line",
+      "children": [
+        {
+          "title": "Promotions",
+          "isActive": false,
+          "link": ".",
+          "className": "",
+          "isIconClass": false,
+          "icon": ""
+        },
+        {
+          "title": "My CRM",
+          "isActive": false,
+          "link": ".",
+          "className": "",
+          "isIconClass": false,
+          "icon": ""
+        }
+      ]
     }
   ]
 }
