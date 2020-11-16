@@ -8,7 +8,7 @@
               <div class="iq-image-container">
                 <div class="iq-product-cover">
                   <!-- <img style=" height: 360px; width: 422px; margin-left: 90px;" *ngIf="data.image_medium" src="data:image/jpg;base64,{{data.image_medium}}" alt="product-image" class="img-fluid"> -->
-                  <img style=" height: 360px; width: 422px; margin-left: 90px;" *ngIf="!dataimage_medium" src="https://drugstoc-sam-dev-1293660.dev.odoo.com/web/image/product.product/{{data.id}}/image" onerror="this.src='assets/images/no_image.png'" alt="product-image" class="img-fluid">
+                  <img style=" height: 360px; width: 422px; margin-left: 90px;" *ngIf="!dataimage_medium" src="data:image/jpg;base64,{{data.image}}" onerror="this.src='assets/images/no_image.png'" alt="product-image" class="img-fluid">
                 </div>
                 <div class="iq-additional_slider">
                   <!-- <ngx-slick-carousel

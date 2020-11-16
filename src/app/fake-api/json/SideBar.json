@@ -131,6 +131,14 @@
           "className": "",
           "isIconClass": false,
           "icon": ""
+        },
+        {
+          "title": "Analytics",
+          "isActive": false,
+          "link": ".",
+          "className": "",
+          "isIconClass": false,
+          "icon": ""
         }
       ]
     }

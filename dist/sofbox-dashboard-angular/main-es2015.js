@@ -170,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- TOP Nav Bar [START] -->\n<div class=\"iq-top-navbar\">\n  <div class=\"iq-navbar-custom\">\n    <div class=\"iq-sidebar-logo\">\n      <div class=\"top-logo\">\n        <a href=\"index.html\" class=\"logo\">\n          <img src=\"/assets/images/drugstoc.png\" class=\"img-fluid\" alt=\"\">\n          <!-- <span>Sofbox</span> -->\n        </a>\n      </div>\n    </div>\n    <!-- <app-breadcrumb1 title=\"Dashboard\" [items]=\"breadCrumbItems\"></app-breadcrumb1> -->\n    <nav class=\"navbar navbar-expand-lg navbar-light p-0\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <i class=\"ri-menu-3-line\"></i>\n      </button>\n      <div class=\"iq-menu-bt align-self-center\">\n        <div class=\"wrapper-menu\">\n          <div class=\"line-menu half start\"></div>\n          <div class=\"line-menu\"></div>\n          <div class=\"line-menu half end\"></div>\n        </div>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav ml-auto navbar-list\">\n          <li class=\"nav-item\">\n            <!-- <a class=\"search-toggle iq-waves-effect\" href=\"javascript:void(0);\"><i class=\"ri-search-line\"></i></a> -->\n            <div class=\"ng-autocomplete\">\n              <ng-autocomplete \n                [data]=\"searchList\"\n                [searchKeyword]=\"keyword\"\n                placeHolder=\"Search for products\"\n                (keyup.enter)=\"search($event)\"\n                (selected)='selectEvent($event)'\n                (inputChanged)='onChangeSearch($event)'\n                (inputFocused)='onFocused($event)'\n                historyIdentifier=\"History\"\n                [itemTemplate]=\"itemTemplate\"\n                [notFoundTemplate]=\"notFoundTemplate\">                                 \n              </ng-autocomplete>\n               \n              <ng-template #itemTemplate let-item>\n              <a [innerHTML]=\"item.name\"></a>\n              </ng-template>\n               \n              <ng-template #notFoundTemplate let-notFound>\n              <div [innerHTML]=\"notFound\"></div>\n              </ng-template>\n              </div>\n          </li>\n          <!-- <li class=\"nav-item dropdown\">\n            <a href=\"javascript:void(0);\" class=\"search-toggle iq-waves-effect\"><i class=\"ri-mail-line\"></i></a>\n            <div class=\"iq-sub-dropdown\">\n              <div class=\"iq-card shadow-none m-0\">\n                <div class=\"iq-card-body p-0 \">\n                  <div class=\"bg-primary p-3\">\n                    <h5 class=\"mb-0 text-white\">All Messages<small class=\"badge  badge-light float-right pt-1\">{{ messagesList.length }}</small></h5>\n                  </div>\n                  <a *ngFor=\"let message of messagesList\" [href]=\"message.link\" class=\"iq-sub-card\" >\n                    <div class=\"media align-items-center\">\n                      <div class=\"\">\n                        <img class=\"avatar-40 rounded\" [src]=\"message.image\" alt=\"\">\n                      </div>\n                      <div class=\"media-body ml-3\">\n                        <h6 class=\"mb-0 \">{{ message.title }}</h6>\n                        <small class=\"float-left font-size-12\">{{ message.date_format }}</small>\n                      </div>\n                    </div>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </li>\n          <li class=\"nav-item iq-film-block\" *ngIf=\"countTicket\" (click)=\"clickPaymentShow(countTicket)\">\n            <a href=\"javascript:void(0);\" class=\"iq-waves-effect\"><i class=\"ri-film-line\"></i>\n              <span class=\"menu-tag\">{{ countTicket }}</span>\n            </a>\n          </li> -->\n\n          <li class=\"nav-item\">\n            <a routerLink=\"/cart\" class=\"iq-waves-effect\">\n              <i class=\"ri-shopping-cart-2-line\"></i>\n              <span *ngIf=\"countTicket !== 0\" class=\"menu-tag\">{{countTicket}}</span>\n            </a>\n          </li>\n          <!-- <li class=\"nav-item\">\n            <a href=\"javascript:void(0);\" class=\"search-toggle iq-waves-effect\"><i class=\"ri-notification-2-line\"></i></a>\n            <div class=\"iq-sub-dropdown\">\n              <div class=\"iq-card shadow-none m-0\">\n                <div class=\"iq-card-body p-0 \">\n                  <div class=\"bg-danger p-3\">\n                    <h5 class=\"mb-0 text-white\">All Notifications<small class=\"badge  badge-light float-right pt-1\">{{ notificationList.length }}</small></h5>\n                  </div>\n                  <a *ngFor=\"let notification of notificationList\" href=\"javascript:void(0);\" class=\"iq-sub-card\" >\n                    <div class=\"media align-items-center\">\n                      <div class=\"\" *ngIf=\"notification.image\">\n                        <img class=\"avatar-40 rounded\" [src]=\"notification.image\" alt=\"\">\n                      </div>\n                      <div class=\"media-body ml-3\">\n                        <h6 class=\"mb-0 \">{{ notification.title }}</h6>\n                        <small class=\"float-right font-size-12\">{{ notification.date_format }}</small>\n                        <p class=\"mb-0\">{{ notification.sub_title }}</p>\n                      </div>\n                    </div>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </li> -->\n          <!-- <li class=\"nav-item iq-full-screen\"><a href=\"javascript:void(0);\" class=\"iq-waves-effect\" id=\"btnFullscreen\"><i class=\"ri-fullscreen-line\"></i></a></li> -->\n        </ul>\n      </div>\n      <ul *ngIf=\"userData\" class=\"navbar-list\">\n        <li>\n          <a href=\"javascript:void(0);\" class=\"search-toggle iq-waves-effect bg-primary text-white\"><img src=\"/assets/images/user/1.jpg\" class=\"img-fluid rounded\" alt=\"user\"></a>\n          <div class=\"iq-sub-dropdown iq-user-dropdown\">\n            <div class=\"iq-card shadow-none m-0\">\n              <div class=\"iq-card-body p-0 \">\n                <div class=\"bg-primary p-3\">\n                  <h5 class=\"mb-0 text-white line-height\">Hello {{userName}}</h5>\n                  <!-- <span class=\"text-white font-size-12\">Available</span> -->\n                </div>\n                <a routerLink=\"/update-profile\" class=\"iq-sub-card iq-bg-primary-success-hover\">\n                  <div class=\"media align-items-center\">\n                    <div class=\"rounded iq-card-icon iq-bg-success\">\n                      <i class=\"ri-profile-line\"></i>\n                    </div>\n                    <div class=\"media-body ml-3\">\n                      <h6 class=\"mb-0 \">Edit Profile</h6>\n                      <p class=\"mb-0 font-size-12\">Modify your personal details.</p>\n                    </div>\n                  </div>\n                </a>\n                <div class=\"d-inline-block w-100 text-center p-3\">\n                  <a class=\"iq-bg-danger iq-sign-btn\" href=\"javascript:void(0);\" (click)=\"logout()\" role=\"button\">Sign out<i class=\"ri-login-box-line ml-2\"></i></a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</div>\n<!-- TOP Nav Bar [END] -->\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- TOP Nav Bar [START] -->\n<div class=\"iq-top-navbar\">\n  <div class=\"iq-navbar-custom\">\n    <div class=\"iq-sidebar-logo\">\n      <div class=\"top-logo\">\n        <a href=\"index.html\" class=\"logo\">\n          <img src=\"/assets/images/drugstoc.png\" class=\"img-fluid\" alt=\"\">\n          <!-- <span>Sofbox</span> -->\n        </a>\n      </div>\n    </div>\n    <!-- <app-breadcrumb1 title=\"Dashboard\" [items]=\"breadCrumbItems\"></app-breadcrumb1> -->\n    <nav *ngIf=\"userData\" class=\"navbar navbar-expand-lg navbar-light p-0\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <i class=\"ri-menu-3-line\"></i>\n      </button>\n      <div class=\"iq-menu-bt align-self-center\">\n        <div class=\"wrapper-menu\">\n          <div class=\"line-menu half start\"></div>\n          <div class=\"line-menu\"></div>\n          <div class=\"line-menu half end\"></div>\n        </div>\n      </div>\n      <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav ml-auto navbar-list\">\n          <li class=\"nav-item\">\n            <!-- <a class=\"search-toggle iq-waves-effect\" href=\"javascript:void(0);\"><i class=\"ri-search-line\"></i></a> -->\n            <div class=\"ng-autocomplete\">\n              <ng-autocomplete \n                [data]=\"searchList\"\n                [searchKeyword]=\"keyword\"\n                placeHolder=\"Search for products\"\n                (keyup.enter)=\"search($event)\"\n                (selected)='selectEvent($event)'\n                (inputChanged)='onChangeSearch($event)'\n                (inputFocused)='onFocused($event)'\n                historyIdentifier=\"History\"\n                [itemTemplate]=\"itemTemplate\"\n                [notFoundTemplate]=\"notFoundTemplate\">                                 \n              </ng-autocomplete>\n               \n              <ng-template #itemTemplate let-item>\n              <a [innerHTML]=\"item.name\"></a>\n              </ng-template>\n               \n              <ng-template #notFoundTemplate let-notFound>\n              <div [innerHTML]=\"notFound\"></div>\n              </ng-template>\n              </div>\n          </li>\n          <!-- <li class=\"nav-item dropdown\">\n            <a href=\"javascript:void(0);\" class=\"search-toggle iq-waves-effect\"><i class=\"ri-mail-line\"></i></a>\n            <div class=\"iq-sub-dropdown\">\n              <div class=\"iq-card shadow-none m-0\">\n                <div class=\"iq-card-body p-0 \">\n                  <div class=\"bg-primary p-3\">\n                    <h5 class=\"mb-0 text-white\">All Messages<small class=\"badge  badge-light float-right pt-1\">{{ messagesList.length }}</small></h5>\n                  </div>\n                  <a *ngFor=\"let message of messagesList\" [href]=\"message.link\" class=\"iq-sub-card\" >\n                    <div class=\"media align-items-center\">\n                      <div class=\"\">\n                        <img class=\"avatar-40 rounded\" [src]=\"message.image\" alt=\"\">\n                      </div>\n                      <div class=\"media-body ml-3\">\n                        <h6 class=\"mb-0 \">{{ message.title }}</h6>\n                        <small class=\"float-left font-size-12\">{{ message.date_format }}</small>\n                      </div>\n                    </div>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </li>\n          <li class=\"nav-item iq-film-block\" *ngIf=\"countTicket\" (click)=\"clickPaymentShow(countTicket)\">\n            <a href=\"javascript:void(0);\" class=\"iq-waves-effect\"><i class=\"ri-film-line\"></i>\n              <span class=\"menu-tag\">{{ countTicket }}</span>\n            </a>\n          </li> -->\n\n          <li class=\"nav-item\">\n            <a routerLink=\"/cart\" class=\"iq-waves-effect\">\n              <i class=\"ri-shopping-cart-2-line\"></i>\n              <span *ngIf=\"countTicket !== 0\" class=\"menu-tag\">{{countTicket}}</span>\n            </a>\n          </li>\n          <!-- <li class=\"nav-item\">\n            <a href=\"javascript:void(0);\" class=\"search-toggle iq-waves-effect\"><i class=\"ri-notification-2-line\"></i></a>\n            <div class=\"iq-sub-dropdown\">\n              <div class=\"iq-card shadow-none m-0\">\n                <div class=\"iq-card-body p-0 \">\n                  <div class=\"bg-danger p-3\">\n                    <h5 class=\"mb-0 text-white\">All Notifications<small class=\"badge  badge-light float-right pt-1\">{{ notificationList.length }}</small></h5>\n                  </div>\n                  <a *ngFor=\"let notification of notificationList\" href=\"javascript:void(0);\" class=\"iq-sub-card\" >\n                    <div class=\"media align-items-center\">\n                      <div class=\"\" *ngIf=\"notification.image\">\n                        <img class=\"avatar-40 rounded\" [src]=\"notification.image\" alt=\"\">\n                      </div>\n                      <div class=\"media-body ml-3\">\n                        <h6 class=\"mb-0 \">{{ notification.title }}</h6>\n                        <small class=\"float-right font-size-12\">{{ notification.date_format }}</small>\n                        <p class=\"mb-0\">{{ notification.sub_title }}</p>\n                      </div>\n                    </div>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </li> -->\n          <!-- <li class=\"nav-item iq-full-screen\"><a href=\"javascript:void(0);\" class=\"iq-waves-effect\" id=\"btnFullscreen\"><i class=\"ri-fullscreen-line\"></i></a></li> -->\n        </ul>\n      </div>\n      <ul *ngIf=\"userData\" class=\"navbar-list\">\n        <li>\n          <a href=\"javascript:void(0);\" class=\"search-toggle iq-waves-effect bg-primary text-white\"><img src=\"/assets/images/user/1.jpg\" class=\"img-fluid rounded\" alt=\"user\"></a>\n          <div class=\"iq-sub-dropdown iq-user-dropdown\">\n            <div class=\"iq-card shadow-none m-0\">\n              <div class=\"iq-card-body p-0 \">\n                <div class=\"bg-primary p-3\">\n                  <h5 class=\"mb-0 text-white line-height\">Hello {{userName}}</h5>\n                  <!-- <span class=\"text-white font-size-12\">Available</span> -->\n                </div>\n                <a routerLink=\"/update-profile\" class=\"iq-sub-card iq-bg-primary-success-hover\">\n                  <div class=\"media align-items-center\">\n                    <div class=\"rounded iq-card-icon iq-bg-success\">\n                      <i class=\"ri-profile-line\"></i>\n                    </div>\n                    <div class=\"media-body ml-3\">\n                      <h6 class=\"mb-0 \">Edit Profile</h6>\n                      <p class=\"mb-0 font-size-12\">Modify your personal details.</p>\n                    </div>\n                  </div>\n                </a>\n                <div class=\"d-inline-block w-100 text-center p-3\">\n                  <a class=\"iq-bg-danger iq-sign-btn\" href=\"javascript:void(0);\" (click)=\"logout()\" role=\"button\">Sign out<i class=\"ri-login-box-line ml-2\"></i></a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </li>\n      </ul>\n    </nav>\n    <nav *ngIf=\"!userData\" class=\"navbar navbar-expand-lg navbar-light p-0\">\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <i class=\"ri-menu-3-line\"></i>\n      </button>\n      <div class=\"iq-menu-bt align-self-center\">\n        <div class=\"wrapper-menu\">\n          <div class=\"line-menu half start\"></div>\n          <div class=\"line-menu\"></div>\n          <div class=\"line-menu half end\"></div>\n        </div>\n      </div>\n      <div style=\"background-color: red; height: 100%;\" class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <p style=\"color: #fff; height: 100%; text-align: center; font-weight: bold; margin-top: 30px; margin-left: auto; margin-right: auto;\">We  Couldnt find an account matching the email and password you entered. Please check your email and password and try again</p>\n      </div>\n    </nav>\n  </div>\n</div>\n<!-- TOP Nav Bar [END] -->\n");
 
 /***/ }),
 
@@ -2260,7 +2260,7 @@ let PerCategoryListComponent = class PerCategoryListComponent {
             // case 'Elbe Pharma':
             //   return '../../../assets/images/Manufacturer Names/HOVID.png'
             case 'Embassy Pharmaceutical':
-                return '../../../assets/images/Manufacturer Names/ Emzor Pharmaceuticals Industries Ltd .png';
+                return '../../../assets/images/Manufacturer Names/ Embassy Pharmaceutical .png';
             case 'Emzor':
                 return '../../../assets/images/Manufacturer Names/ Emzor Pharmaceuticals Industries Ltd .png';
             case 'Ensure':
@@ -2291,8 +2291,208 @@ let PerCategoryListComponent = class PerCategoryListComponent {
                 return '../../../assets/images/Manufacturer Names/ G.R Lane HealthCare Products .png';
             case 'GSK':
                 return '../../../assets/images/Manufacturer Names/ GSK .png';
+            case 'GainWorld':
+                return '../../../assets/images/Manufacturer Names/GainWorld.png';
+            case 'Gedeon Richter':
+                return '../../../assets/images/Manufacturer Names/  Gedeon Richter .png';
+            case 'Gemini':
+                return '../../../assets/images/Manufacturer Names/ Gemini .png';
+            case 'Geneith Pharm Limited':
+                return '../../../assets/images/Manufacturer Names/ Geneith Pharm Limited .png';
+            case 'Generix Global':
+                return '../../../assets/images/Manufacturer Names/  Generix Globa .png';
+            case 'Getz Pharma':
+                return '../../../assets/images/Manufacturer Names/ Getz Pharma  .png';
+            case 'Ginsana':
+                return '../../../assets/images/Manufacturer Names/ Ginsana .png';
+            // case 'Gland':
+            //   return '../../../assets/images/Manufacturer Names/HOVID.png'
+            case 'Globela Pharm Pvt. Ltd.':
+                return '../../../assets/images/Manufacturer Names/ Globela Pharm Pvt. Ltd. .png';
+            case 'Greenlife Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/  Greenlife Pharmaceuticals .png';
             case 'HOVID':
                 return '../../../assets/images/Manufacturer Names/HOVID.png';
+            case 'Haliborange':
+                return '../../../assets/images/Manufacturer Names/  Haliborange .png';
+            // case 'Hameln':
+            //   return '../../../assets/images/Manufacturer Names/HOVID.png'
+            case 'Hangzhou Qingyuan Medical Equipment Tech Ltd ':
+                return '../../../assets/images/Manufacturer Names/  Hangzhou Qingyuan Medical Equipment Tech Ltd  .png';
+            case 'Hanlim Pharm':
+                return '../../../assets/images/Manufacturer Names/ Hanlim Pharm .png';
+            // case 'Healflon':
+            //   return '../../../assets/images/Manufacturer Names/HOVID.png'
+            // case 'Health Check':
+            //   return '../../../assets/images/Manufacturer Names/HOVID.png'
+            case 'Health Forever Limited':
+                return '../../../assets/images/Manufacturer Names/Health Forever Limited.png';
+            // case 'HealthCheck':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Healthquipng':
+                return '../../../assets/images/Manufacturer Names/Healthquipng.png';
+            // case 'Hemeln Pharms':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Holland and Barrett':
+                return '../../../assets/images/Manufacturer Names/ Holland and Barrett .png';
+            case 'IPCA Laboratories':
+                return '../../../assets/images/Manufacturer Names/ Ipca Laboratories .png';
+            // case 'Immunecare':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Indus Life Sciences':
+                return '../../../assets/images/Manufacturer Names/Indus Life Sciences.png';
+            case 'Innotech Laboratories':
+                return '../../../assets/images/Manufacturer Names/ Innotech Laboratories .png';
+            // case 'Ivee Aqua EPZ Ltd':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'JIZIKI':
+                return '../../../assets/images/Manufacturer Names/ JIZIKI .png';
+            case 'Janssen':
+                return '../../../assets/images/Manufacturer Names/Janssen.png';
+            case 'Jawa International ':
+                return '../../../assets/images/Manufacturer Names/ Jawa International Limited .png';
+            case 'Jiangsu Pengyao Pharmaceuticals Co. Ltd':
+                return '../../../assets/images/Manufacturer Names/  Jiangsu Pengyao Pharmaceuticals Co. Ltd .png';
+            case 'Jiangxi Xier Kangtai Pharmaceutical':
+                return '../../../assets/images/Manufacturer Names/ Jiangxi Xier Kangtai Pharmaceutical .png';
+            case 'Johnson & Johnson':
+                return '../../../assets/images/Manufacturer Names/ Johnson and Johnson Limited .png';
+            case 'Joswe Medical':
+                return '../../../assets/images/Manufacturer Names/ Joswe Medical .png';
+            case 'Juhel':
+                return '../../../assets/images/Manufacturer Names/ Juhel .png';
+            // case 'KIMCO':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Kalms':
+                return '../../../assets/images/Manufacturer Names/ Kalms .png';
+            case 'Kendy Ltd':
+                return '../../../assets/images/Manufacturer Names/ Kendy Ltd .png';
+            case 'Kimbery Clark':
+                return '../../../assets/images/Manufacturer Names/ Kimbery Clark .png';
+            case 'KingLion':
+                return '../../../assets/images/Manufacturer Names/Kinglion Pharmaceuticals.png';
+            case 'Korea Pharma Co':
+                return '../../../assets/images/Manufacturer Names/  Korea Pharma Co .png';
+            case 'Korlyns Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Korlyns Pharmaceuticals .png';
+            case 'Labacon':
+                return '../../../assets/images/Manufacturer Names/ Labacon .png';
+            case 'Laborate Pharmaceuticals Ltd':
+                return '../../../assets/images/Manufacturer Names/ Laborate Pharmaceuticals Ltd .png';
+            case 'Lane Health Products':
+                return '../../../assets/images/Manufacturer Names/ Lane Health Products .png';
+            // case 'Lavus Investment':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'LefasPharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Lefas Pharmaceuticals .png';
+            case 'Lifesign Medical':
+                return '../../../assets/images/Manufacturer Names/  Lifesign Medical .gif';
+            case 'Lilly Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Lilly Medical .png';
+            case 'Lincoln Parenteral Limited':
+                return '../../../assets/images/Manufacturer Names/ Lincoln Parenteral Limited .png';
+            case 'M & B Pharma':
+                return '../../../assets/images/Manufacturer Names/M & B Pharma.png';
+            // case 'M.P.I Pharmaceutica GmbH':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'MIMS':
+                return '../../../assets/images/Manufacturer Names/ MIMS .png';
+            case 'MSG company':
+                return '../../../assets/images/Manufacturer Names/ MSG company .png';
+            case 'MSN Laboratories':
+                return '../../../assets/images/Manufacturer Names/MSN Laboratories.png';
+            case 'MYK':
+                return '../../../assets/images/Manufacturer Names/ MYK .png';
+            case 'Marcson Healthcare':
+                return '../../../assets/images/Manufacturer Names/  Marcson Healthcare .png';
+            case 'Mark Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Mark Pharmaceuticals .png';
+            case 'Martindale Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Martindale Pharmaceuticals .png';
+            case 'Mass Pharma Ltd':
+                return '../../../assets/images/Manufacturer Names/ Mass Pharma Ltd .png';
+            case 'Maxivision':
+                return '../../../assets/images/Manufacturer Names/ Maxivision .png';
+            case 'McNeil Products Limited':
+                return '../../../assets/images/Manufacturer Names/ McNeil Products Limited .gif';
+            case 'McW Healthcare':
+                return '../../../assets/images/Manufacturer Names/McW Healthcare.png';
+            case 'Mecure Industries':
+                return '../../../assets/images/Manufacturer Names/ Mecure Industries .png';
+            case 'Medi Scan':
+                return '../../../assets/images/Manufacturer Names/  Medi Scan .png';
+            case 'Medicom Healthcare Ltd':
+                return '../../../assets/images/Manufacturer Names/ Medicom Healthcare Ltd .png';
+            case 'Medisure':
+                return '../../../assets/images/Manufacturer Names/ Medisure .png';
+            case 'Medop Healthcare':
+                return '../../../assets/images/Manufacturer Names/Medop Healthcare.png';
+            case 'Medreich':
+                return '../../../assets/images/Manufacturer Names/ Medreich .png';
+            case 'Mega Lifescience Nigeria Ltd':
+                return '../../../assets/images/Manufacturer Names/  Mega Lifescience Nigeria Ltd .png';
+            case 'Mentholatum Company Ltd':
+                return '../../../assets/images/Manufacturer Names/ Mentholatum Company Ltd .png';
+            case 'Merck':
+                return '../../../assets/images/Manufacturer Names/ Merck .png';
+            case 'Merit':
+                return '../../../assets/images/Manufacturer Names/ Merit .png';
+            // case 'Mic-Micro labs':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Micro Nova':
+                return '../../../assets/images/Manufacturer Names/ Micro Nova Pharmaceuticals .png';
+            case 'Micropoint Bioscience':
+                return '../../../assets/images/Manufacturer Names/ Micropoint Bioscience .png';
+            case 'Mopson Pharmaceutical':
+                return '../../../assets/images/Manufacturer Names/Mopson Pharmaceutical.png';
+            case 'Moxie':
+                return '../../../assets/images/Manufacturer Names/ Moxie .png';
+            case 'Mundi Pharma':
+                return '../../../assets/images/Manufacturer Names/Mundi Pharma.png';
+            // case 'NGC PLC':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case '"Nanjing Bajingyu Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Nanjing Bajingyu Pharmaceuticals .gif';
+            // case 'Nature Care':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case "Nature's Field":
+                return ".../../../assets/images/Manufacturer Names/Nature's Field.png";
+            case "Nature's Way":
+                return "../../../assets/images/Manufacturer Names/Nature's Way.png";
+            case 'Nectar Healthcare Ltd':
+                return '../../../assets/images/Manufacturer Names/Nectar Healthcare Ltd.png';
+            case 'Neimeth':
+                return '../../../assets/images/Manufacturer Names/ Neimeth .png';
+            case 'Nemel Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/  Nemel Pharmaceuticals .png';
+            case 'New Healthway Company':
+                return '../../../assets/images/Manufacturer Names/   New Healthway Company .png';
+            case 'New Height Pharma Distribution':
+                return '../../../assets/images/Manufacturer Names/New Height Pharma Distribution.png';
+            case 'Nino Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Nino Pharmaceuticals .png';
+            case 'Nitin Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/ Nitin Pharmaceuticals .png';
+            // case 'Novartis':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Novo Nordisk Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/Novo Nordisk Pharmaceutical.png';
+            // case 'Nuestra':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Oak-Faith Pharmaceuticals':
+                return '../../../assets/images/Manufacturer Names/Oak-Faith Pharmaceuticals.png';
+            // case 'Oakleaf Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
+            case 'Oculus Pharmacare':
+                return '../../../assets/images/Manufacturer Names/ Oculus Pharmacare .png';
+            case 'Ofidy Global':
+                return '../../../assets/images/Manufacturer Names/ Ofidy Global .png';
+            case 'Olive Healthcare':
+                return '../../../assets/images/Manufacturer Names/ Olive Healthcare .png';
+            case 'Olpharm Nigeria':
+                return '../../../assets/images/Manufacturer Names/ Olpharm Nigeria .png';
+            case 'Omega Pharma Limited':
+                return '../../../assets/images/Manufacturer Names/ Omega Pharma Limited .png';
             case 'Union Swiss':
                 return '../../../assets/images/Manufacturer Names/Union_Swiss.png';
             // case 'Union Swiss':
@@ -2975,7 +3175,7 @@ SearchComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"data\":[{\"title\":\"Main\",\"isHeading\":true,\"isActive\":false,\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-separator\"},{\"title\":\"Products\",\"name\":\"products\",\"isHeading\":false,\"isActive\":true,\"link\":\"/\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-home-4-line\",\"children\":[{\"title\":\"Per Category\",\"isActive\":false,\"link\":\"/category\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"},{\"title\":\"Per Company\",\"isActive\":false,\"link\":\"/company\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"}]},{\"title\":\"New Products\",\"name\":\"new products\",\"isHeading\":false,\"isActive\":true,\"link\":\"/new-products\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-calendar-line\"},{\"title\":\"Cart\",\"name\":\"cart\",\"isHeading\":false,\"isActive\":true,\"link\":\"/cart\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-shopping-cart-2-line\"},{\"title\":\"My DrugStoc\",\"name\":\"my drugstoc\",\"isHeading\":false,\"isActive\":true,\"link\":\"/my-drugstoc\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-bookmark-line\"},{\"title\":\"My Orders\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/my-orders\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-account-pin-box-line\"},{\"title\":\"My Invoices\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/my-invoice\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-book-open-line\"},{\"title\":\"Report a Problem\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/report-a-problem\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-lightbulb-line\"},{\"title\":\"Update Profile\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/update-profile\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-settings-2-line\"},{\"title\":\"Coming Soon\",\"name\":\"Coming Soon\",\"isHeading\":false,\"isActive\":true,\"link\":\".\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-award-line\",\"children\":[{\"title\":\"Promotions\",\"isActive\":false,\"link\":\".\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"},{\"title\":\"My CRM\",\"isActive\":false,\"link\":\".\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"}]}]}");
+module.exports = JSON.parse("{\"data\":[{\"title\":\"Main\",\"isHeading\":true,\"isActive\":false,\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-separator\"},{\"title\":\"Products\",\"name\":\"products\",\"isHeading\":false,\"isActive\":true,\"link\":\"/\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-home-4-line\",\"children\":[{\"title\":\"Per Category\",\"isActive\":false,\"link\":\"/category\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"},{\"title\":\"Per Company\",\"isActive\":false,\"link\":\"/company\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"}]},{\"title\":\"New Products\",\"name\":\"new products\",\"isHeading\":false,\"isActive\":true,\"link\":\"/new-products\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-calendar-line\"},{\"title\":\"Cart\",\"name\":\"cart\",\"isHeading\":false,\"isActive\":true,\"link\":\"/cart\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-shopping-cart-2-line\"},{\"title\":\"My DrugStoc\",\"name\":\"my drugstoc\",\"isHeading\":false,\"isActive\":true,\"link\":\"/my-drugstoc\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-bookmark-line\"},{\"title\":\"My Orders\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/my-orders\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-account-pin-box-line\"},{\"title\":\"My Invoices\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/my-invoice\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-book-open-line\"},{\"title\":\"Report a Problem\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/report-a-problem\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-lightbulb-line\"},{\"title\":\"Update Profile\",\"name\":\"dashboard\",\"isHeading\":false,\"isActive\":true,\"link\":\"/update-profile\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-settings-2-line\"},{\"title\":\"Coming Soon\",\"name\":\"Coming Soon\",\"isHeading\":false,\"isActive\":true,\"link\":\".\",\"className\":\"\",\"isIconClass\":true,\"icon\":\"ri-award-line\",\"children\":[{\"title\":\"Promotions\",\"isActive\":false,\"link\":\".\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"},{\"title\":\"My CRM\",\"isActive\":false,\"link\":\".\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"},{\"title\":\"Analytics\",\"isActive\":false,\"link\":\".\",\"className\":\"\",\"isIconClass\":false,\"icon\":\"\"}]}]}");
 
 /***/ }),
 
@@ -3553,8 +3753,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    // apiEndpoint: 'http://127.0.0.1:3200',
-    apiEndpoint: 'http://3.138.110.220:3100',
+    apiEndpoint: 'http://127.0.0.1:3200',
+    // apiEndpoint: 'http://3.138.110.220:3100',
     // apiEndpoint: 'http://localhost:3000',
     mapbox: {
         accessToken: 'pk.eyJ1IjoiZ29sZGVubWFjZWRldiIsImEiOiJjazBnYnFxb3AwNWdqM2JuNWRwazZxMWY0In0._I3zpcM9QTHNqcXWjWpD6Q',

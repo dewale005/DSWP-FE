@@ -10,7 +10,7 @@
       </div>
     </div>
     <!-- <app-breadcrumb1 title="Dashboard" [items]="breadCrumbItems"></app-breadcrumb1> -->
-    <nav class="navbar navbar-expand-lg navbar-light p-0">
+    <nav *ngIf="userData" class="navbar navbar-expand-lg navbar-light p-0">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="ri-menu-3-line"></i>
       </button>
@@ -139,6 +139,21 @@
           </div>
         </li>
       </ul>
+    </nav>
+    <nav *ngIf="!userData" class="navbar navbar-expand-lg navbar-light p-0">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="ri-menu-3-line"></i>
+      </button>
+      <div class="iq-menu-bt align-self-center">
+        <div class="wrapper-menu">
+          <div class="line-menu half start"></div>
+          <div class="line-menu"></div>
+          <div class="line-menu half end"></div>
+        </div>
+      </div>
+      <div style="background-color: red; height: 100%;" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <p style="color: #fff; height: 100%; text-align: center; font-weight: bold; margin-top: 30px; margin-left: auto; margin-right: auto;">We  Couldnt find an account matching the email and password you entered. Please check your email and password and try again</p>
+      </div>
     </nav>
   </div>
 </div>
