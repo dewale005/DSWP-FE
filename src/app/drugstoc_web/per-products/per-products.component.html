@@ -78,7 +78,7 @@
                         <div class="product-miniature">
                           <div class="thumbnail-container">
                             <a *ngIf="item.image_medium === false" routerLink="/products/itemdetail/{{item.id}}"><img src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" /> </a>
-                            <a *ngIf="item.image_medium != false" routerLink="/products/itemdetail/{{item.id}}"><img src="https://drugstoc-sam-dev-1293660.dev.odoo.com/web/image/product.product/{{item.id}}/image" alt="product-image" class="img-fluid" /> </a>
+                            <a *ngIf="item.image_medium != false" routerLink="/products/itemdetail/{{item.id}}"><img src="data:image/jpeg;base64,{{item.image_medium}}" alt="product-image" class="img-fluid" /> </a>
                             <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
                           </div>
                           <div class="product-description">

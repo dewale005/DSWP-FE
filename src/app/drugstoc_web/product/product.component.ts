@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
   public loading: boolean = true;
   public data: any = [];
   public page = 0;
+  cartItem: any[];
   
   constructor(private product: ProductService, private toastr: ToastrService) { }
 
@@ -20,6 +21,20 @@ export class ProductComponent implements OnInit {
       this.loading = false;
       this.data = resp;
     })
+    this.cartItem = this.product.getCatItem();
+  }
+
+  public check_already_in_cart(id) {
+		if (this.cartItem.length === 0) {
+			return false;
+		} else {
+			for (let i = 0; i < this.cartItem.length; i++) {
+				if (id === this.cartItem[i].id) {
+					return true;
+				}
+			}
+			return false;
+		}
   }
 
   addToCat(item) {

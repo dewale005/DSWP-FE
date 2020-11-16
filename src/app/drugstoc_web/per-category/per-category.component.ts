@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -13,8 +14,9 @@ export class PerCategoryComponent implements OnInit {
   public data: any = [];
 
   private newdata: any = [];
+  cartItem: any;
 
-  constructor(private product: ProductService) { }
+  constructor(private product: ProductService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.product.getCategory().subscribe(res => {
@@ -26,6 +28,8 @@ export class PerCategoryComponent implements OnInit {
       this.loading = false;
       this.data = resp;
     })
+
+    this.cartItem = this.product.getCatItem();
   }
 
   changeCatgory(event) {
@@ -39,6 +43,27 @@ export class PerCategoryComponent implements OnInit {
     })
     
   }
+
+  public check_already_in_cart(id) {
+		if (this.cartItem.length === 0) {
+			return false;
+		} else {
+			for (let i = 0; i < this.cartItem.length; i++) {
+				if (id === this.cartItem[i].id) {
+					return true;
+				}
+			}
+			return false;
+		}
+  }
+
+  addToCat(item) {
+		item.quantity = 1;
+    this.product.addToCart(item);
+		this.toastr.info('Item has been added to cart', 'Added to Cart', {
+			positionClass: 'toast-bottom-left'
+		});
+	}
 
   onScroll() {
     this.page++

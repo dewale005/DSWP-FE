@@ -54,12 +54,12 @@
                               </ul>
                             </div> -->
                             <div class="d-flex flex-wrap justify-content-between align-items-center">
+                              <div class="product-action">
+                                <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a (click)="addToCat(item)"data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
+                                <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
+                              </div>
                               <div class="product-price">
                                 <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
-                              </div>
-                              <div class="product-action">
-                                <div class="add-to-cart"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
-                                <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
                               </div>
                             </div>
                           </div>
