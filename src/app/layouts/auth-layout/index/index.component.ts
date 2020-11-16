@@ -39,20 +39,20 @@ export class IndexComponent implements OnInit {
     {
       id: 1,
       image: 'assets/images/image1.png',
-      title: 'Manage your orders',
-      description: 'It is a long established fact that a reader will be distracted by the readable content.'
+      // title: 'SIGN UP FOR FREE',
+      // description: "Enroll your Pharmacy, Doctor's office, Clinic, Hopsital, or Nursing Home for free Zero Tolerance for counterfeits"
     },
     {
       id: 2,
       image: 'assets/images/image2.png',
-      title: 'Manage your orders',
-      description: 'It is a long established fact that a reader will be distracted by the readable content.'
+      // title: 'CONNECT',
+      // description: 'Only Licensed Health Professionals in Nigeria get Acess to Drugstoc'
     },
     {
       id: 3,
       image: 'assets/images/image3.png',
-      title: 'Manage your orders',
-      description: 'It is a long established fact that a reader will be distracted by the readable content.'
+      // title: 'ORDER',
+      // description: 'See libe Pricing, Order, and Track your pharmacy needs from thousands of drugs available on your customized Mobile App.'
     },
   ];
 

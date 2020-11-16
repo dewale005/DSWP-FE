@@ -1,5 +1,5 @@
 <div class="sign-in-from">
-  <h1 class="mb-0">Sign in</h1>
+  <h1 class="mb-0" >Sign in</h1>
   <p>Enter your email address and password to access admin panel.</p>
   <form class="mt-4" (ngSubmit)="onSubmit()" [formGroup]="ngform">
     <div class="form-group">
@@ -18,8 +18,8 @@
       </div>
       <button type="submit" [disabled]="!ngform.valid" class="btn btn-primary float-right">Sign in</button>
     </div>
-    <div class="sign-info">
-      <span class="dark-color d-inline-block line-height-2">Don't have an account? <a routerLink='sign-up'>Sign up</a></span>
+    <div class="sign-info" style="margin-right: auto;">
+      <span class="dark-color d-inline-block line-height-2">Don't have an account? <a routerLink='/auth/sign-up'>Sign up</a></span>
       <!-- <ul class="iq-social-media">
         <li><a href="javascript:void(0);"><i class="ri-facebook-box-line"></i></a></li>
         <li><a href="javascript:void(0);"><i class="ri-twitter-line"></i></a></li>

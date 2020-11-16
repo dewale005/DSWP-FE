@@ -51,6 +51,7 @@ export class CartComponent implements OnInit {
 
 	paymentSuccess($event) {
 		console.log($event)
+		this.make_order();
 	}
 
 	paymentFailure() {
