@@ -35,6 +35,19 @@ export class ProductService {
 		return this.cartItem.push(item);
 	}
 
+	getCart() {
+		let id = localStorage.getItem('user')
+	  	this.http.get(`${this.BASE_URL}/mycart/${id}`).subscribe(res => {
+			  let arr: any = res;
+			  this.cartItem = arr;
+		  })
+	}
+
+	removeFromCart(id) {
+		this.cartItem.splice(id, 1)
+		console.log(this.cartItem, id);
+	}
+
 	emptyCart() {
 		return (this.cartItem = []);
 	}
@@ -81,5 +94,10 @@ export class ProductService {
 
   lis_per_company(query) {
     return this.http.post(`${this.BASE_URL}/per-company`, {query})
+  }
+
+  updateCat(data) {
+	  let id = localStorage.getItem('user')
+	  return this.http.post(`${this.BASE_URL}/mycart/${id}`, data)
   }
 }

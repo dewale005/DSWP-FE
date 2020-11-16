@@ -101,7 +101,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"sign-in-from\">\n  <h1 class=\"mb-0\">Sign Up</h1>\n  <p>Enter your email address and password to access admin panel.</p>\n  <form class=\"mt-4\">\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail1\">First Name</label>\n      <input type=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail1\" placeholder=\"Your first name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail1\">Last Name</label>\n      <input type=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail1\" placeholder=\"Your last name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail1\">Phone Number</label>\n      <input type=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail1\" placeholder=\"Your Phone Number\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail2\">Email address</label>\n      <input type=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail2\" placeholder=\"Enter email\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail2\">Category</label>\n      <select class=\"form-control mb-0\" id=\"exampleInputEmail2\">\n        <option disabled>Category</option>\n        <option>Pharmacy</option>\n        <option>Doctor Office</option>\n        <option>Clinic</option>\n        <option>Hospital</option>\n        <option>Nursing Homes</option>\n        <option>Others</option>\n      </select>\n      <!-- <input type=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail2\" placeholder=\"Enter email\"> -->\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"exampleInputPassword1\">Password</label>\n      <input type=\"password\" class=\"form-control mb-0\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n    </div> -->\n    <div class=\"d-inline-block w-100\">\n      <div class=\"custom-control custom-checkbox d-inline-block mt-2 pt-1\">\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheck1\">\n        <label class=\"custom-control-label\" for=\"customCheck1\">I accept <a href=\"javascript:void(0);\">Terms and Conditions</a></label>\n      </div>\n      <button type=\"submit\" class=\"btn btn-primary float-right\">Sign Up</button>\n    </div>\n    <div class=\"sign-info\">\n      <span class=\"dark-color d-inline-block line-height-2\">Already Have Account ? <a routerLink=\"/auth/sign-in\">Log In</a></span>\n      <ul class=\"iq-social-media\">\n        <li><a href=\"javascript:void(0);\"><i class=\"ri-facebook-box-line\"></i></a></li>\n        <li><a href=\"javascript:void(0);\"><i class=\"ri-twitter-line\"></i></a></li>\n        <li><a href=\"javascript:void(0);\"><i class=\"ri-instagram-line\"></i></a></li>\n      </ul>\n    </div>\n  </form>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"sign-in-from\">\n  <h1 class=\"mb-0\">Sign Up</h1>\n  <p>Enter your email address and password to access admin panel.</p>\n  <form class=\"mt-4\" (ngSubmit)=\"onSubmit()\" [formGroup]=\"ngform\">\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail1\">First Name</label>\n      <input type=\"email\" formControlName=\"firstname\" class=\"form-control mb-0\" id=\"exampleInputEmail1\" placeholder=\"Your first name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail1\">Last Name</label>\n      <input type=\"email\" formControlName=\"lastname\" class=\"form-control mb-0\" id=\"exampleInputEmail1\" placeholder=\"Your last name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail1\">Phone Number</label>\n      <input type=\"email\" formControlName=\"phone\" class=\"form-control mb-0\" id=\"exampleInputEmail1\" placeholder=\"Your Phone Number\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail2\">Email address</label>\n      <input type=\"email\" formControlName=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail2\" placeholder=\"Enter email\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"exampleInputEmail2\">Category</label>\n      <select class=\"form-control mb-0\" formControlName=\"category\" id=\"exampleInputEmail2\">\n        <option disabled>Category</option>\n        <option>Pharmacy</option>\n        <option>Doctor Office</option>\n        <option>Clinic</option>\n        <option>Hospital</option>\n        <option>Nursing Homes</option>\n        <option>Others</option>\n      </select>\n      <!-- <input type=\"email\" class=\"form-control mb-0\" id=\"exampleInputEmail2\" placeholder=\"Enter email\"> -->\n    </div>\n    <!-- <div class=\"form-group\">\n      <label for=\"exampleInputPassword1\">Password</label>\n      <input type=\"password\" class=\"form-control mb-0\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n    </div> -->\n    <div class=\"d-inline-block w-100\">\n      <div class=\"custom-control custom-checkbox d-inline-block mt-2 pt-1\">\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"customCheck1\">\n        <label class=\"custom-control-label\" for=\"customCheck1\">I accept <a href=\"javascript:void(0);\">Terms and Conditions</a></label>\n      </div>\n      <button type=\"submit\" class=\"btn btn-primary float-right\">Sign Up</button>\n    </div>\n    <div class=\"sign-info\">\n      <span class=\"dark-color d-inline-block line-height-2\">Already Have Account ? <a routerLink=\"/auth/sign-in\">Log In</a></span>\n      <ul class=\"iq-social-media\">\n        <li><a href=\"javascript:void(0);\"><i class=\"ri-facebook-box-line\"></i></a></li>\n        <li><a href=\"javascript:void(0);\"><i class=\"ri-twitter-line\"></i></a></li>\n        <li><a href=\"javascript:void(0);\"><i class=\"ri-instagram-line\"></i></a></li>\n      </ul>\n    </div>\n  </form>\n</div>\n";
     /***/
   },
 
@@ -572,19 +572,80 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! sweetalert2 */
+    "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+    /* harmony import */
+
+
+    var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var SignUpComponent = /*#__PURE__*/function () {
-      function SignUpComponent() {
+      function SignUpComponent(fb, router) {
         _classCallCheck(this, SignUpComponent);
+
+        this.fb = fb;
+        this.router = router;
+        this.ngform = this.fb.group({
+          firstname: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+          lastname: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+          email: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+          phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+          category: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])
+        });
       }
 
       _createClass(SignUpComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          console.log(this.ngform.valid);
+          var message = 'Please check your email for further instructions on activating your account.\nFor more information, call us on 0803 687 9999 or send an email to customercare@drugstoc.com.';
+
+          if (this.ngform.valid) {
+            sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+              icon: 'success',
+              title: message,
+              showConfirmButton: true
+            });
+            this.router.navigate(['/']);
+          } else {
+            sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+              icon: 'error',
+              title: "Wrong Registeration details please check and start again",
+              showConfirmButton: true
+            });
+          }
+        }
       }]);
 
       return SignUpComponent;
     }();
+
+    SignUpComponent.ctorParameters = function () {
+      return [{
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }];
+    };
 
     SignUpComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-sign-up',

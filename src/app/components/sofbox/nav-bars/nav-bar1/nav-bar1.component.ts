@@ -33,6 +33,7 @@ export class NavBar1Component implements OnInit{
     this.user.getProfile(this.userData).subscribe(res => {
       this.userName = res['name'];
     })
+    this.user.getCart();
     setInterval(() => {
       this.countTicket = this.user.getCatItem().length
     }, 200)

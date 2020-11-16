@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import jQuery from 'jquery';
 import Swal from 'sweetalert2';
 import { AuthService } from 'src/app/services/auth.service';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 	templateUrl: './cart.component.html',
 	encapsulation: ViewEncapsulation.None
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, OnDestroy {
 	public userId;
 	public cartData = [];
 	public Total: any;
@@ -22,6 +22,15 @@ export class CartComponent implements OnInit {
 		this.userId = this.auth.userData;
 		this.cartData = this.product.getCatItem();
 		console.log(this.cartData);
+		this.product.updateCat(this.cartData).subscribe(res => {
+			console.log(res)
+		})
+	}
+
+	ngOnDestroy() {
+		this.product.updateCat(this.cartData).subscribe(res => {
+			console.log(res)
+		})
 	}
 
 	placeOrder() {
@@ -32,9 +41,23 @@ export class CartComponent implements OnInit {
 		jQuery('#step2').addClass('active');
 	}
 
-	increaseQuantity(number) {
-		console.log(number);
+	decreaseQty(item) {
+		if(item.quantity > 0) {
+			item.quantity-= 1
+		} 
 		// this.cartData[id].quantity = number;
+	}
+
+	increaseQty(item) {
+		item.quantity+= 1
+		console.log(item)
+		// this.product.editItemAQuantity()
+	}
+
+	removeItem(id) {
+		// console.log(id)
+		this.product.removeFromCart(id)
+		this.cartData = this.product.getCatItem();
 	}
 
 	// jQuery('#place-order').click(function(){
