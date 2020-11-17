@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import Swal from 'sweetalert2';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -22,6 +23,10 @@ export class AuthService {
       this.toastr.error(err.error.message)
       console.log()
     });
+  }
+
+  register(payload) {
+    return this.http.post(`${this.BASE_URL}/register`, payload)
   }
 
   public get userData() {
