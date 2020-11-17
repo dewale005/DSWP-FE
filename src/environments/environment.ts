@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'http://3.133.86.80:3200',
+  apiEndpoint: 'http://3.129.99.242:3200',
   // apiEndpoint: 'http://3.138.110.220:3100',
   // apiEndpoint: 'http://127.0.0.1:3200',
   mapbox: {
