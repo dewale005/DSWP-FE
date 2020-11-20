@@ -3,7 +3,7 @@
         <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
             <div style="min-height: 329px" class="iq-team text-center p-0">
               <img *ngIf="!userId" src="assets/images/no_logo.png" style="filter: grayscale(100%);" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
-              <img *ngIf="userId" src="{{image}}" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
+              <a routerLink="/update-profile" ><img *ngIf="userId" src="{{image}}" class="img-fluid mb-3 avatar-120 rounded-circle" alt=""></a>
               <h4 *ngIf="!userId" class="mb-0">Welcome</h4>
               <h4 *ngIf="userId" class="mb-0">{{user.name}}</h4>
               <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">0{{user.phone}}</a>
