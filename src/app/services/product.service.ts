@@ -9,7 +9,7 @@ import { array, List } from '@amcharts/amcharts4/core';
 export class ProductService {
 	private cartItem = [];
 
-	public photo = 'assets/images/drugstoc.png';
+	public photo = 'assets/images/no_logo.png';
 
 	private BASE_URL = environment.apiEndpoint;
 
