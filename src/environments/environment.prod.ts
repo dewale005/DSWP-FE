@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  apiEndpoint: 'https://shop.drugstoc.com/api',
-  // apiEndpoint: 'http://3.138.110.220:3100',
+  apiEndpoint: 'https://shop.drugstoc.com:3200',
+  // apiEndpoint: 'https://localhost/api',
   // apiEndpoint: 'http://3.129.99.242:3200',
   mapbox: {
     accessToken: 'pk.eyJ1IjoiZ29sZGVubWFjZWRldiIsImEiOiJjazBnYnFxb3AwNWdqM2JuNWRwazZxMWY0In0._I3zpcM9QTHNqcXWjWpD6Q',
