@@ -28,6 +28,8 @@ import { SearchComponent } from '../drugstoc_web/search/search.component';
 const routes: Routes = [
   {
     path: '',
+    // loadChildren: './layouts/blank-layout/blank-layout.module#BlankLayoutModule'
+    // ./layouts/layout1/layout1.module#Layout1Module
     component: HomeComponent,
   },
   {
