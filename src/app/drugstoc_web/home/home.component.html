@@ -32,15 +32,15 @@
     <div [ngClass]="{'col-lg-9': userId, 'col-lg-12': !userId }" class="col-md-12" [ngStyle]="!userId?{'filter': 'grayscale(100%)'} : {'filter': 'grayscale(0%)'}">
         <app-iq-card cardClass="iq-card bg-primary sb-top-banner-card" cardBodyClass="iq-card-body" [isCardHeader]=false>
             <div class="row">
-              <div class="col-md-6 align-self-center padded" >
-                <h2 *ngIf="!userId" class="text-white" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>
-                <h2 *ngIf="userId" class="text-white">{{user.name}}</h2>
-                <p class="text-white" style="font-weight: 600; width: 150%;">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>
+              <div class="col-md-8 align-self-center padded" >
+                <h2 *ngIf="!userId" class="text-white padded" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>
+                <h2 *ngIf="userId" class="text-white padded">{{user.name}}</h2>
+                <p class="text-white padded" style="font-weight: 600;">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>
                 <!-- <p *ngIf="userId" class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->
                 <!-- <button type="button" class="btn iq-bg-primary">Read More</button> -->
               </div>
-              <div class="col-md-6 position-relative">
-                <div class="an-img-two">
+              <div class="col-md-4 position-relative">
+                <div class="an-img-two" style="margin-right: 20px;">
                   <div class="bodymovin">
                     <ng-lottie [options]="optionsData2"></ng-lottie>
                   </div>
