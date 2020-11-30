@@ -24,13 +24,19 @@ export class HomeComponent implements OnInit {
 		private product: ProductService,
 		private toastr: ToastrService,
 		private auth: AuthService
-	) {}
+	) {
+		this.data.length = 21
+		this.sumLoading.length = 3
+	}
 
   public sales_v: any;
   
   @Output() cartValue = new EventEmitter()
 
-	public data: any;
+	public data: any = [];
+	loadingItem: boolean = true;
+	loadCatergory: boolean = true;
+	sumLoading = [];
 
 	image: any;
 
@@ -64,7 +70,8 @@ export class HomeComponent implements OnInit {
 	  }, 200)
     this.getSummary();
 		this.product.getAllProducts(this.page).subscribe((resp) => {
-			console.log(resp);
+			console.log(resp)
+			this.loadingItem = false;
 			// this.loading = false;
 			this.data = resp;
 			let dat = [];
@@ -79,13 +86,6 @@ export class HomeComponent implements OnInit {
 			this.user.name = resp['name'];
 			this.user.address = resp['contact_address'];
 			this.user.phone = resp['mobile'];
-		});
-
-		this.product.getMyInvoice(this.userId).subscribe((resp) => {
-			console.log(resp);
-			let arr: any = [];
-			arr = resp;
-			this.invoice = arr.slice(0, 5);
 		});
 
 		this.cartItem = this.product.getCatItem();
@@ -107,8 +107,8 @@ export class HomeComponent implements OnInit {
           summary.push(data);
         }
         summary.sort((a,b) => (a.number > b.number) ? -1 : ((b.number > a.number) ? 1 : 0));
-        console.log(summary.slice(0, 3));
-        this.sumaryItem = summary.slice(0, 3);
+		this.sumaryItem = summary.slice(0, 3);
+		this.loadCatergory = false
       })     
     })
   }

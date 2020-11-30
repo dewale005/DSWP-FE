@@ -12,6 +12,11 @@ import { Router } from '@angular/router';
 })
 export class CartComponent implements OnInit, OnDestroy {
 	public userId;
+	public dispatch = {
+		name: '',
+		address: '',
+		phone: ''
+	};
 	public cartData = [];
 	public Total: any;
 	public quantity: string;
@@ -20,6 +25,13 @@ export class CartComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this.userId = this.auth.userData;
+		this.product.getProfile(this.userId).subscribe(res => {
+			// console.log(res);
+			this.dispatch.name = res['name'];
+			this.dispatch.address = res['contact_address'];
+			this.dispatch.phone = res['phone'];
+			// console.log(this.dispatch, res)
+		})
 		this.cartData = this.product.getCatItem();
 		console.log(this.cartData);
 		this.product.updateCat(this.cartData).subscribe(res => {

@@ -6,7 +6,7 @@
               <a routerLink="/update-profile" ><img *ngIf="userId" src="{{image}}" class="img-fluid mb-3 avatar-120 rounded-circle" alt=""></a>
               <h4 *ngIf="!userId" class="mb-0">Welcome</h4>
               <h4 *ngIf="userId" class="mb-0">{{user.name}}</h4>
-              <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">0{{user.phone}}</a>
+              <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">{{user.phone}}</a>
               <p *ngIf="!userId" class="mt-1">To Drugstoc your No 1</p>
               <p *ngIf="!userId" class="mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>
               <p *ngIf="userId" class="mt-1">{{user.address}}</p>
@@ -32,7 +32,7 @@
     <div [ngClass]="{'col-lg-9': userId, 'col-lg-12': !userId }" class="col-md-12" [ngStyle]="!userId?{'filter': 'grayscale(100%)'} : {'filter': 'grayscale(0%)'}">
         <app-iq-card cardClass="iq-card bg-primary sb-top-banner-card" cardBodyClass="iq-card-body" [isCardHeader]=false>
             <div class="row">
-              <div class="col-md-6 align-self-center" style="padding-left: 120px;">
+              <div class="col-md-6 align-self-center padded" >
                 <h2 *ngIf="!userId" class="text-white" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>
                 <h2 *ngIf="userId" class="text-white">{{user.name}}</h2>
                 <p class="text-white" style="font-weight: 600; width: 150%;">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>
@@ -62,7 +62,7 @@
                 </a>
               </div>
             </div>
-            <div class="row" *ngIf="sumaryItem.length > 0">
+            <div class="row" *ngIf="!loadCatergory">
               <div *ngFor="let sale of sumaryItem; let i=index;" class="col-md-4">
                 <app-iq-card cardClass="iq-card shadow-none mb-0" cardBodyClass="q-card-body p-1" [isCardHeader]=false>
                   <span class="text-dark float-right"><i
@@ -75,6 +75,37 @@
                       <!-- <progressbar class="iq-progress-bar" [value]="{{sale.percentage}}" type="primary" ></progressbar> -->
                     </div>
                   </div>
+                </app-iq-card>
+              </div>
+            </div>
+            <div class="row" *ngIf="loadCatergory">
+              <div *ngFor="let sale of sumLoading; let i=index;" class="col-md-4">
+                <app-iq-card cardClass="iq-card shadow-none mb-0" cardBodyClass="q-card-body p-1" [isCardHeader]=false>
+                  <span class="text-dark float-right"><i
+                    class="ri-arrow-up-fill mr-1"></i></span>
+                    <ngx-skeleton-loader count="1" [theme]="{
+                      width: '250px',
+                      'border-radius': '12px',
+                      height: '15px',
+                      'margin-bottom': '-5px',
+                      'margin-right': '20px'
+                    }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                    <p style="margin-bottom: 0;">
+                      <ngx-skeleton-loader count="1" [theme]="{
+                        width: '100px',
+                        'border-radius': '12px',
+                        height: '20px',
+                        'margin-bottom': '-2px',
+                        'margin-right': '20px'
+                      }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                    </p>
+                    <ngx-skeleton-loader count="1" [theme]="{
+                      width: '390px',
+                      'border-radius': '12px',
+                      height: '10px',
+                      'margin-bottom': '-5px',
+                      'margin-right': '20px'
+                    }" appearance="circle" animation="progress"></ngx-skeleton-loader>
                 </app-iq-card>
               </div>
             </div>
@@ -105,46 +136,88 @@
                             </div>
                           </div> -->
                         </div>
-                      <div class="iq-card-body">
-                        <div id="js-product-list">
-                          <div class="Products">
-                            <ul class="product_list gridcount grid row">
-                              <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                <div class="product-miniature">
-                                  <div class="thumbnail-container">
-                                    <a *ngIf="!item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" /> </a>
-                                    <a *ngIf="item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="data:image/jpeg;base64,{{item.image}}" alt="product-image" class="img-fluid" /> </a>
-                                    <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
-                                  </div>
-                                  <div class="product-description">
-                                    <h4>{{ item.name }}</h4>
-                                    <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
-                                    <div *ngIf="userId" class="ratting">
-                                      <!-- <ul class="ratting-item d-flex p-0 m-0">
-                                        <li class="full"><i class="{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
-                                        <li class="full"><i class="{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
-                                        <li class="full"><i class="{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
-                                        <li class="full"><i class="{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
-                                        <li class="full"><i class="{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
-                                      </ul> -->
+                        <div *ngIf="loadingItem" class="iq-card-body">
+                          <div id="js-product-list">
+                            <div class="Products">
+                              <ul class="product_list gridcount grid row">
+                                <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                  <div class="product-miniature">
+                                    <div class="thumbnail-container">
+                                      <ngx-skeleton-loader count="1" [theme]="{
+                                        width: '402px',
+                                        'border-radius': '12px',
+                                        height: '200px',
+                                        'margin-bottom': '-5px',
+                                        'margin-right': '20px'
+                                      }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                                      <ngx-skeleton-loader count="1" [theme]="{
+                                        width: '290px',
+                                        'border-radius': '12px',
+                                        height: '20px',
+                                        'margin-bottom': '-5px',
+                                        'margin-right': '20px'
+                                      }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                                      <ngx-skeleton-loader count="1" [theme]="{
+                                        width: '350px',
+                                        'border-radius': '12px',
+                                        height: '15px',
+                                        'margin-bottom': '-5px',
+                                        'margin-right': '20px'
+                                      }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                                      <ngx-skeleton-loader count="1" [theme]="{
+                                        width: '120px',
+                                        'border-radius': '12px',
+                                        height: '15px',
+                                        'margin-bottom': '-5px',
+                                        'margin-right': '20px'
+                                      }" appearance="circle" animation="progress"></ngx-skeleton-loader>
                                     </div>
-                                    <div *ngIf="userId" class="d-flex flex-wrap justify-content-between align-items-center">
-                                      <div class="product-price">
-                                        <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
-                                      </div>
-                                      <div class="product-action">
-                                        <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a (click)="addToCat(item)" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
-                                        <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
-                                      </div>
-                                    </div>
                                   </div>
-                                </div>
-                              </li>
-                            </ul>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </app-iq-card>
+                        <div *ngIf="!loadingItem" class="iq-card-body">
+                          <div id="js-product-list">
+                            <div class="Products">
+                              <ul class="product_list gridcount grid row">
+                                <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                  <div class="product-miniature">
+                                    <div class="thumbnail-container">
+                                      <a *ngIf="!item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" /> </a>
+                                      <a *ngIf="item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="data:image/jpeg;base64,{{item.image}}" alt="product-image" class="img-fluid" /> </a>
+                                      <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
+                                    </div>
+                                    <div class="product-description">
+                                      <h4>{{ item.name }}</h4>
+                                      <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
+                                      <div *ngIf="userId" class="ratting">
+                                        <!-- <ul class="ratting-item d-flex p-0 m-0">
+                                          <li class="full"><i class="{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                                          <li class="full"><i class="{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                                          <li class="full"><i class="{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                                          <li class="full"><i class="{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                                          <li class="full"><i class="{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
+                                        </ul> -->
+                                      </div>
+                                      <div *ngIf="userId" class="d-flex flex-wrap justify-content-between align-items-center">
+                                        <div class="product-price">
+                                          <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
+                                        </div>
+                                        <div class="product-action">
+                                          <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a (click)="addToCat(item)" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
+                                          <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </app-iq-card>
                     <div
         infiniteScroll
         [infiniteScrollDistance]="2"

@@ -164,12 +164,12 @@
                 <div class="col-lg-4">
                   <div class="iq-card">
                     <div class="iq-card-body">
-                      <h4 class="mb-2">MedPlus Pharmacy</h4>
+                      <h4 class="mb-2">{{dispatch.name}}</h4>
                       <div class="shipping-address">
-                        <p class="mb-0">9447 Glen Eagles Drive</p>
-                        <p>Lewis Center, OH 43035</p>
-                        <p>UTC-5: Eastern Standard Time (EST)</p>
-                        <p>0803 361 9901</p>
+                        <p class="mb-0">{{dispatch.address}}</p>
+                        <!-- <p>Lewis Center, OH 43035</p> -->
+                        <!-- <p>{{dispatch.address}}</p> -->
+                        <p *ngIf="dispatch.phone">{{dispatch.phone}}</p>
                       </div>
                       <hr>
                       <a id="deliver-address" href="javascript:void();" type="button" (click)="deliverAddress()" class="btn btn-primary d-block mt-1 next">Deliver To this Address</a>
