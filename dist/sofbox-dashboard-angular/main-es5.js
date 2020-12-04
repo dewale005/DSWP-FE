@@ -359,6 +359,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/home/home.component.html":
+  /*!*********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/home/home.component.html ***!
+    \*********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppDrugstoc_webHomeHomeComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"row row-eq-height\">\n    <div *ngIf=\"userId\" class=\"col-lg-3 col-md-12\">\n        <app-iq-card cardClass=\"iq-card iq-profile-card text-center\" [isCardHeader]=false>\n            <div style=\"min-height: 329px\" class=\"iq-team text-center p-0\">\n              <img *ngIf=\"!userId\" src=\"assets/images/no_logo.png\" style=\"filter: grayscale(100%);\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n              <a routerLink=\"/update-profile\" ><img *ngIf=\"userId\" src=\"{{image}}\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\"></a>\n              <h4 *ngIf=\"!userId\" class=\"mb-0\">Welcome</h4>\n              <h4 *ngIf=\"userId\" class=\"mb-0\">{{user.name}}</h4>\n              <a *ngIf=\"userId && user.phone\" href=\"javascript:void(0);\" class=\"d-inline-block w-100\">{{user.phone}}</a>\n              <p *ngIf=\"!userId\" class=\"mt-1\">To Drugstoc your No 1</p>\n              <p *ngIf=\"!userId\" class=\"mt-1\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>\n              <p *ngIf=\"userId\" class=\"mt-1\">{{user.address}}</p>\n              <hr>\n              <ul class=\"list-inline mb-0 d-flex justify-content-between\">\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Blood</h5>\n                  <p class=\"text-success\">AB+</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <h5 *ngIf=\"!userId\">Virtual Pharmacy</h5>\n                  <h5 *ngIf=\"userId\">Licensed Pharmacy</h5>\n                  <!-- <p class=\"text-success\">161cm</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Weight</h5>\n                  <p class=\"text-success\">64kg</p> -->\n                </li>\n              </ul>\n            </div>\n          </app-iq-card>\n    </div>\n    <div [ngClass]=\"{'col-lg-9': userId, 'col-lg-12': !userId }\" class=\"col-md-12\" [ngStyle]=\"!userId?{'filter': 'grayscale(100%)'} : {'filter': 'grayscale(0%)'}\">\n        <app-iq-card cardClass=\"iq-card bg-primary sb-top-banner-card\" cardBodyClass=\"iq-card-body\" [isCardHeader]=false>\n            <div class=\"row\">\n              <div class=\"col-md-8 align-self-center padded\" >\n                <h2 *ngIf=\"!userId\" class=\"text-white padded\" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>\n                <h2 *ngIf=\"userId\" class=\"text-white padded\">{{user.name}}</h2>\n                <p class=\"text-white padded\" style=\"font-weight: 600;\">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>\n                <!-- <p *ngIf=\"userId\" class=\"text-white\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->\n                <!-- <button type=\"button\" class=\"btn iq-bg-primary\">Read More</button> -->\n              </div>\n              <div class=\"col-md-4 position-relative\">\n                <div class=\"an-img-two\" style=\"margin-right: 20px;\">\n                  <div class=\"bodymovin\">\n                    <ng-lottie [options]=\"optionsData2\"></ng-lottie>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </app-iq-card>\n    </div>\n    </div>\n    <div class=\"row\">\n        <div *ngIf=\"userId\" class=\"col-md-12\">\n          <app-iq-card cardClass=\"iq-card wow fadeInUp\" data-wow-delay=\"0.6s\">\n            <div card-header class=\"iq-header-title\">\n              <h4 class=\"card-title\">Category Summary</h4>\n            </div>\n            <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n              <div class=\"dropdown\">\n                <a routerLink=\"/my-drugstoc\" class=\"dropdown-toggle text-primary\" data-toggle=\"dropdown\">View All\n                </a>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"!loadCatergory\">\n              <div *ngFor=\"let sale of sumaryItem; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                  <span class=\"font-size-14\">{{sale.category}}</span>\n                  <h2>{{sale.number}}</h2>\n                  <div class=\"iq-progress-bar-linear d-inline-block w-100 mt-3\">\n                    <div class=\"iq-progress-bar\">\n                      <span class=\"bg-primary\" data-percent={{sale.percentage}} style=\"transition: width 2s ease 0s; width: {{sale.percentage}}%\"></span>\n                      <!-- <progressbar class=\"iq-progress-bar\" [value]=\"{{sale.percentage}}\" type=\"primary\" ></progressbar> -->\n                    </div>\n                  </div>\n                </app-iq-card>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"loadCatergory\">\n              <div *ngFor=\"let sale of sumLoading; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '70%',\n                      'border-radius': '12px',\n                      height: '15px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    <p style=\"margin-bottom: 0;\">\n                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                        width: '30%',\n                        'border-radius': '6px',\n                        height: '30px',\n                        'margin-bottom': '-2px',\n                        'margin-right': '20px'\n                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    </p>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '100%',\n                      'border-radius': '12px',\n                      height: '10px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                </app-iq-card>\n              </div>\n            </div>\n  \n          </app-iq-card>\n        </div>\n      </div>\n        <div class=\"row\">\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <div class=\"iq-card\">\n                      <app-iq-card>\n                        <div card-header class=\"iq-header-title\">\n                          <h4 class=\"card-title\">New Products</h4>\n                        </div>\n                        <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n                          <!-- <div class=\"dropdown\">\n                            <span class=\"dropdown-toggle\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\">\n                              <i class=\"ri-more-2-fill\"></i>\n                            </span>\n                            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenuButton\">\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-eye-fill mr-2\"></i>View</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-delete-bin-6-fill mr-2\"></i>Delete</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-pencil-fill mr-2\"></i>Edit</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-printer-fill mr-2\"></i>Print</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-file-download-fill mr-2\"></i>Download</a>\n                            </div>\n                          </div> -->\n                        </div>\n                        <div *ngIf=\"loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\" style=\"width: 100%;\">\n                                    <div class=\"thumbnail-container\">\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '100%',\n                                        'border-radius': '12px',\n                                        height: '200px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '70%',\n                                        'border-radius': '12px',\n                                        height: '20px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '95%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '40%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                        <div *ngIf=\"!loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\">\n                                    <div class=\"thumbnail-container\">\n                                      <a *ngIf=\"!item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"../../../assets/images/no_image.png\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                      <a *ngIf=\"item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"data:image/jpeg;base64,{{item.image}}\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                      <a href=\"javascript:void();\" *ngIf=\"item.type == 'New'\" class=\"new\">{{ item.type }}</a>\n                                    </div>\n                                    <div class=\"product-description\">\n                                      <h4>{{ item.name }}</h4>\n                                      <p class=\"mb-0\">{{ item.x_studio_field_5Gttm }}</p>\n                                      <div *ngIf=\"userId\" class=\"ratting\">\n                                        <!-- <ul class=\"ratting-item d-flex p-0 m-0\">\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                        </ul> -->\n                                      </div>\n                                      <div *ngIf=\"userId\" class=\"d-flex flex-wrap justify-content-between align-items-center\">\n                                        <div class=\"product-price\">\n                                          <div class=\"regular-price\"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>\n                                        </div>\n                                        <div class=\"product-action\">\n                                          <div *ngIf=\"!check_already_in_cart(item.id)\" class=\"add-to-cart\"><a (click)=\"addToCat(item)\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Add to Cart\"> <i class=\"ri-shopping-cart-2-line\"></i> </a></div>\n                                          <!-- <div class=\"wishlist\"><a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Wishlist\"> <i class=\"ri-heart-line\"></i> </a></div> -->\n                                        </div>\n                                      </div>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                      </app-iq-card>\n                    <div\n        infiniteScroll\n        [infiniteScrollDistance]=\"2\"\n        [infiniteScrollThrottle]=\"1000\"\n        (scrolled)=\"onScroll()\"\n      ></div>\n    <p *ngIf=\"loading\" style=\"text-align: center;\">Loading....</p>\n                    </div>\n                  </div>\n                </div>\n              </div>\n        </div>\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/layout/layout.component.html":
   /*!*************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/layout/layout.component.html ***!
@@ -1090,6 +1110,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _drugstoc_web_search_search_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
     /*! ./drugstoc_web/search/search.component */
     "./src/app/drugstoc_web/search/search.component.ts");
+    /* harmony import */
+
+
+    var _drugstoc_web_home_home_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
+    /*! ./drugstoc_web/home/home.module */
+    "./src/app/drugstoc_web/home/home.module.ts");
 
     function playerFactory() {
       return lottie_web__WEBPACK_IMPORTED_MODULE_29___default.a;
@@ -1102,7 +1128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _views_pages_error_page_error_page_component__WEBPACK_IMPORTED_MODULE_6__["ErrorPageComponent"], _drugstoc_web_layout_layout_component__WEBPACK_IMPORTED_MODULE_26__["LayoutComponent"], // HomeComponent,
       _drugstoc_web_product_product_component__WEBPACK_IMPORTED_MODULE_30__["ProductComponent"], _drugstoc_web_my_drugstoc_my_drugstoc_component__WEBPACK_IMPORTED_MODULE_31__["MyDrugstocComponent"], _drugstoc_web_my_orders_my_orders_component__WEBPACK_IMPORTED_MODULE_32__["MyOrdersComponent"], _drugstoc_web_my_invoice_my_invoice_component__WEBPACK_IMPORTED_MODULE_33__["MyInvoiceComponent"], _drugstoc_web_problem_problem_component__WEBPACK_IMPORTED_MODULE_34__["ProblemComponent"], _drugstoc_web_profile_profile_component__WEBPACK_IMPORTED_MODULE_35__["ProfileComponent"], _drugstoc_web_promotions_promotions_component__WEBPACK_IMPORTED_MODULE_36__["PromotionsComponent"], _drugstoc_web_cart_cart_component__WEBPACK_IMPORTED_MODULE_41__["CartComponent"], _drugstoc_web_per_products_per_products_component__WEBPACK_IMPORTED_MODULE_42__["PerProductsComponent"], _drugstoc_web_per_category_per_category_component__WEBPACK_IMPORTED_MODULE_45__["PerCategoryComponent"], _drugstoc_web_search_search_component__WEBPACK_IMPORTED_MODULE_47__["SearchComponent"], _drugstoc_web_per_category_list_per_category_list_component__WEBPACK_IMPORTED_MODULE_46__["PerCategoryListComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_43__["InfiniteScrollModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_44__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_44__["ReactiveFormsModule"], _components_sofbox_sofbox_module__WEBPACK_IMPORTED_MODULE_5__["SofboxModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_8__["StoreModule"].forRoot(_store_reducers__WEBPACK_IMPORTED_MODULE_9__["reducers"], {
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _drugstoc_web_home_home_module__WEBPACK_IMPORTED_MODULE_48__["HomeModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_43__["InfiniteScrollModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_44__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_44__["ReactiveFormsModule"], _components_sofbox_sofbox_module__WEBPACK_IMPORTED_MODULE_5__["SofboxModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_8__["StoreModule"].forRoot(_store_reducers__WEBPACK_IMPORTED_MODULE_9__["reducers"], {
         metaReducers: _store_reducers__WEBPACK_IMPORTED_MODULE_9__["metaReducers"],
         runtimeChecks: {
           strictStateImmutability: true,
@@ -2547,6 +2573,442 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/drugstoc_web/home/home-routing.module.ts":
+  /*!**********************************************************!*\
+    !*** ./src/app/drugstoc_web/home/home-routing.module.ts ***!
+    \**********************************************************/
+
+  /*! exports provided: HomeRoutingModule */
+
+  /***/
+  function srcAppDrugstoc_webHomeHomeRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HomeRoutingModule", function () {
+      return HomeRoutingModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./home.component */
+    "./src/app/drugstoc_web/home/home.component.ts");
+
+    var routes = [{
+      path: '',
+      component: _home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+    }];
+
+    var HomeRoutingModule = function HomeRoutingModule() {
+      _classCallCheck(this, HomeRoutingModule);
+    };
+
+    HomeRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+      exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })], HomeRoutingModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/drugstoc_web/home/home.component.ts":
+  /*!*****************************************************!*\
+    !*** ./src/app/drugstoc_web/home/home.component.ts ***!
+    \*****************************************************/
+
+  /*! exports provided: HomeComponent */
+
+  /***/
+  function srcAppDrugstoc_webHomeHomeComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HomeComponent", function () {
+      return HomeComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/services/api.service */
+    "./src/app/services/api.service.ts");
+    /* harmony import */
+
+
+    var src_app_services_product_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/services/product.service */
+    "./src/app/services/product.service.ts");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/app/services/auth.service */
+    "./src/app/services/auth.service.ts");
+
+    var HomeComponent = /*#__PURE__*/function () {
+      function HomeComponent(apiService, product, toastr, auth) {
+        _classCallCheck(this, HomeComponent);
+
+        this.apiService = apiService;
+        this.product = product;
+        this.toastr = toastr;
+        this.auth = auth;
+        this.optionsData = {
+          path: '/assets/images/small/data.json'
+        };
+        this.optionsData2 = {
+          path: '/assets/images/small/data.json'
+        };
+        this.cartValue = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.data = [];
+        this.loadingItem = true;
+        this.loadCatergory = true;
+        this.sumLoading = [];
+        this.page = 0;
+        this.loading = false;
+        this.user = {
+          name: 'loading....',
+          phone: 'loading....',
+          address: 'loading....'
+        };
+        this.sumaryItem = [];
+        this.invoice = [];
+        this.newdata = [];
+        this.cartItem = [];
+        this.data.length = 21;
+        this.sumLoading.length = 3;
+      }
+
+      _createClass(HomeComponent, [{
+        key: "animationCreated",
+        value: function animationCreated(animationItem) {}
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this6 = this;
+
+          this.userId = this.auth.userData;
+          setInterval(function () {
+            _this6.image = _this6.product.photo;
+          }, 200);
+          this.getSummary();
+          this.product.getAllProducts(this.page).subscribe(function (resp) {
+            console.log(resp);
+            _this6.loadingItem = false; // this.loading = false;
+
+            _this6.data = resp;
+            var dat = [];
+
+            for (var i = 0; i < 3; i++) {
+              dat.push(resp[i]);
+            }
+
+            _this6.sales_v = dat;
+          });
+          this.product.getProfile(this.userId).subscribe(function (resp) {
+            console.log(resp);
+            _this6.user.name = resp['name'];
+            _this6.user.address = resp['contact_address'];
+            _this6.user.phone = resp['mobile'];
+          });
+          this.cartItem = this.product.getCatItem();
+        }
+      }, {
+        key: "getSummary",
+        value: function getSummary() {
+          var _this7 = this;
+
+          var arr = [];
+          this.product.getMyDrugstoc(this.userId).subscribe(function (resp) {
+            arr = resp;
+
+            _this7.product.getCategory().subscribe(function (res) {
+              var summary = [];
+
+              var _loop = function _loop(i) {
+                var m = arr.filter(function (a) {
+                  return a.categ_id[1] === res[i].name;
+                });
+                var data = {
+                  category: res[i].name,
+                  number: m.length,
+                  percentage: m.length / resp['length'] * 100
+                };
+                summary.push(data);
+              };
+
+              for (var i = 0; i < res['length']; i++) {
+                _loop(i);
+              }
+
+              summary.sort(function (a, b) {
+                return a.number > b.number ? -1 : b.number > a.number ? 1 : 0;
+              });
+              _this7.sumaryItem = summary.slice(0, 3);
+              _this7.loadCatergory = false;
+            });
+          });
+        }
+      }, {
+        key: "addToCat",
+        value: function addToCat(item) {
+          item.quantity = 1;
+          this.product.addToCart(item);
+          this.cartValue.emit(this.cartItem.length);
+          this.toastr.info('Item has been added to cart', 'Added to Cart', {
+            positionClass: 'toast-bottom-left'
+          });
+        }
+      }, {
+        key: "check_already_in_cart",
+        value: function check_already_in_cart(id) {
+          if (this.cartItem.length === 0) {
+            return false;
+          } else {
+            for (var i = 0; i < this.cartItem.length; i++) {
+              if (id === this.cartItem[i].id) {
+                return true;
+              }
+            }
+
+            return false;
+          }
+        }
+      }, {
+        key: "onScroll",
+        value: function onScroll() {
+          var _this8 = this;
+
+          this.page++;
+          this.loading = true;
+          this.product.getAllProducts(this.page).subscribe(function (res) {
+            _this8.newdata = res;
+            _this8.loading = false;
+            var unqie = [].concat(_toConsumableArray(_this8.data), _toConsumableArray(_this8.newdata));
+
+            var categories = _toConsumableArray(new Set(unqie.map(function (bill) {
+              return bill.id;
+            })));
+
+            console.log(categories); // let may = [...new Set(unqie)];
+
+            _this8.data = unqie;
+          });
+        }
+      }]);
+
+      return HomeComponent;
+    }();
+
+    HomeComponent.ctorParameters = function () {
+      return [{
+        type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"]
+      }, {
+        type: src_app_services_product_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
+      }, {
+        type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], HomeComponent.prototype, "cartValue", void 0);
+    HomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-home',
+      template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! raw-loader!./home.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/home/home.component.html"))["default"]
+    })], HomeComponent);
+
+    function compare(a, b) {
+      if (a.last_nom < b.last_nom) {
+        return -1;
+      }
+
+      if (a.last_nom > b.last_nom) {
+        return 1;
+      }
+
+      return 0;
+    }
+    /***/
+
+  },
+
+  /***/
+  "./src/app/drugstoc_web/home/home.module.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/drugstoc_web/home/home.module.ts ***!
+    \**************************************************/
+
+  /*! exports provided: HomeModule */
+
+  /***/
+  function srcAppDrugstoc_webHomeHomeModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HomeModule", function () {
+      return HomeModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./home.component */
+    "./src/app/drugstoc_web/home/home.component.ts");
+    /* harmony import */
+
+
+    var _home_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ./home-routing.module */
+    "./src/app/drugstoc_web/home/home-routing.module.ts");
+    /* harmony import */
+
+
+    var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ngx-bootstrap/carousel */
+    "./node_modules/ngx-bootstrap/__ivy_ngcc__/carousel/fesm2015/ngx-bootstrap-carousel.js");
+    /* harmony import */
+
+
+    var ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ngx-bootstrap/progressbar */
+    "./node_modules/ngx-bootstrap/__ivy_ngcc__/progressbar/fesm2015/ngx-bootstrap-progressbar.js");
+    /* harmony import */
+
+
+    var ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ngx-bootstrap/tabs */
+    "./node_modules/ngx-bootstrap/__ivy_ngcc__/tabs/fesm2015/ngx-bootstrap-tabs.js");
+    /* harmony import */
+
+
+    var ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ngx-infinite-scroll */
+    "./node_modules/ngx-infinite-scroll/__ivy_ngcc__/modules/ngx-infinite-scroll.js");
+    /* harmony import */
+
+
+    var ngx_lottie__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! ngx-lottie */
+    "./node_modules/ngx-lottie/__ivy_ngcc__/fesm2015/ngx-lottie.js");
+    /* harmony import */
+
+
+    var ngx_scrollbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ngx-scrollbar */
+    "./node_modules/ngx-scrollbar/__ivy_ngcc__/fesm2015/ngx-scrollbar.js");
+    /* harmony import */
+
+
+    var ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ngx-slick-carousel */
+    "./node_modules/ngx-slick-carousel/__ivy_ngcc__/fesm2015/ngx-slick-carousel.js");
+    /* harmony import */
+
+
+    var ngx_wow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ngx-wow */
+    "./node_modules/ngx-wow/__ivy_ngcc__/esm2015/ngx-wow.js");
+    /* harmony import */
+
+
+    var src_app_app_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! src/app/app.module */
+    "./src/app/app.module.ts");
+    /* harmony import */
+
+
+    var src_app_components_sofbox_sofbox_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! src/app/components/sofbox/sofbox.module */
+    "./src/app/components/sofbox/sofbox.module.ts");
+    /* harmony import */
+
+
+    var ngx_skeleton_loader__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! ngx-skeleton-loader */
+    "./node_modules/ngx-skeleton-loader/__ivy_ngcc__/fesm2015/ngx-skeleton-loader.js");
+
+    var HomeModule = function HomeModule() {
+      _classCallCheck(this, HomeModule);
+    };
+
+    HomeModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      declarations: [_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]],
+      exports: [_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _home_routing_module__WEBPACK_IMPORTED_MODULE_4__["HomeRoutingModule"], ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_8__["InfiniteScrollModule"], src_app_components_sofbox_sofbox_module__WEBPACK_IMPORTED_MODULE_14__["SofboxModule"], ngx_lottie__WEBPACK_IMPORTED_MODULE_9__["LottieModule"].forRoot({
+        player: src_app_app_module__WEBPACK_IMPORTED_MODULE_13__["playerFactory"]
+      }), ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_6__["ProgressbarModule"], ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"], ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_7__["TabsModule"], ngx_scrollbar__WEBPACK_IMPORTED_MODULE_10__["NgScrollbarModule"], ngx_wow__WEBPACK_IMPORTED_MODULE_12__["NgwWowModule"], ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_11__["SlickCarouselModule"], ngx_skeleton_loader__WEBPACK_IMPORTED_MODULE_15__["NgxSkeletonLoaderModule"]]
+    })], HomeModule);
+    /***/
+  },
+
+  /***/
   "./src/app/drugstoc_web/layout/layout.component.ts":
   /*!*********************************************************!*\
     !*** ./src/app/drugstoc_web/layout/layout.component.ts ***!
@@ -2741,18 +3203,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(MyDrugstocComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this6 = this;
+          var _this9 = this;
 
           this.userId = this.auth.userData;
           this.product.getMyDrugstoc(this.userId).subscribe(function (res) {
             console.log(res);
-            _this6.loading = false;
-            _this6.data = res;
-            _this6.listData = res;
+            _this9.loading = false;
+            _this9.data = res;
+            _this9.listData = res;
           });
           this.product.getCategory().subscribe(function (res) {
             console.log(res);
-            _this6.category = res;
+            _this9.category = res;
           });
           this.cartItem = this.product.getCatItem();
         }
@@ -2888,13 +3350,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(MyInvoiceComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this7 = this;
+          var _this10 = this;
 
           this.userId = this.auth.userData;
           this.product.getMyInvoice(this.userId).subscribe(function (resp) {
             console.log(resp);
-            _this7.loading = false;
-            _this7.invoice = resp;
+            _this10.loading = false;
+            _this10.invoice = resp;
           });
         }
       }]);
@@ -3019,13 +3481,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this8 = this;
+          var _this11 = this;
 
           this.user_id = this.auth.userData;
           this.order.getMyOrders(this.user_id).subscribe(function (resp) {
             console.log(resp);
-            _this8.loading = false;
-            _this8.orders = resp;
+            _this11.loading = false;
+            _this11.orders = resp;
           });
           this.cartItem = this.order.getCatItem();
         }
@@ -3129,14 +3591,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PerCategoryListComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this9 = this;
+          var _this12 = this;
 
           this.list.per_company().subscribe(function (res) {
-            _this9.loading = false;
+            _this12.loading = false;
             var arr = [];
             arr = res;
             console.log(arr.sort());
-            _this9.data = arr.sort();
+            _this12.data = arr.sort();
           });
         }
       }, {
@@ -3792,29 +4254,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PerCategoryComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this10 = this;
+          var _this13 = this;
 
           this.product.getCategory().subscribe(function (res) {
-            _this10.categories = res;
+            _this13.categories = res;
           });
           this.product.getAllProducts(this.page).subscribe(function (resp) {
             console.log(resp);
-            _this10.loading = false;
-            _this10.data = resp;
+            _this13.loading = false;
+            _this13.data = resp;
           });
           this.cartItem = this.product.getCatItem();
         }
       }, {
         key: "changeCatgory",
         value: function changeCatgory(event) {
-          var _this11 = this;
+          var _this14 = this;
 
           this.page = 0;
           this.category = event;
           this.loading = true;
           this.product.getProductCategory(event, this.page).subscribe(function (res) {
-            _this11.loading = false;
-            _this11.data = res;
+            _this14.loading = false;
+            _this14.data = res;
             console.log(res);
           });
         }
@@ -3845,20 +4307,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onScroll",
         value: function onScroll() {
-          var _this12 = this;
+          var _this15 = this;
 
           this.page++;
           console.log(this.page);
 
           if (this.category === 'all') {
             this.product.getAllProducts(this.page).subscribe(function (resp) {
-              _this12.newdata = resp;
-              _this12.data = [].concat(_toConsumableArray(_this12.data), _toConsumableArray(_this12.newdata));
+              _this15.newdata = resp;
+              _this15.data = [].concat(_toConsumableArray(_this15.data), _toConsumableArray(_this15.newdata));
             });
           } else {
             this.product.getProductCategory(this.category, this.page).subscribe(function (res) {
-              _this12.newdata = res;
-              _this12.data = [].concat(_toConsumableArray(_this12.data), _toConsumableArray(_this12.newdata));
+              _this15.newdata = res;
+              _this15.data = [].concat(_toConsumableArray(_this15.data), _toConsumableArray(_this15.newdata));
             });
           }
         }
@@ -3955,13 +4417,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(PerProductsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this13 = this;
+          var _this16 = this;
 
           this.title = this.route.snapshot.params.id;
           this.product.lis_per_company(this.title).subscribe(function (resp) {
-            _this13.loading = false;
+            _this16.loading = false;
             console.log(resp);
-            _this13.data = resp;
+            _this16.data = resp;
           });
           this.cartItem = this.product.getCatItem();
         }
@@ -4414,12 +4876,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ProductComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this14 = this;
+          var _this17 = this;
 
           this.product.getAllProducts(this.page).subscribe(function (resp) {
             console.log(resp);
-            _this14.loading = false;
-            _this14.data = resp;
+            _this17.loading = false;
+            _this17.data = resp;
           });
           this.cartItem = this.product.getCatItem();
         }
@@ -4721,16 +5183,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SearchComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this15 = this;
+          var _this18 = this;
 
           var data = this.route.snapshot.params.data;
           this.product.search_result(data).subscribe(function (res) {
-            _this15.data2 = res;
+            _this18.data2 = res;
           });
           this.product.getAllProducts(this.page).subscribe(function (resp) {
             var arr = [];
             arr = resp;
-            _this15.loading = false;
+            _this18.loading = false;
             var res = arr.filter(function (n) {
               return n.name.toLowerCase().includes(data.toLowerCase()) || n.x_studio_field_xH9Vy.toLowerCase().includes(data.toLowerCase());
             });
@@ -4970,7 +5432,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               var wrapperMenu = document.querySelectorAll('.wrapper-menu');
               var body = document.querySelector('body');
 
-              var _loop = function _loop(i) {
+              var _loop2 = function _loop2(i) {
                 wrapperMenu[i].addEventListener('click', function () {
                   wrapperMenu[i].classList.toggle('open');
                   body.classList.toggle('sidebar-main');
@@ -4978,7 +5440,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               };
 
               for (var i = 0; i < wrapperMenu.length; i++) {
-                _loop(i);
+                _loop2(i);
               }
             })();
           }
@@ -5250,15 +5712,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(AuthService, [{
         key: "login",
         value: function login(payload) {
-          var _this16 = this;
+          var _this19 = this;
 
           this.http.post("".concat(this.BASE_URL, "/login"), payload).subscribe(function (resp) {
             localStorage.setItem('user', resp['user']);
             localStorage.setItem('token', resp['token']);
 
-            _this16.router.navigate(['/']);
+            _this19.router.navigate(['/']);
           }, function (err) {
-            _this16.toastr.error(err.error.message);
+            _this19.toastr.error(err.error.message);
 
             console.log();
           });
@@ -5392,12 +5854,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getCart",
         value: function getCart() {
-          var _this17 = this;
+          var _this20 = this;
 
           var id = localStorage.getItem('user');
           this.http.get("".concat(this.BASE_URL, "/mycart/").concat(id)).subscribe(function (res) {
             var arr = res;
-            _this17.cartItem = arr;
+            _this20.cartItem = arr;
           });
         }
       }, {

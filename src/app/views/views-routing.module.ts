@@ -28,9 +28,9 @@ import { SearchComponent } from '../drugstoc_web/search/search.component';
 const routes: Routes = [
   {
     path: '',
-    // loadChildren: '../drugstoc_web/home/home.module#HomeModule'
+    // loadChildren: () => import('/src/app/drugstoc_web/home/home.module#HomeModule').then(m => m.HomeModule)
     // ./layouts/layout1/layout1.module#Layout1Module /Users/adewale/Desktop/drugstoc web/angular/src/app/drugstoc_web/home/home.module.ts
-    component: HomeComponent,
+    component: HomeComponent
   },
   // {
   //   path: 'products',

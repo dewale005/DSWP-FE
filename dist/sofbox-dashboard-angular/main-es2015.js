@@ -239,6 +239,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/home/home.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/home/home.component.html ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row row-eq-height\">\n    <div *ngIf=\"userId\" class=\"col-lg-3 col-md-12\">\n        <app-iq-card cardClass=\"iq-card iq-profile-card text-center\" [isCardHeader]=false>\n            <div style=\"min-height: 329px\" class=\"iq-team text-center p-0\">\n              <img *ngIf=\"!userId\" src=\"assets/images/no_logo.png\" style=\"filter: grayscale(100%);\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n              <a routerLink=\"/update-profile\" ><img *ngIf=\"userId\" src=\"{{image}}\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\"></a>\n              <h4 *ngIf=\"!userId\" class=\"mb-0\">Welcome</h4>\n              <h4 *ngIf=\"userId\" class=\"mb-0\">{{user.name}}</h4>\n              <a *ngIf=\"userId && user.phone\" href=\"javascript:void(0);\" class=\"d-inline-block w-100\">{{user.phone}}</a>\n              <p *ngIf=\"!userId\" class=\"mt-1\">To Drugstoc your No 1</p>\n              <p *ngIf=\"!userId\" class=\"mt-1\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>\n              <p *ngIf=\"userId\" class=\"mt-1\">{{user.address}}</p>\n              <hr>\n              <ul class=\"list-inline mb-0 d-flex justify-content-between\">\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Blood</h5>\n                  <p class=\"text-success\">AB+</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <h5 *ngIf=\"!userId\">Virtual Pharmacy</h5>\n                  <h5 *ngIf=\"userId\">Licensed Pharmacy</h5>\n                  <!-- <p class=\"text-success\">161cm</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Weight</h5>\n                  <p class=\"text-success\">64kg</p> -->\n                </li>\n              </ul>\n            </div>\n          </app-iq-card>\n    </div>\n    <div [ngClass]=\"{'col-lg-9': userId, 'col-lg-12': !userId }\" class=\"col-md-12\" [ngStyle]=\"!userId?{'filter': 'grayscale(100%)'} : {'filter': 'grayscale(0%)'}\">\n        <app-iq-card cardClass=\"iq-card bg-primary sb-top-banner-card\" cardBodyClass=\"iq-card-body\" [isCardHeader]=false>\n            <div class=\"row\">\n              <div class=\"col-md-8 align-self-center padded\" >\n                <h2 *ngIf=\"!userId\" class=\"text-white padded\" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>\n                <h2 *ngIf=\"userId\" class=\"text-white padded\">{{user.name}}</h2>\n                <p class=\"text-white padded\" style=\"font-weight: 600;\">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>\n                <!-- <p *ngIf=\"userId\" class=\"text-white\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->\n                <!-- <button type=\"button\" class=\"btn iq-bg-primary\">Read More</button> -->\n              </div>\n              <div class=\"col-md-4 position-relative\">\n                <div class=\"an-img-two\" style=\"margin-right: 20px;\">\n                  <div class=\"bodymovin\">\n                    <ng-lottie [options]=\"optionsData2\"></ng-lottie>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </app-iq-card>\n    </div>\n    </div>\n    <div class=\"row\">\n        <div *ngIf=\"userId\" class=\"col-md-12\">\n          <app-iq-card cardClass=\"iq-card wow fadeInUp\" data-wow-delay=\"0.6s\">\n            <div card-header class=\"iq-header-title\">\n              <h4 class=\"card-title\">Category Summary</h4>\n            </div>\n            <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n              <div class=\"dropdown\">\n                <a routerLink=\"/my-drugstoc\" class=\"dropdown-toggle text-primary\" data-toggle=\"dropdown\">View All\n                </a>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"!loadCatergory\">\n              <div *ngFor=\"let sale of sumaryItem; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                  <span class=\"font-size-14\">{{sale.category}}</span>\n                  <h2>{{sale.number}}</h2>\n                  <div class=\"iq-progress-bar-linear d-inline-block w-100 mt-3\">\n                    <div class=\"iq-progress-bar\">\n                      <span class=\"bg-primary\" data-percent={{sale.percentage}} style=\"transition: width 2s ease 0s; width: {{sale.percentage}}%\"></span>\n                      <!-- <progressbar class=\"iq-progress-bar\" [value]=\"{{sale.percentage}}\" type=\"primary\" ></progressbar> -->\n                    </div>\n                  </div>\n                </app-iq-card>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"loadCatergory\">\n              <div *ngFor=\"let sale of sumLoading; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '70%',\n                      'border-radius': '12px',\n                      height: '15px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    <p style=\"margin-bottom: 0;\">\n                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                        width: '30%',\n                        'border-radius': '6px',\n                        height: '30px',\n                        'margin-bottom': '-2px',\n                        'margin-right': '20px'\n                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    </p>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '100%',\n                      'border-radius': '12px',\n                      height: '10px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                </app-iq-card>\n              </div>\n            </div>\n  \n          </app-iq-card>\n        </div>\n      </div>\n        <div class=\"row\">\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <div class=\"iq-card\">\n                      <app-iq-card>\n                        <div card-header class=\"iq-header-title\">\n                          <h4 class=\"card-title\">New Products</h4>\n                        </div>\n                        <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n                          <!-- <div class=\"dropdown\">\n                            <span class=\"dropdown-toggle\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\">\n                              <i class=\"ri-more-2-fill\"></i>\n                            </span>\n                            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenuButton\">\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-eye-fill mr-2\"></i>View</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-delete-bin-6-fill mr-2\"></i>Delete</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-pencil-fill mr-2\"></i>Edit</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-printer-fill mr-2\"></i>Print</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-file-download-fill mr-2\"></i>Download</a>\n                            </div>\n                          </div> -->\n                        </div>\n                        <div *ngIf=\"loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\" style=\"width: 100%;\">\n                                    <div class=\"thumbnail-container\">\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '100%',\n                                        'border-radius': '12px',\n                                        height: '200px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '70%',\n                                        'border-radius': '12px',\n                                        height: '20px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '95%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '40%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                        <div *ngIf=\"!loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\">\n                                    <div class=\"thumbnail-container\">\n                                      <a *ngIf=\"!item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"../../../assets/images/no_image.png\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                      <a *ngIf=\"item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"data:image/jpeg;base64,{{item.image}}\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                      <a href=\"javascript:void();\" *ngIf=\"item.type == 'New'\" class=\"new\">{{ item.type }}</a>\n                                    </div>\n                                    <div class=\"product-description\">\n                                      <h4>{{ item.name }}</h4>\n                                      <p class=\"mb-0\">{{ item.x_studio_field_5Gttm }}</p>\n                                      <div *ngIf=\"userId\" class=\"ratting\">\n                                        <!-- <ul class=\"ratting-item d-flex p-0 m-0\">\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                        </ul> -->\n                                      </div>\n                                      <div *ngIf=\"userId\" class=\"d-flex flex-wrap justify-content-between align-items-center\">\n                                        <div class=\"product-price\">\n                                          <div class=\"regular-price\"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>\n                                        </div>\n                                        <div class=\"product-action\">\n                                          <div *ngIf=\"!check_already_in_cart(item.id)\" class=\"add-to-cart\"><a (click)=\"addToCat(item)\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Add to Cart\"> <i class=\"ri-shopping-cart-2-line\"></i> </a></div>\n                                          <!-- <div class=\"wishlist\"><a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Wishlist\"> <i class=\"ri-heart-line\"></i> </a></div> -->\n                                        </div>\n                                      </div>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                      </app-iq-card>\n                    <div\n        infiniteScroll\n        [infiniteScrollDistance]=\"2\"\n        [infiniteScrollThrottle]=\"1000\"\n        (scrolled)=\"onScroll()\"\n      ></div>\n    <p *ngIf=\"loading\" style=\"text-align: center;\">Loading....</p>\n                    </div>\n                  </div>\n                </div>\n              </div>\n        </div>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/layout/layout.component.html":
 /*!*************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/layout/layout.component.html ***!
@@ -553,6 +566,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _drugstoc_web_per_category_per_category_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./drugstoc_web/per-category/per-category.component */ "./src/app/drugstoc_web/per-category/per-category.component.ts");
 /* harmony import */ var _drugstoc_web_per_category_list_per_category_list_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./drugstoc_web/per-category-list/per-category-list.component */ "./src/app/drugstoc_web/per-category-list/per-category-list.component.ts");
 /* harmony import */ var _drugstoc_web_search_search_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./drugstoc_web/search/search.component */ "./src/app/drugstoc_web/search/search.component.ts");
+/* harmony import */ var _drugstoc_web_home_home_module__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./drugstoc_web/home/home.module */ "./src/app/drugstoc_web/home/home.module.ts");
+
 
 
 
@@ -629,6 +644,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+            _drugstoc_web_home_home_module__WEBPACK_IMPORTED_MODULE_48__["HomeModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
             ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_43__["InfiniteScrollModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_44__["FormsModule"],
@@ -1576,6 +1592,276 @@ CartComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None
     })
 ], CartComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/drugstoc_web/home/home-routing.module.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/drugstoc_web/home/home-routing.module.ts ***!
+  \**********************************************************/
+/*! exports provided: HomeRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeRoutingModule", function() { return HomeRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.component */ "./src/app/drugstoc_web/home/home.component.ts");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+    }
+];
+let HomeRoutingModule = class HomeRoutingModule {
+};
+HomeRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })
+], HomeRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/drugstoc_web/home/home.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/drugstoc_web/home/home.component.ts ***!
+  \*****************************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/api.service */ "./src/app/services/api.service.ts");
+/* harmony import */ var src_app_services_product_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/product.service */ "./src/app/services/product.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/auth.service */ "./src/app/services/auth.service.ts");
+
+
+
+
+
+
+let HomeComponent = class HomeComponent {
+    constructor(apiService, product, toastr, auth) {
+        this.apiService = apiService;
+        this.product = product;
+        this.toastr = toastr;
+        this.auth = auth;
+        this.optionsData = {
+            path: '/assets/images/small/data.json'
+        };
+        this.optionsData2 = {
+            path: '/assets/images/small/data.json'
+        };
+        this.cartValue = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.data = [];
+        this.loadingItem = true;
+        this.loadCatergory = true;
+        this.sumLoading = [];
+        this.page = 0;
+        this.loading = false;
+        this.user = {
+            name: 'loading....',
+            phone: 'loading....',
+            address: 'loading....'
+        };
+        this.sumaryItem = [];
+        this.invoice = [];
+        this.newdata = [];
+        this.cartItem = [];
+        this.data.length = 21;
+        this.sumLoading.length = 3;
+    }
+    animationCreated(animationItem) { }
+    ngOnInit() {
+        this.userId = this.auth.userData;
+        setInterval(() => {
+            this.image = this.product.photo;
+        }, 200);
+        this.getSummary();
+        this.product.getAllProducts(this.page).subscribe((resp) => {
+            console.log(resp);
+            this.loadingItem = false;
+            // this.loading = false;
+            this.data = resp;
+            let dat = [];
+            for (let i = 0; i < 3; i++) {
+                dat.push(resp[i]);
+            }
+            this.sales_v = dat;
+        });
+        this.product.getProfile(this.userId).subscribe((resp) => {
+            console.log(resp);
+            this.user.name = resp['name'];
+            this.user.address = resp['contact_address'];
+            this.user.phone = resp['mobile'];
+        });
+        this.cartItem = this.product.getCatItem();
+    }
+    getSummary() {
+        let arr = [];
+        this.product.getMyDrugstoc(this.userId).subscribe(resp => {
+            arr = resp;
+            this.product.getCategory().subscribe(res => {
+                let summary = [];
+                for (let i = 0; i < res['length']; i++) {
+                    let m = arr.filter(a => a.categ_id[1] === res[i].name);
+                    let data = {
+                        category: res[i].name,
+                        number: m.length,
+                        percentage: (m.length / resp['length']) * 100
+                    };
+                    summary.push(data);
+                }
+                summary.sort((a, b) => (a.number > b.number) ? -1 : ((b.number > a.number) ? 1 : 0));
+                this.sumaryItem = summary.slice(0, 3);
+                this.loadCatergory = false;
+            });
+        });
+    }
+    addToCat(item) {
+        item.quantity = 1;
+        this.product.addToCart(item);
+        this.cartValue.emit(this.cartItem.length);
+        this.toastr.info('Item has been added to cart', 'Added to Cart', {
+            positionClass: 'toast-bottom-left'
+        });
+    }
+    check_already_in_cart(id) {
+        if (this.cartItem.length === 0) {
+            return false;
+        }
+        else {
+            for (let i = 0; i < this.cartItem.length; i++) {
+                if (id === this.cartItem[i].id) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+    onScroll() {
+        this.page++;
+        this.loading = true;
+        this.product.getAllProducts(this.page).subscribe((res) => {
+            this.newdata = res;
+            this.loading = false;
+            let unqie = [...this.data, ...this.newdata];
+            const categories = [...new Set(unqie.map(bill => bill.id))];
+            console.log(categories);
+            // let may = [...new Set(unqie)];
+            this.data = unqie;
+        });
+    }
+};
+HomeComponent.ctorParameters = () => [
+    { type: src_app_services_api_service__WEBPACK_IMPORTED_MODULE_2__["ApiService"] },
+    { type: src_app_services_product_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] },
+    { type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"] }
+];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], HomeComponent.prototype, "cartValue", void 0);
+HomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-home',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/drugstoc_web/home/home.component.html")).default
+    })
+], HomeComponent);
+
+function compare(a, b) {
+    if (a.last_nom < b.last_nom) {
+        return -1;
+    }
+    if (a.last_nom > b.last_nom) {
+        return 1;
+    }
+    return 0;
+}
+
+
+/***/ }),
+
+/***/ "./src/app/drugstoc_web/home/home.module.ts":
+/*!**************************************************!*\
+  !*** ./src/app/drugstoc_web/home/home.module.ts ***!
+  \**************************************************/
+/*! exports provided: HomeModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.component */ "./src/app/drugstoc_web/home/home.component.ts");
+/* harmony import */ var _home_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home-routing.module */ "./src/app/drugstoc_web/home/home-routing.module.ts");
+/* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/carousel/fesm2015/ngx-bootstrap-carousel.js");
+/* harmony import */ var ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/progressbar */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/progressbar/fesm2015/ngx-bootstrap-progressbar.js");
+/* harmony import */ var ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/tabs */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/tabs/fesm2015/ngx-bootstrap-tabs.js");
+/* harmony import */ var ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-infinite-scroll */ "./node_modules/ngx-infinite-scroll/__ivy_ngcc__/modules/ngx-infinite-scroll.js");
+/* harmony import */ var ngx_lottie__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-lottie */ "./node_modules/ngx-lottie/__ivy_ngcc__/fesm2015/ngx-lottie.js");
+/* harmony import */ var ngx_scrollbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-scrollbar */ "./node_modules/ngx-scrollbar/__ivy_ngcc__/fesm2015/ngx-scrollbar.js");
+/* harmony import */ var ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-slick-carousel */ "./node_modules/ngx-slick-carousel/__ivy_ngcc__/fesm2015/ngx-slick-carousel.js");
+/* harmony import */ var ngx_wow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-wow */ "./node_modules/ngx-wow/__ivy_ngcc__/esm2015/ngx-wow.js");
+/* harmony import */ var src_app_app_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var src_app_components_sofbox_sofbox_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/components/sofbox/sofbox.module */ "./src/app/components/sofbox/sofbox.module.ts");
+/* harmony import */ var ngx_skeleton_loader__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-skeleton-loader */ "./node_modules/ngx-skeleton-loader/__ivy_ngcc__/fesm2015/ngx-skeleton-loader.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let HomeModule = class HomeModule {
+};
+HomeModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]],
+        exports: [_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _home_routing_module__WEBPACK_IMPORTED_MODULE_4__["HomeRoutingModule"],
+            ngx_infinite_scroll__WEBPACK_IMPORTED_MODULE_8__["InfiniteScrollModule"],
+            src_app_components_sofbox_sofbox_module__WEBPACK_IMPORTED_MODULE_14__["SofboxModule"],
+            ngx_lottie__WEBPACK_IMPORTED_MODULE_9__["LottieModule"].forRoot({ player: src_app_app_module__WEBPACK_IMPORTED_MODULE_13__["playerFactory"] }),
+            ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_6__["ProgressbarModule"],
+            ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_5__["CarouselModule"],
+            ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_7__["TabsModule"],
+            ngx_scrollbar__WEBPACK_IMPORTED_MODULE_10__["NgScrollbarModule"],
+            ngx_wow__WEBPACK_IMPORTED_MODULE_12__["NgwWowModule"],
+            ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_11__["SlickCarouselModule"],
+            ngx_skeleton_loader__WEBPACK_IMPORTED_MODULE_15__["NgxSkeletonLoaderModule"],
+        ]
+    })
+], HomeModule);
 
 
 

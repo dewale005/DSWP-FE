@@ -49,6 +49,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerCategoryComponent } from './drugstoc_web/per-category/per-category.component';
 import { PerCategoryListComponent } from './drugstoc_web/per-category-list/per-category-list.component';
 import { SearchComponent } from './drugstoc_web/search/search.component';
+import { HomeModule } from './drugstoc_web/home/home.module';
 
 export function playerFactory() {
   return player;
@@ -76,6 +77,7 @@ export function playerFactory() {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HomeModule,
     HttpClientModule,
     InfiniteScrollModule,
     FormsModule, 
