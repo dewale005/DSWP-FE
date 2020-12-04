@@ -1,8 +1,39 @@
-<div class="row">
+<div *ngIf="loading" class="row">
+    <div *ngFor="let item of data2; let i=index;" class="col-lg-3 col-md-12">
+        <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
+          <p style="margin-bottom: 0;">
+            <ngx-skeleton-loader count="1" [theme]="{
+              width: '30%',
+              'border-radius': '6px',
+              height: '70px',
+              'margin-bottom': '20px',
+              'margin-right': '20px'
+            }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+          </p>
+          <ngx-skeleton-loader count="1" [theme]="{
+            width: '70%',
+            'border-radius': '12px',
+            height: '15px',
+            'margin-bottom': '-5px',
+            'margin-right': '20px'
+          }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+              <hr>
+              <ul class="list-inline mb-0 d-flex justify-content-between">
+                <li class="list-inline-item">
+                </li>
+                <li class="list-inline-item">
+                </li>
+                <li class="list-inline-item">
+                </li>
+              </ul>
+          </app-iq-card>
+    </div>
+</div>
+<div *ngIf="!loading" class="row">
     <div *ngFor="let item of data; let i=index;" class="col-lg-3 col-md-12">
         <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
             <a routerLink="/company/{{item}}" class="iq-team text-center p-0">
-              <img *ngIf="!userId" src="{{getImage(item)}}" onerror="this.src='assets/images/drugstoc.png'" class="img-fluid mb-3 avatar-120" alt="">
+              <img *ngIf="!userId" src="{{getImage(item)}}" onerror="this.src='/Users/adewale/Desktop/drugstoc web/angular/src/assets/images/no_image2.png'" class="img-fluid mb-3 avatar-120" alt="">
               <img *ngIf="userId" src="assets/images/medplus.jpeg" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
               <!-- <h4 *ngIf="!userId" class="mb-0">Welcome</h4> -->
               <h4 class="mb-0">{{item}}</h4>

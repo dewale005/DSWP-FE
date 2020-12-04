@@ -30,7 +30,7 @@
 
           </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="!loading">
           <tr *ngFor="let order of orders; let i=index;">
             <td>{{order.name}}</td>
             <td>{{order.confirmation_date | date}}</td>
@@ -40,6 +40,42 @@
               <div class="badge badge-pill badge-{{getStatus(order.state)}}">{{getOrderStatus(order.state)}}</div>
             </td>
             <td>₦ {{order.amount_total | number : '1.2-2'}}</td>
+          </tr>
+          </tbody>
+          <tbody *ngIf="loading">
+          <tr *ngFor="let order of data2; let i=index;">
+            <td><ngx-skeleton-loader count="1" [theme]="{
+              width: '70%',
+              'border-radius': '12px',
+              height: '20px'
+            }" appearance="circle" animation="progress"></ngx-skeleton-loader></td>
+            <td><ngx-skeleton-loader count="1" [theme]="{
+              width: '70%',
+              'border-radius': '12px',
+              height: '20px'
+            }" appearance="circle" animation="progress"></ngx-skeleton-loader></td>
+            <td><ngx-skeleton-loader count="1" [theme]="{
+              width: '70%',
+              'border-radius': '12px',
+              height: '20px'
+            }" appearance="circle" animation="progress"></ngx-skeleton-loader></td>
+            <td><ngx-skeleton-loader count="1" [theme]="{
+              width: '70%',
+              'border-radius': '12px',
+              height: '20px'
+            }" appearance="circle" animation="progress"></ngx-skeleton-loader></td>
+            <td>
+              <div class="badge badge-pill"><ngx-skeleton-loader count="1" [theme]="{
+                width: '70px',
+                'border-radius': '12px',
+                height: '20px'
+              }" appearance="circle" animation="progress"></ngx-skeleton-loader></div>
+            </td>
+            <td><ngx-skeleton-loader count="1" [theme]="{
+              width: '70%',
+              'border-radius': '12px',
+              height: '20px'
+            }" appearance="circle" animation="progress"></ngx-skeleton-loader></td>
           </tr>
           </tbody>
         </table>

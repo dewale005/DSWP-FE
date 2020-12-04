@@ -28,15 +28,15 @@ import { SearchComponent } from '../drugstoc_web/search/search.component';
 const routes: Routes = [
   {
     path: '',
-    // loadChildren: './layouts/blank-layout/blank-layout.module#BlankLayoutModule'
-    // ./layouts/layout1/layout1.module#Layout1Module
-    component: HomeComponent,
+    loadChildren: '../drugstoc_web/home/home.module#HomeModule'
+    // ./layouts/layout1/layout1.module#Layout1Module /Users/adewale/Desktop/drugstoc web/angular/src/app/drugstoc_web/home/home.module.ts
+    // component: HomeComponent,
   },
-  {
-    path: 'products',
-    component: Dashboard2Component,
-    canActivate: [AuthGuard]
-  },
+  // {
+  //   path: 'products',
+  //   component: Dashboard2Component,
+  //   canActivate: [AuthGuard]
+  // },
   {
     path: 'new-products',
     component: ProductComponent,

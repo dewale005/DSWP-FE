@@ -7,12 +7,16 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class PerCategoryListComponent implements OnInit {
 
-  constructor(private list: ProductService) { }
-
+  constructor(private list: ProductService) {
+    this.data2.length = 40; 
+   }
+  loading: boolean = true;
   data: any = []
+  data2: any = []
 
   ngOnInit(){
     this.list.per_company().subscribe(res => {
+      this.loading = false;
       let arr: any = [];
       arr = res
       console.log(arr.sort())
@@ -425,7 +429,7 @@ export class PerCategoryListComponent implements OnInit {
       // case 'Union Swiss':
       //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
       default:
-        return 'assets/images/drugstoc.png'
+        return 'assets/images/no_image2.png'
     }
   }
 

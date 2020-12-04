@@ -12,8 +12,12 @@ export class MyOrdersComponent implements OnInit {
 
   private user_id;
   cartItem: any;
+  data2: any = []
+  loading: boolean = true;
 
-  constructor(private order: ProductService, private auth: AuthService, private toastr: ToastrService) { }
+  constructor(private order: ProductService, private auth: AuthService, private toastr: ToastrService) {
+    this.data2.length = 21; 
+   }
 
   public orders: any = [];
 
@@ -60,6 +64,7 @@ export class MyOrdersComponent implements OnInit {
     this.user_id = this.auth.userData;
     this.order.getMyOrders(this.user_id).subscribe(resp => {
       console.log(resp);
+      this.loading = false;
       this.orders = resp;
     })
     this.cartItem = this.order.getCatItem();

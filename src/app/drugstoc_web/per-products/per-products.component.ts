@@ -12,7 +12,9 @@ import { ProductService } from 'src/app/services/product.service';
 export class PerProductsComponent implements OnInit {
 
   public data: any = [];
+  public loading: boolean = true;
   public page = 0;
+  public data2: any = [];
   
   title: string = ''
 
@@ -21,11 +23,14 @@ export class PerProductsComponent implements OnInit {
   };
   cartItem: any;
 
-  constructor(private product: ProductService, private route: ActivatedRoute, private toastr: ToastrService) { }
+  constructor(private product: ProductService, private route: ActivatedRoute, private toastr: ToastrService) { 
+    this.data2.length = 21
+  }
 
   ngOnInit(): void {
     this.title = this.route.snapshot.params.id;
     this.product.lis_per_company(this.title).subscribe(resp => {
+      this.loading = false;
       console.log(resp);
       this.data = resp;
     })

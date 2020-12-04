@@ -12,11 +12,14 @@ export class PerCategoryComponent implements OnInit {
   private category: string = 'all'
   public categories: any = [];
   public data: any = [];
+  public data2: any = [];
 
   private newdata: any = [];
   cartItem: any;
 
-  constructor(private product: ProductService, private toastr: ToastrService) { }
+  constructor(private product: ProductService, private toastr: ToastrService) {
+    this.data2.length = 21
+   }
 
   ngOnInit(): void {
     this.product.getCategory().subscribe(res => {

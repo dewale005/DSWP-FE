@@ -12,17 +12,16 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class NavBar1Component implements OnInit{
 
-
-
+  photo: string 
   countTicket = 0;
-
-
   keyword = 'name';
   public searchList: any = [];
   public userData;
   public userName: string = '';
 
-  constructor(private store: Store<any>, private user: ProductService, private auth: AuthService, private router: Router,) { }
+  constructor(private store: Store<any>, private user: ProductService, private auth: AuthService, private router: Router,) {
+    this.photo = this.user.photo
+   }
 
   ngOnInit() {
     this.userData =this.auth.userData;
@@ -33,6 +32,7 @@ export class NavBar1Component implements OnInit{
     this.user.getProfile(this.userData).subscribe(res => {
       this.userName = res['name'];
     })
+    this.photo = this.user.photo
     this.user.getCart();
     setInterval(() => {
       this.countTicket = this.user.getCatItem().length

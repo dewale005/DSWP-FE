@@ -21,14 +21,47 @@
         <div class="iq-card">
           <div class="iq-card-body">
             <div id="js-product-list">
-              <div class="item" style="align-content: center; width: 100%;">
-                <ngx-skeleton-loader *ngIf="loading" count="6" [theme]="{
-                  width: '402px',
-                  'border-radius': '12px',
-                  height: '400px',
-                  'margin-bottom': '20px',
-                  'margin-right': '20px'
-                }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+              <div *ngIf="loading"  class="iq-card-body">
+                <div id="js-product-list">
+                  <div class="Products">
+                    <ul class="product_list gridcount grid row">
+                      <li *ngFor="let item of data2" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="product-miniature" style="width: 100%;">
+                          <div class="thumbnail-container">
+                            <ngx-skeleton-loader count="1" [theme]="{
+                              width: '100%',
+                              'border-radius': '12px',
+                              height: '200px',
+                              'margin-bottom': '-5px',
+                              'margin-right': '20px'
+                            }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                            <ngx-skeleton-loader count="1" [theme]="{
+                              width: '70%',
+                              'border-radius': '12px',
+                              height: '20px',
+                              'margin-bottom': '-5px',
+                              'margin-right': '20px'
+                            }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                            <ngx-skeleton-loader count="1" [theme]="{
+                              width: '95%',
+                              'border-radius': '12px',
+                              height: '15px',
+                              'margin-bottom': '-5px',
+                              'margin-right': '20px'
+                            }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                            <ngx-skeleton-loader count="1" [theme]="{
+                              width: '40%',
+                              'border-radius': '12px',
+                              height: '15px',
+                              'margin-bottom': '-5px',
+                              'margin-right': '20px'
+                            }" appearance="circle" animation="progress"></ngx-skeleton-loader>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div *ngIf="!loading" class="Products">
                 <ul class="product_list gridcount grid row">

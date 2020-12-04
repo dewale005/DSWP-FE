@@ -15,9 +15,13 @@ export class MyDrugstocComponent implements OnInit {
   public data: any = [];
   public category: any = [];
   private listData: any = [];
+  public loading: boolean = true;
   cartItem: any = [];
+  data2: any = [];
 
-  constructor(private product: ProductService, private auth: AuthService, private toastr: ToastrService) { }
+  constructor(private product: ProductService, private auth: AuthService, private toastr: ToastrService) {
+    this.data2.length = 21; 
+   }
 
   public chart1 = {
     chart: {
@@ -65,6 +69,7 @@ export class MyDrugstocComponent implements OnInit {
     this.userId = this.auth.userData;
     this.product.getMyDrugstoc(this.userId).subscribe(res => {
       console.log(res)
+      this.loading = false
       this.data = res;
       this.listData = res;
     })

@@ -59,7 +59,7 @@ export function playerFactory() {
     AppComponent,
     ErrorPageComponent,
     LayoutComponent,
-    HomeComponent,
+    // HomeComponent,
     ProductComponent,
     MyDrugstocComponent,
     MyOrdersComponent,

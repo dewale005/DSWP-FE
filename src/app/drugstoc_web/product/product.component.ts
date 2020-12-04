@@ -10,10 +10,13 @@ export class ProductComponent implements OnInit {
 
   public loading: boolean = true;
   public data: any = [];
+  public data2: any = [];
   public page = 0;
   cartItem: any[];
   
-  constructor(private product: ProductService, private toastr: ToastrService) { }
+  constructor(private product: ProductService, private toastr: ToastrService) { 
+    this.data2.length = 21;
+  }
 
   ngOnInit(): void {
     this.product.getAllProducts(this.page).subscribe(resp => {
