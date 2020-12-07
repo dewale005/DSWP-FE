@@ -378,7 +378,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-12 col-lg-12\">\n      <app-iq-card>\n        <div card-header class=\"iq-header-title\">\n          <h4 class=\"card-title\">Update you Profile</h4>\n        </div>\n        <img *ngIf=\"image == ''\" src=\"assets/images/medplus.jpeg\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n        <img *ngIf=\"image !== ''\" src=\"{{image}}\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n        <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"ngform\">\n          <div class=\"form-row\">\n              <div class=\"col-md-6 mb-3\">\n                <label for=\"validationDefault01\">Name</label>\n                <input disabled formControlName=\"name\" type=\"text\" class=\"form-control\" id=\"validationDefault01\" required>\n              </div>\n              <div class=\"col-md-6 mb-3\">\n                <label for=\"validationDefault02\">Phone Number</label>\n                <input disabled formControlName=\"phone\" type=\"text\" class=\"form-control\" id=\"validationDefault02\" required>\n              </div>\n              <div class=\"col-md-12 mb-12\">\n                <label for=\"validationDefaultUsername\">Address</label>\n                <div class=\"input-group\">\n                    <input disabled formControlName=\"address\" type=\"text\" class=\"form-control\" id=\"validationDefaultUsername\"  aria-describedby=\"inputGroupPrepend2\" required>\n                </div>\n              </div>\n              <div class=\"col-md-6 mb-3\">\n                <label for=\"validationDefault04\">Profile Photo</label>\n                <input type=\"file\" #userPhoto accept=\"image/x-png,image/gif,image/jpeg\" class=\"form-control-file formStyle\" (change)=\"onFileSelected($event)\">\n              </div>\n          </div>\n          <div class=\"form-group\">\n              <div class=\"form-check\">\n                <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"invalidCheck2\" required>\n                <label class=\"form-check-label\" for=\"invalidCheck2\">\n                Agree to terms and conditions\n                </label>\n              </div>\n          </div>\n          <div class=\"form-group\">\n              <button class=\"btn btn-primary\" type=\"submit\">Submit form</button>\n          </div>\n        </form>\n      </app-iq-card>\n    </div>\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-12 col-lg-12\">\n      <app-iq-card>\n        <div card-header class=\"iq-header-title\">\n          <h4 class=\"card-title\">Update you Profile</h4>\n        </div>\n        <img *ngIf=\"image == ''\" src=\"assets/images/medplus.jpeg\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n        <img *ngIf=\"image !== ''\" src=\"{{image}}\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n        <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"ngform\">\n          <div class=\"form-row\">\n              <div class=\"col-md-6 mb-3\">\n                <label for=\"validationDefault01\">Name</label>\n                <input value=\"{{username}}\" disabled formControlName=\"name\" type=\"text\" class=\"form-control\" id=\"validationDefault01\" required>\n              </div>\n              <div class=\"col-md-6 mb-3\">\n                <label for=\"validationDefault02\">Phone Number</label>\n                <input disabled value=\"{{phone}}\" formControlName=\"phone\" type=\"text\" class=\"form-control\" id=\"validationDefault02\" required>\n              </div>\n              <div class=\"col-md-12 mb-12\">\n                <label for=\"validationDefaultUsername\">Address</label>\n                <div class=\"input-group\">\n                    <input disabled formControlName=\"address\" value=\"{{address}}\" type=\"text\" class=\"form-control\" id=\"validationDefaultUsername\"  aria-describedby=\"inputGroupPrepend2\" required>\n                </div>\n              </div>\n              <div class=\"col-md-6 mb-3\">\n                <label for=\"validationDefault04\">Profile Photo</label>\n                <input type=\"file\" #userPhoto accept=\"image/x-png,image/gif,image/jpeg\" class=\"form-control-file formStyle\" (change)=\"onFileSelected($event)\">\n              </div>\n          </div>\n          <div class=\"form-group\">\n              <div class=\"form-check\">\n                <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"invalidCheck2\" required>\n                <label class=\"form-check-label\" for=\"invalidCheck2\">\n                Agree to terms and conditions\n                </label>\n              </div>\n          </div>\n          <div class=\"form-group\">\n              <button class=\"btn btn-primary\" type=\"submit\">Save Settings</button>\n          </div>\n        </form>\n      </app-iq-card>\n    </div>\n  </div>");
 
 /***/ }),
 
@@ -3184,25 +3184,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var src_app_services_product_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/product.service */ "./src/app/services/product.service.ts");
+/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var src_app_services_product_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/product.service */ "./src/app/services/product.service.ts");
+
 
 
 
 
 let ProfileComponent = class ProfileComponent {
-    constructor(profile, fb) {
+    constructor(profile, fb, auth) {
         this.profile = profile;
         this.fb = fb;
+        this.auth = auth;
         this.image = '';
+        this.username = '';
+        this.address = '';
+        this.phone = '';
         this.ngform = this.fb.group({
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
-            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
-            phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.username, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            address: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.address, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
+            phone: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.phone, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
         });
     }
     ngOnInit() {
-        this.profile.getProfile(7977).subscribe(resp => {
-            console.log(resp[0]);
+        this.userId = this.auth.userData;
+        this.profile.getProfile(this.userId).subscribe(resp => {
+            console.log(resp);
+            this.username = resp['name'];
+            this.address = resp['contact_address'];
+            this.phone = resp['mobile'];
         });
         this.image = this.profile.photo;
     }
@@ -3219,8 +3229,9 @@ let ProfileComponent = class ProfileComponent {
     }
 };
 ProfileComponent.ctorParameters = () => [
-    { type: src_app_services_product_service__WEBPACK_IMPORTED_MODULE_3__["ProductService"] },
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] }
+    { type: src_app_services_product_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] }
 ];
 ProfileComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

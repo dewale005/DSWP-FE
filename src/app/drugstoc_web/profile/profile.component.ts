@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 import { ProductService } from 'src/app/services/product.service';
 
 export interface FileReaderEventTarget extends EventTarget {
@@ -20,18 +21,27 @@ export class ProfileComponent implements OnInit {
 
   public ngform: FormGroup;
   public image: string = '';
+  userId: string;
+  username: string = '';
+  address: string = '';
+  phone: string = '';
 
-  constructor(private profile: ProductService, public fb: FormBuilder) {
+
+  constructor(private profile: ProductService, public fb: FormBuilder, private auth: AuthService) {
     this.ngform = this.fb.group({
-      name: new FormControl('', [Validators.required]),
-      address: new FormControl('', [Validators.required]),
-      phone: new FormControl('', [Validators.required]),
+      name: new FormControl(this.username, [Validators.required]),
+      address: new FormControl(this.address, [Validators.required]),
+      phone: new FormControl(this.phone, [Validators.required]),
     });
    }
 
   ngOnInit() {
-    this.profile.getProfile(7977).subscribe(resp => {
-      console.log(resp[0])
+    this.userId = this.auth.userData;
+    this.profile.getProfile(this.userId).subscribe(resp => {
+      console.log(resp)
+      this.username = resp['name'];
+			this.address = resp['contact_address'];
+			this.phone = resp['mobile'];
     })
 
     this.image = this.profile.photo;
