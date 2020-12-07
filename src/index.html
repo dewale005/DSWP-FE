@@ -10,6 +10,13 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
 
+  <style>
+		/* This only works with JavaScript, 
+		   if it's not present, don't show loader */
+		.no-js #load { display: none;  }
+		.js #load { display: block; position: absolute; bottom: 50%; top: 50%; margin-left: auto; margin-right: auto }
+	</style>
+
   <!--Google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -35,8 +42,22 @@
 </script>
 <!-- <script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiM2N2MxOGUiLCJ3ZWIiOnsiYm90SWQiOiI1ZmM0ZWQwMzljZDk1ZTE2MDA2OWZlYWYiLCJ0aGVtZSI6IiM2N2MxOGUifX0=" async defer></script> -->
 <script src="//code.tidio.co/ogocxh3zcgb4cdykhwgct7zwamm62w9e.js" async></script>
+<script>
+  // Wait for window load
+  $(window).load(function() {
+    // Animate loader off screen
+    $("#load").animate({
+      top: -200
+    }, 3000);
+  });
+</script>	
 </head>
 <body>
+  <div id="load">
+    <div style="position: absolute; top: 50%; bottom: 50%; width: 100%;">
+      <p style="text-align: center;">Welcome to DrugStoc, we're preparing your space....</p>
+    </div>
+  </div>
   <app-root></app-root>
 </body>
 </html>
