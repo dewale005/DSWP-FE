@@ -48,7 +48,7 @@
     // Animate loader off screen
     $("#load").animate({
       top: -200
-    }, 3000);
+    }, 200000);
   });
 </script>	
 </head>
@@ -56,6 +56,12 @@
   <div id="load">
     <div style="position: absolute; top: 50%; bottom: 50%; width: 100%;">
       <p style="text-align: center;">Welcome to DrugStoc, we're preparing your space....</p>
+      <div class="initial-load-animation">
+        <!-- <div class="linkedin-image"></div> -->
+        <div class="loading-bar">
+          <div class="blue-bar"></div>
+        </div>
+      </div>
     </div>
   </div>
   <app-root></app-root>

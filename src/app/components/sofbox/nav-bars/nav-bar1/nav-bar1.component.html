@@ -5,11 +5,9 @@
       <div class="top-logo">
         <a href="index.html" class="logo">
           <img src="/assets/images/drugstoc.png" class="img-fluid" alt="">
-          <!-- <span>Sofbox</span> -->
         </a>
       </div>
     </div>
-    <!-- <app-breadcrumb1 title="Dashboard" [items]="breadCrumbItems"></app-breadcrumb1> -->
     <nav *ngIf="userData" class="navbar navbar-expand-lg navbar-light p-0">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="ri-menu-3-line"></i>
@@ -24,7 +22,6 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto navbar-list">
           <li class="nav-item">
-            <!-- <a class="search-toggle iq-waves-effect" href="javascript:void(0);"><i class="ri-search-line"></i></a> -->
             <div class="ng-autocomplete">
               <ng-autocomplete 
                 [data]="searchList"
@@ -49,34 +46,6 @@
               </ng-template>
               </div>
           </li>
-          <!-- <li class="nav-item dropdown">
-            <a href="javascript:void(0);" class="search-toggle iq-waves-effect"><i class="ri-mail-line"></i></a>
-            <div class="iq-sub-dropdown">
-              <div class="iq-card shadow-none m-0">
-                <div class="iq-card-body p-0 ">
-                  <div class="bg-primary p-3">
-                    <h5 class="mb-0 text-white">All Messages<small class="badge  badge-light float-right pt-1">{{ messagesList.length }}</small></h5>
-                  </div>
-                  <a *ngFor="let message of messagesList" [href]="message.link" class="iq-sub-card" >
-                    <div class="media align-items-center">
-                      <div class="">
-                        <img class="avatar-40 rounded" [src]="message.image" alt="">
-                      </div>
-                      <div class="media-body ml-3">
-                        <h6 class="mb-0 ">{{ message.title }}</h6>
-                        <small class="float-left font-size-12">{{ message.date_format }}</small>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item iq-film-block" *ngIf="countTicket" (click)="clickPaymentShow(countTicket)">
-            <a href="javascript:void(0);" class="iq-waves-effect"><i class="ri-film-line"></i>
-              <span class="menu-tag">{{ countTicket }}</span>
-            </a>
-          </li> -->
 
           <li class="nav-item">
             <a routerLink="/cart" class="iq-waves-effect">
@@ -84,31 +53,7 @@
               <span *ngIf="countTicket !== 0" class="menu-tag">{{countTicket}}</span>
             </a>
           </li>
-          <!-- <li class="nav-item">
-            <a href="javascript:void(0);" class="search-toggle iq-waves-effect"><i class="ri-notification-2-line"></i></a>
-            <div class="iq-sub-dropdown">
-              <div class="iq-card shadow-none m-0">
-                <div class="iq-card-body p-0 ">
-                  <div class="bg-danger p-3">
-                    <h5 class="mb-0 text-white">All Notifications<small class="badge  badge-light float-right pt-1">{{ notificationList.length }}</small></h5>
-                  </div>
-                  <a *ngFor="let notification of notificationList" href="javascript:void(0);" class="iq-sub-card" >
-                    <div class="media align-items-center">
-                      <div class="" *ngIf="notification.image">
-                        <img class="avatar-40 rounded" [src]="notification.image" alt="">
-                      </div>
-                      <div class="media-body ml-3">
-                        <h6 class="mb-0 ">{{ notification.title }}</h6>
-                        <small class="float-right font-size-12">{{ notification.date_format }}</small>
-                        <p class="mb-0">{{ notification.sub_title }}</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li> -->
-          <!-- <li class="nav-item iq-full-screen"><a href="javascript:void(0);" class="iq-waves-effect" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li> -->
+
         </ul>
       </div>
       <ul *ngIf="userData" class="navbar-list">
