@@ -12,11 +12,14 @@ import { ProductService } from 'src/app/services/product.service';
 export class SearchComponent implements OnInit {
 	constructor(
 		public apiService: ApiService,
-		private product: ProductService, private toastr: ToastrService, private route: ActivatedRoute	) {}
+		private product: ProductService, private toastr: ToastrService, private route: ActivatedRoute	) {
+			this.data3.length = 21;
+		}
 
 	data2: any = [];
+	public data3: any = [];
 
-	loading: boolean = false;
+	loading: boolean = true;
 
 	image: any;
 
@@ -31,6 +34,7 @@ export class SearchComponent implements OnInit {
 	const { data } = this.route.snapshot.params;
 	this.product.search_result(data).subscribe(res => {
 		this.data2 = res;
+		this.loading = false;
 	})
 		this.product.getAllProducts(this.page).subscribe((resp) => {
 			let arr: any = []
@@ -64,16 +68,16 @@ export class SearchComponent implements OnInit {
 		});
 	}
 
-	onScroll() {
-    const { data } = this.route.snapshot.params;
-		this.page++;
-		this.loading = true;
-		this.product.getAllProducts(this.page).subscribe((resp) => {
-	//   let res = resp.filter(n => n.name.toLowerCase().includes(data.toLowerCase())) 
-	// 		console.log(res, data);
-	// 		this.newdata = res;
-	// 		this.loading = false;
-	// 		this.data2 = [ ...this.data2, ...this.newdata ];
-		});
-	}
+	// onScroll() {
+    // const { data } = this.route.snapshot.params;
+	// 	this.page++;
+	// 	this.loading = true;
+	// 	this.product.getAllProducts(this.page).subscribe((resp) => {
+	// //   let res = resp.filter(n => n.name.toLowerCase().includes(data.toLowerCase())) 
+	// // 		console.log(res, data);
+	// // 		this.newdata = res;
+	// // 		this.loading = false;
+	// // 		this.data2 = [ ...this.data2, ...this.newdata ];
+	// 	});
+	// }
 }

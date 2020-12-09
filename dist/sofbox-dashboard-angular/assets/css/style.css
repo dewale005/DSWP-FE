@@ -1127,3 +1127,7 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
 .initial-load-animation .fade-load .loading-bar {
   transform: rotateY(90deg);
 }
+
+.tidio-1i4qef3 {
+  display: none !important;
+}

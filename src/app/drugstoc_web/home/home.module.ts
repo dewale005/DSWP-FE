@@ -18,7 +18,6 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [ HomeComponent ],
-  exports: [HomeComponent], 
   imports: [
     CommonModule,
     HomeRoutingModule,
