@@ -70,9 +70,6 @@ export class NavBar1Component implements OnInit{
   search($event) {
     // console.log($event.target.value)
     this.router.navigate([`/search/${$event.target.value}`])
-    setTimeout(() => {
-      window.location.reload();
-    }, 2000)
   }
   
   onFocused(e){

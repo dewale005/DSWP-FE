@@ -190,6 +190,12 @@
                                       <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
                                     </div>
                                     <div class="product-description">
+                                      <h4 *ngIf="item.qty_available === 0" style="padding: 5px;
+                                      background: red;
+                                      margin: 10px 0;
+                                      color: #fff;
+                                      text-align: center;
+                                      border-radius: 12px;">Out Of Stock</h4>
                                       <h4>{{ item.name }}</h4>
                                       <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
                                       <div *ngIf="userId" class="ratting">
@@ -205,8 +211,8 @@
                                         <div class="product-price">
                                           <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
                                         </div>
-                                        <div class="product-action">
-                                          <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a (click)="addToCat(item)" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
+                                        <div class="product-action" *ngIf="item.qty_available > 0">
+                                          <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a (click)="addToCat(item)"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
                                           <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
                                         </div>
                                       </div>

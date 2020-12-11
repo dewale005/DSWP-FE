@@ -11,6 +11,8 @@ export class SignInComponent implements OnInit {
 
   ngform: FormGroup;
 
+  isProcessing: boolean = false;
+
   constructor(public fb: FormBuilder, private auth: AuthService) {
     this.ngform = this.fb.group({
       email: new FormControl('', [Validators.required]),
@@ -22,7 +24,9 @@ export class SignInComponent implements OnInit {
   }
 
   onSubmit() {
-    this.auth.login(this.ngform.value);
+    this.isProcessing = true;
+    this.auth.login(this.ngform.value)
+    this.isProcessing = false;
   }
 
 }

@@ -22,12 +22,12 @@
       <label for="exampleInputEmail2">Category</label>
       <select class="form-control mb-0" formControlName="category" id="exampleInputEmail2">
         <option disabled>Category</option>
-        <option>Pharmacy</option>
-        <option>Doctor Office</option>
-        <option>Clinic</option>
-        <option>Hospital</option>
-        <option>Nursing Homes</option>
-        <option>Others</option>
+        <option value="pharmacy">Pharmacy</option>
+        <option value="doctor-office">Doctor Office</option>
+        <option value="clinic">Clinic</option>
+        <option value="hospital">Hospital</option>
+        <option value="nursing-homes">Nursing Homes</option>
+        <option value="others">Others</option>
       </select>
       <!-- <input type="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email"> -->
     </div>
@@ -40,7 +40,8 @@
         <input type="checkbox" class="custom-control-input" id="customCheck1">
         <label class="custom-control-label" for="customCheck1">I accept <a href="javascript:void(0);">Terms and Conditions</a></label>
       </div> -->
-      <button [disabled]="isProcessing" type="submit" class="btn btn-primary float-right">{{!isProcessing ? 'Sign Up' : "Registering...."}}</button>
+      <button *ngIf="!isProcessing" type="submit" class="btn btn-primary float-right">{{!isProcessing ? 'Sign Up' : "Registering...."}}</button>
+      <p *ngIf="isProcessing">Loading....</p>
     </div>
     <div class="sign-info">
       <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a routerLink="/auth/sign-in">Log In</a></span>

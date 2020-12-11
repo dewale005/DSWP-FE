@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ApiService } from 'src/app/services/api.service';
@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/services/product.service';
 	templateUrl: './search.component.html',
 	styleUrls: []
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent implements OnInit{
 	constructor(
 		public apiService: ApiService,
 		private product: ProductService, private toastr: ToastrService, private route: ActivatedRoute	) {
@@ -22,6 +22,8 @@ export class SearchComponent implements OnInit {
 	loading: boolean = true;
 
 	image: any;
+	query: any;
+	newquery: any;
 
 	usersData: any;
 
@@ -32,20 +34,50 @@ export class SearchComponent implements OnInit {
 
 	ngOnInit() {
 	const { data } = this.route.snapshot.params;
-	this.product.search_result(data).subscribe(res => {
-		this.data2 = res;
-		this.loading = false;
-	})
-		this.product.getAllProducts(this.page).subscribe((resp) => {
-			let arr: any = []
-			arr = resp;
-      this.loading = false;
-      let res = arr.filter(n => n.name.toLowerCase().includes(data.toLowerCase()) || n.x_studio_field_xH9Vy.toLowerCase().includes(data.toLowerCase())) 
-      console.log(res);
+	this.query === this.route.snapshot.params.data;
+	this.get_search(data);
+	// setInterval(() => {
+	// 	this.newquery === this.route.snapshot.params;
+	// 	console.log(this.query === this.newquery, this.newquery, this.query);
+	// 	// this.newquery === this.route.snapshot.params.data
+	// },1000)
+
+
+	// console.log(this.query === this.route.snapshot.params);
+	setInterval(() => {
+		console.log(this.route.snapshot.params.data);
+		console.log(this.query === this.route.snapshot.params.data);
+	}, 200)
+
+	// if(this.query === this.route.snapshot.params.data) {
+	// 	return;
+	// } else {
+		
+	// }
+	// 	this.product.getAllProducts(this.page).subscribe((resp) => {
+	// 		let arr: any = []
+	// 		arr = resp;
+	// 		let res = arr.filter(n => n.name.toLowerCase().includes(data.toLowerCase()) || n.x_studio_field_xH9Vy.toLowerCase().includes(data.toLowerCase())) 
+	// 		this.loading = false;
+    //   console.log(res);
       
-    });
+    // });
     this.cartItem = this.product.getCatItem();
   }
+
+  get_search(data) {
+	this.loading = true;
+		this.product.search_result(data).subscribe(res => {
+			this.data2 = res;
+			this.loading = false;
+		})
+  }
+
+//   ngOnChanges(changes: SimpleChanges): void {
+// 	  //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+// 	  //Add '${implements OnChanges}' to the class.
+// 	  console.log(SimpleChanges)
+//   }
   
   public check_already_in_cart(id) {
 		if (this.cartItem.length === 0) {
