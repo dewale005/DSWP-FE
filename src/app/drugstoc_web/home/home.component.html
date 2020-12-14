@@ -185,35 +185,21 @@
                                 <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
                                   <div class="product-miniature">
                                     <div class="thumbnail-container">
-                                      <div class="special-offer">
-                                        <a *ngIf="!item.image" routerLink="/products/itemdetail/{{item.id}}" class="offer-img-wrap">
-                                          <img src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" />
-                                            <div *ngIf="item.qty_available === 0" class="offer-discount-wrap">
-                                              <div class="offer-discount">
-                                                <div class="test">
-                                                  <div class="offer-discount-rotate"><strong>Out of Stock</strong></div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                        </a>
-                                        <!-- Product heading, price etc ... -->
-                                      </div>
-                                      <div class="special-offer">
-                                        <a *ngIf="item.image" routerLink="/products/itemdetail/{{item.id}}" class="offer-img-wrap">
-                                          <img src="data:image/jpeg;base64,{{item.image}}" alt="product-image" class="img-fluid" />
-                                            <div *ngIf="item.qty_available === 0" class="offer-discount-wrap">
-                                              <div class="offer-discount">
-                                                <div class="test">
-                                                  <div class="offer-discount-rotate"><strong>Out of Stock</strong></div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                        </a>
-                                        <!-- Product heading, price etc ... -->
-                                      </div>
+                                      <div class="box">
+                                        <a *ngIf="!item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" /> </a>
+                                        <a *ngIf="item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="data:image/jpeg;base64,{{item.image}}" alt="product-image" class="img-fluid" /> </a>
+                                        <div *ngIf="item.qty_available === 0" class="ribbon ribbon-top-right"><span>Out Of Stock</span></div>
                                       <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
                                     </div>
+                                    </div>
                                     <div class="product-description">
+                                      
+                                      <!-- <h4 *ngIf="item.qty_available === 0" style="padding: 5px;
+                                      background: red;
+                                      margin: 10px 0;
+                                      color: #fff;
+                                      text-align: center;
+                                      border-radius: 12px;">Out Of Stock</h4> -->
                                       <h4>{{ item.name }}</h4>
                                       <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
                                       <div *ngIf="userId" class="ratting">
