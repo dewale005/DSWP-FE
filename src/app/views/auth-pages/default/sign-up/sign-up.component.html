@@ -27,7 +27,7 @@
         <option value="clinic">Clinic</option>
         <option value="hospital">Hospital</option>
         <option value="nursing-home">Nursing Homes</option>
-        <option value="others">Others</option>
+        <!-- <option value="others">Others</option> -->
       </select>
       <!-- <input type="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email"> -->
     </div>
@@ -41,7 +41,11 @@
         <label class="custom-control-label" for="customCheck1">I accept <a href="javascript:void(0);">Terms and Conditions</a></label>
       </div> -->
       <button *ngIf="!isProcessing" type="submit" class="btn btn-primary float-right">{{!isProcessing ? 'Sign Up' : "Registering...."}}</button>
-      <p *ngIf="isProcessing">Loading....</p>
+        <div *ngIf="isProcessing" class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
     </div>
     <div class="sign-info">
       <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a routerLink="/auth/sign-in">Log In</a></span>

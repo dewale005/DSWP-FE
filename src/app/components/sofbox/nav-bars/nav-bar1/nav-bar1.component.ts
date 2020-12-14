@@ -68,6 +68,9 @@ export class NavBar1Component implements OnInit{
   }
 
   search($event) {
+    setTimeout(() => {
+      window.location.reload();
+    }, 100)
     // console.log($event.target.value)
     this.router.navigate([`/search/${$event.target.value}`])
   }

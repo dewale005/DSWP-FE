@@ -1,3 +1,89 @@
 .footer-bottom {
     display: none !important;
   }
+
+  .special-offer {
+    margin: 30px 15px;
+  }
+  
+  /* Special offer */
+  
+  .special-offer .offer-img-wrap {
+    display: block;
+    position: relative;
+  }
+  
+  .special-offer .offer-img-wrap img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .special-offer .offer-discount-wrap {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    overflow: hidden;
+  }
+  
+  .special-offer .offer-discount {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .special-offer.deg-30 .offer-discount {
+    height: 42.3px; /* 100 - 57.5 */
+  }
+  
+  .special-offer .offer-discount::before,
+  .special-offer .offer-discount::after {
+    content: '';
+    position: absolute;
+    background: black;
+  }
+  
+  .special-offer .offer-discount::before {
+    width: 20px; /* 40 x 0,5 */
+    height: 5px;
+    bottom: -5px;
+    left: -37px; /* 40 - 5px */
+    transform: skewX(45deg);
+  }
+  
+  .special-offer .offer-discount::after {
+    width: 5px;
+    height: 20px;
+    right: -5px;
+    top: -37px; /* 40 - 5px */
+    transform: skewY(45deg);
+  }
+  
+  .special-offer .offer-discount-rotate {
+    position: absolute;
+    z-index: 1;
+    width: 500%;
+    left: -200%; /* (width - 100%) / 2 */
+    top: 50%;
+    height: 40px;
+    margin-top: -20px; /* height x -0,5 */
+    line-height: 40px; /* same as height, or a little bit more, to compensate font */
+    transform: rotate(-45deg);
+    font-size: 17px;
+    text-align: center;
+    background: rgb(246, 30, 30);
+    color: white;
+  }
+  
+  .special-offer.deg-30 .offer-discount-rotate {
+    transform: rotate(-30deg);
+  }
+  
+  .special-offer.deg-30 .offer-discount-rotate strong {
+    position: relative;
+    right: -14px;
+  }
