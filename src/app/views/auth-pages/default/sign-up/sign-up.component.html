@@ -40,6 +40,7 @@
         <input type="checkbox" class="custom-control-input" id="customCheck1">
         <label class="custom-control-label" for="customCheck1">I accept <a href="javascript:void(0);">Terms and Conditions</a></label>
       </div> -->
+      <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a routerLink="/auth/sign-in">Log In</a></span>
       <button *ngIf="!isProcessing" type="submit" class="btn btn-primary float-right">{{!isProcessing ? 'Sign Up' : "Registering...."}}</button>
         <div *ngIf="isProcessing" class="spinner">
           <div class="bounce1"></div>
@@ -48,7 +49,6 @@
         </div>
     </div>
     <div class="sign-info">
-      <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a routerLink="/auth/sign-in">Log In</a></span>
       <ul class="iq-social-media">
         <li><a href="https://www.facebook.com/drugstoc"><i class="ri-facebook-box-line"></i></a></li>
         <li><a href="https://twitter.com/DrugStocNg"><i class="ri-twitter-line"></i></a></li>
