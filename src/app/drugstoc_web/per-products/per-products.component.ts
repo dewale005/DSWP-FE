@@ -258,10 +258,192 @@ export class PerProductsComponent implements OnInit {
         return '../../../assets/images/Manufacturer Names/ GSK .png'
       case 'HOVID':
         return '../../../assets/images/Manufacturer Names/HOVID.png'
-      case 'Union Swiss':
-        return '../../../assets/images/Manufacturer Names/Union_Swiss.png'
-      // case 'Union Swiss':
+      case 'Optrex':
+        return '../../../assets/images/Manufacturer Names/ Optrex .png'
+      case 'Osang Healthcare':
+        return '../../../assets/images/Manufacturer Names/ Osang Healthcare .png'
+      // case 'POM':
       //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      // case 'Parke Davis and co.':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'PeakPharm':
+        return '../../../assets/images/Manufacturer Names/ PeakPharm .png'
+      // case 'Pemason Pharmaceuticals':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Perigo':
+        return '../../../assets/images/Manufacturer Names/ Perigo .png'
+      case 'Pfizer':
+        return '../../../assets/images/Manufacturer Names/ Pfizer .png'
+      case 'Pfizer Consumer Healthcare':
+        return '../../../assets/images/Manufacturer Names/ Pfizer Consumer Healthcare .png'
+      case 'Phamatex Industries':
+        return '../../../assets/images/Manufacturer Names/ Phamatex Industries .png'
+      case 'Pharma Ethics ':
+        return '../../../assets/images/Manufacturer Names/ Pharma Ethics  .png'
+      case 'Pharma Max':
+        return '../../../assets/images/Manufacturer Names/ Pharma Max .png'
+      case 'Pharma-Deko PLC':
+        return '../../../assets/images/Manufacturer Names/ Pharma Deko .png'
+      // case 'Pharmacy Plus':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      // case 'Pharmaton':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Pinnacle Health Pharm Ltd':
+        return '../../../assets/images/Manufacturer Names/ Pinnacle Health Pharm Ltd .png'
+      case 'Plush Organics':
+        return '../../../assets/images/Manufacturer Names/ Plush Organics .png'
+      // case 'Popular Pharmaceuticals':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Prevail':
+        return '../../../assets/images/Manufacturer Names/ Prevail .svg'
+      case 'Prisma Pharmaceuticals':
+        return '../../../assets/images/Manufacturer Names/ Prisma Pharmaceuticals .png'
+      case 'Procter & Gamble ':
+        return '../../../assets/images/Manufacturer Names/ Procter & Gamble .png'
+      case 'Pulse Pharmaceuticals':
+        return '../../../assets/images/Manufacturer Names/ Pulse Pharmaceuticals .png'
+      // case 'Qualiphar':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'RICH RESOURCE GLOBAL SUPPLY CHAIN LTD':
+        return '../../../assets/images/Manufacturer Names/   RICH RESOURCE GLOBAL SUPPLY CHAIN LTD .png'
+      // case 'Reagan Remedies':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Reals Pharmaceuticals Limited':
+        return '../../../assets/images/Manufacturer Names/ Reals Pharmaceuticals Limited .png'
+      case 'Reckitt Benckiser':
+        return '../../../assets/images/Manufacturer Names/Reckitt Beckinser.png'
+      // case 'Reload':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Reproaid':
+        return '../../../assets/images/Manufacturer Names/ Reproaid .png'
+      case 'Roche':
+        return '../../../assets/images/Manufacturer Names/ Roche .png'
+      case 'Rohto Pharmaceutical Company':
+        return '../../../assets/images/Manufacturer Names/  Rohto Pharmaceutical Company .png'
+      case 'Rossmax Swiss GmbH':
+        return '../../../assets/images/Manufacturer Names/ Rossmax Swiss GmbH .svg'
+      // case 'Rotex Medica':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Ruzu Herbal Products':
+        return '../../../assets/images/Manufacturer Names/ Ruzu Herbal Products .png'
+      case 'SD Biosensor':
+        return '../../../assets/images/Manufacturer Names/ SD Biosensor .png'
+      case 'SKG Pharma Limited':
+        return '../../../assets/images/Manufacturer Names/ SKG Pharma Limited .png'
+      case 'SKT Healthcare':
+        return '../../../assets/images/Manufacturer Names/ SKT Healthcare .png'
+      case 'Saffron':
+        return '../../../assets/images/Manufacturer Names/Saffron.png'
+      // case 'Safi':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Sagar Vitaceutical Nig Ltd':
+        return '../../../assets/images/Manufacturer Names/ Sagar Vitaceutical Nig Ltd .png'
+      case 'Sam Pharmaceuticals':
+        return '../../../assets/images/Manufacturer Names/ Sam Pharmaceuticals .gif'
+      case 'Sanofi':
+        return '../../../assets/images/Manufacturer Names/Sanofi.png'
+      case 'Sarantis':
+        return '../../../assets/images/Manufacturer Names/ Sarantis .png'
+      // case 'Saro Lifecare ':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Seagreen Pharmaceuticals':
+        return '../../../assets/images/Manufacturer Names/  Seagreen Pharmaceuticals .png'
+      case 'Septona':
+        return '../../../assets/images/Manufacturer Names/ Septona .png'
+      case 'Serum Institute Of India':
+        return '../../../assets/images/Manufacturer Names/Serum Institute Of India.png'
+      case 'Servier':
+        return '../../../assets/images/Manufacturer Names/ Servier .png'
+      case 'Seven Seas':
+        return '../../../assets/images/Manufacturer Names/ Seven Seas .png'
+      case 'Shalina Health Care Nigeria Limited':
+        return '../../../assets/images/Manufacturer Names/ Shalina HealthCare Nigeria Limited .png'
+      case 'Shalina Healthcare':
+        return '../../../assets/images/Manufacturer Names/ Shalina HealthCare Nigeria Limited .png'
+      case 'Sii':
+        return '../../../assets/images/Manufacturer Names/ Sii .png'
+      case 'Silver Healthcare ':
+        return '../../../assets/images/Manufacturer Names/ Silver Healthcare  .png'
+      // case 'Society for Family Health':
+      //   return '../../../assets/images/Manufacturer Names/ Seven Seas .png'
+      case 'Sri Trang':
+        return '../../../assets/images/Manufacturer Names/Sri Trang.png'
+      case 'Standard Generic':
+        return '../../../assets/images/Manufacturer Names/  Standard Generics .png'
+      case 'Sterling Drugs':
+        return '../../../assets/images/Manufacturer Names/ Sterling Drugs .png'
+      case 'Strides Shasun':
+        return '../../../assets/images/Manufacturer Names/Strides Shasun.png'
+      case 'Sumitomo Chemical Company':
+        return '../../../assets/images/Manufacturer Names/sumitomo chemical.png'
+      // case 'Sure Health & Beauty Ltd':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      // case 'Swipha':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Swiss Precision Diagnostics Gmb':
+        return '../../../assets/images/Manufacturer Names/ Swiss Precision Diagnostics GmbH .png'
+      // case 'Taylek Drugs':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      // case 'Teva':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'The Mentholatum Company Ltd':
+        return '../../../assets/images/Manufacturer Names/ The Mentholatum Company Ltd .png'
+      case 'Thornton and Ross Ltd':
+        return '../../../assets/images/Manufacturer Names/ Thornton and Ross Ltd .png'
+      case 'Tiger Balm':
+        return '../../../assets/images/Manufacturer Names/ Tiger Balm .png'
+      // case 'Titan Natural Ltd':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Tricare Pharma':
+        return '../../../assets/images/Manufacturer Names/ Tricare Pharma .png'
+      case 'Tuyil Pharm Limited':
+        return '../../../assets/images/Manufacturer Names/ Tuyil Pharm Limited .png'
+      case 'U-Mec':
+        return '../../../assets/images/Manufacturer Names/ U-Mec .png'
+      case 'UCB Pharma Ltd.':
+        return '../../../assets/images/Manufacturer Names/ UCB Pharma Ltd. .png'
+      case 'UST Corporation':
+        return '../../../assets/images/Manufacturer Names/ UST Corporation .png'
+      case 'Uni-medical Healthcare':
+        return '../../../assets/images/Manufacturer Names/ Uni-medical Healthcare .png'
+      case 'Unichem':
+        return '../../../assets/images/Manufacturer Names/ Unichem.png'
+      // case 'Unicure Pharmaceuticals':
+      //   return '../../../assets/images/Manufacturer Names/ Unicure Pharmaceuticals .png'
+      case 'Union Swiss':
+        return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Unique Pharmaceuticals':
+        return '../../../assets/images/Manufacturer Names/ Unique Pharmaceuticals Limited .png'
+      case 'Uvex':
+        return '../../../assets/images/Manufacturer Names/ Uvex .png'
+      case 'VSSCO':
+        return '../../../assets/images/Manufacturer Names/ VSSCO .png'
+      case 'Valupak':
+        return '../../../assets/images/Manufacturer Names/ Valupak .png'
+      case 'Vins':
+        return '../../../assets/images/Manufacturer Names/ Vins .png'
+      case 'Vita Care PVT LTD':
+        return '../../../assets/images/Manufacturer Names/ Vita Care PVT LTD .png'
+      case 'Vitabiotics':
+        return '../../../assets/images/Manufacturer Names/ Vitabiotics .png'
+      case 'Vitane':
+        return '../../../assets/images/Manufacturer Names/  Vitane .png'
+      case 'Vixa Pharmaceutical':
+        return '../../../assets/images/Manufacturer Names/ Vixa Pharmaceutical .png'
+      case 'Wenzhou Classic Packing Ltd':
+        return '../../../assets/images/Manufacturer Names/ Wenzhou Classic Packing Ltd .png'
+      // case 'White House':
+      //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+      case 'Win-Medicare':
+        return '../../../assets/images/Manufacturer Names/Win-Medicare.png'
+      case 'Wockhardt':
+        return '../../../assets/images/Manufacturer Names/ Wockhardt .png'
+      case 'Zentiva':
+        return '../../../assets/images/Manufacturer Names/Zentiva.png'
+      case 'Zolon Healthcare':
+        return '../../../assets/images/Manufacturer Names/ Zolon Healthcare .png'
+      case ' Akums Drugs & Pharmaceuticals':
+        return '../../../assets/images/Manufacturer Names/Akums Drugs _ Pharmaceuticals.png'
       default:
         return 'assets/images/drugstoc.png'
     }

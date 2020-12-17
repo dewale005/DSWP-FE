@@ -100,4 +100,9 @@ export class ProductService {
 	  let id = localStorage.getItem('user')
 	  return this.http.post(`${this.BASE_URL}/mycart/${id}`, data)
   }
+
+  get_recommended_products() {
+	  return this.http.get(`${this.BASE_URL}/recommended`);
+  }
+
 }

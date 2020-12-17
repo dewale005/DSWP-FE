@@ -69,16 +69,11 @@ export class HomeComponent implements OnInit {
 		this.image = this.product.photo
 	  }, 200)
     this.getSummary();
-		this.product.getAllProducts(this.page).subscribe((resp) => {
+		this.product.get_recommended_products().subscribe((resp) => {
 			console.log(resp)
 			this.loadingItem = false;
 			// this.loading = false;
 			this.data = resp;
-			let dat = [];
-			for (let i = 0; i < 3; i++) {
-				dat.push(resp[i]);
-			}
-			this.sales_v = dat;
 		});
 
 		this.product.getProfile(this.userId).subscribe((resp) => {

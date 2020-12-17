@@ -374,7 +374,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"row row-eq-height\">\n    <div *ngIf=\"userId\" class=\"col-lg-3 col-md-12\">\n        <app-iq-card cardClass=\"iq-card iq-profile-card text-center\" [isCardHeader]=false>\n            <div style=\"min-height: 329px\" class=\"iq-team text-center p-0\">\n              <img *ngIf=\"!userId\" src=\"assets/images/no_logo.png\" style=\"filter: grayscale(100%);\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n              <a routerLink=\"/update-profile\" ><img *ngIf=\"userId\" src=\"{{image}}\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\"></a>\n              <h4 *ngIf=\"!userId\" class=\"mb-0\">Welcome</h4>\n              <h4 *ngIf=\"userId\" class=\"mb-0\">{{user.name}}</h4>\n              <a *ngIf=\"userId && user.phone\" href=\"javascript:void(0);\" class=\"d-inline-block w-100\">{{user.phone}}</a>\n              <p *ngIf=\"!userId\" class=\"mt-1\">To Drugstoc your No 1</p>\n              <p *ngIf=\"!userId\" class=\"mt-1\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>\n              <p *ngIf=\"userId\" class=\"mt-1\">{{user.address}}</p>\n              <hr>\n              <ul class=\"list-inline mb-0 d-flex justify-content-between\">\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Blood</h5>\n                  <p class=\"text-success\">AB+</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <h5 *ngIf=\"!userId\">Virtual Pharmacy</h5>\n                  <h5 *ngIf=\"userId\">Licensed Pharmacy</h5>\n                  <!-- <p class=\"text-success\">161cm</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Weight</h5>\n                  <p class=\"text-success\">64kg</p> -->\n                </li>\n              </ul>\n            </div>\n          </app-iq-card>\n    </div>\n    <div [ngClass]=\"{'col-lg-9': userId, 'col-lg-12': !userId }\" class=\"col-md-12\" [ngStyle]=\"!userId?{'filter': 'grayscale(100%)'} : {'filter': 'grayscale(0%)'}\">\n        <app-iq-card cardClass=\"iq-card bg-primary sb-top-banner-card\" cardBodyClass=\"iq-card-body\" [isCardHeader]=false>\n            <div class=\"row\">\n              <div class=\"col-md-8 align-self-center padded\" >\n                <h2 *ngIf=\"!userId\" class=\"text-white padded\" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>\n                <h2 *ngIf=\"userId\" class=\"text-white padded\">{{user.name}}</h2>\n                <p class=\"text-white padded\" style=\"font-weight: 600;\">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>\n                <!-- <p *ngIf=\"userId\" class=\"text-white\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->\n                <!-- <button type=\"button\" class=\"btn iq-bg-primary\">Read More</button> -->\n              </div>\n              <div class=\"col-md-4 position-relative\">\n                <div class=\"an-img-two\" style=\"margin-right: 20px;\">\n                  <div class=\"bodymovin\">\n                    <ng-lottie [options]=\"optionsData2\"></ng-lottie>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </app-iq-card>\n    </div>\n    </div>\n    <div class=\"row\">\n        <div *ngIf=\"userId\" class=\"col-md-12\">\n          <app-iq-card cardClass=\"iq-card wow fadeInUp\" data-wow-delay=\"0.6s\">\n            <div card-header class=\"iq-header-title\">\n              <h4 class=\"card-title\">Category Summary</h4>\n            </div>\n            <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n              <div class=\"dropdown\">\n                <a routerLink=\"/my-drugstoc\" class=\"dropdown-toggle text-primary\" data-toggle=\"dropdown\">View All\n                </a>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"!loadCatergory\">\n              <div *ngFor=\"let sale of sumaryItem; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                  <span class=\"font-size-14\">{{sale.category}}</span>\n                  <h2>{{sale.number}}</h2>\n                  <div class=\"iq-progress-bar-linear d-inline-block w-100 mt-3\">\n                    <div class=\"iq-progress-bar\">\n                      <span class=\"bg-primary\" data-percent={{sale.percentage}} style=\"transition: width 2s ease 0s; width: {{sale.percentage}}%\"></span>\n                      <!-- <progressbar class=\"iq-progress-bar\" [value]=\"{{sale.percentage}}\" type=\"primary\" ></progressbar> -->\n                    </div>\n                  </div>\n                </app-iq-card>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"loadCatergory\">\n              <div *ngFor=\"let sale of sumLoading; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '70%',\n                      'border-radius': '12px',\n                      height: '15px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    <p style=\"margin-bottom: 0;\">\n                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                        width: '30%',\n                        'border-radius': '6px',\n                        height: '30px',\n                        'margin-bottom': '-2px',\n                        'margin-right': '20px'\n                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    </p>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '100%',\n                      'border-radius': '12px',\n                      height: '10px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                </app-iq-card>\n              </div>\n            </div>\n  \n          </app-iq-card>\n        </div>\n      </div>\n        <div class=\"row\">\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <div class=\"iq-card\">\n                      <app-iq-card>\n                        <div card-header class=\"iq-header-title\">\n                          <h4 class=\"card-title\">Top Selling Items</h4>\n                        </div>\n                        <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n                          <!-- <div class=\"dropdown\">\n                            <span class=\"dropdown-toggle\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\">\n                              <i class=\"ri-more-2-fill\"></i>\n                            </span>\n                            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenuButton\">\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-eye-fill mr-2\"></i>View</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-delete-bin-6-fill mr-2\"></i>Delete</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-pencil-fill mr-2\"></i>Edit</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-printer-fill mr-2\"></i>Print</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-file-download-fill mr-2\"></i>Download</a>\n                            </div>\n                          </div> -->\n                        </div>\n                        <div *ngIf=\"loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\" style=\"width: 100%;\">\n                                    <div class=\"thumbnail-container\">\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '100%',\n                                        'border-radius': '12px',\n                                        height: '200px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '70%',\n                                        'border-radius': '12px',\n                                        height: '20px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '95%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '40%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                        <div *ngIf=\"!loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\">\n                                    <div class=\"thumbnail-container\">\n                                      <div class=\"box\">\n                                        <a *ngIf=\"!item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"../../../assets/images/no_image.png\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                        <a *ngIf=\"item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"data:image/jpeg;base64,{{item.image}}\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                        <div *ngIf=\"item.qty_available === 0\" class=\"ribbon ribbon-top-right\"><span>Out Of Stock</span></div>\n                                      <a href=\"javascript:void();\" *ngIf=\"item.type == 'New'\" class=\"new\">{{ item.type }}</a>\n                                    </div>\n                                    </div>\n                                    <div class=\"product-description\">\n                                      \n                                      <!-- <h4 *ngIf=\"item.qty_available === 0\" style=\"padding: 5px;\n                                      background: red;\n                                      margin: 10px 0;\n                                      color: #fff;\n                                      text-align: center;\n                                      border-radius: 12px;\">Out Of Stock</h4> -->\n                                      <h4>{{ item.name }}</h4>\n                                      <p class=\"mb-0\">{{ item.x_studio_field_5Gttm }}</p>\n                                      <div *ngIf=\"userId\" class=\"ratting\">\n                                        <!-- <ul class=\"ratting-item d-flex p-0 m-0\">\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                        </ul> -->\n                                      </div>\n                                      <div *ngIf=\"userId\" class=\"d-flex flex-wrap justify-content-between align-items-center\">\n                                        <div class=\"product-price\">\n                                          <div class=\"regular-price\"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>\n                                        </div>\n                                        <div class=\"product-action\" *ngIf=\"item.qty_available > 0\">\n                                          <div *ngIf=\"!check_already_in_cart(item.id)\" class=\"add-to-cart\"><a (click)=\"addToCat(item)\"  data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Add to Cart\"> <i class=\"ri-shopping-cart-2-line\"></i> </a></div>\n                                          <!-- <div class=\"wishlist\"><a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Wishlist\"> <i class=\"ri-heart-line\"></i> </a></div> -->\n                                        </div>\n                                      </div>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                      </app-iq-card>\n                    <div\n        infiniteScroll\n        [infiniteScrollDistance]=\"2\"\n        [infiniteScrollThrottle]=\"1000\"\n        (scrolled)=\"onScroll()\"\n      ></div>\n    <p *ngIf=\"loading\" style=\"text-align: center;\">Loading....</p>\n                    </div>\n                  </div>\n                </div>\n              </div>\n        </div>\n";
+    __webpack_exports__["default"] = "<div class=\"row row-eq-height\">\n    <div *ngIf=\"userId\" class=\"col-lg-3 col-md-12\">\n        <app-iq-card cardClass=\"iq-card iq-profile-card text-center\" [isCardHeader]=false>\n            <div style=\"min-height: 329px\" class=\"iq-team text-center p-0\">\n              <img *ngIf=\"!userId\" src=\"assets/images/no_logo.png\" style=\"filter: grayscale(100%);\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\">\n              <a routerLink=\"/update-profile\" ><img *ngIf=\"userId\" src=\"{{image}}\" class=\"img-fluid mb-3 avatar-120 rounded-circle\" alt=\"\"></a>\n              <h4 *ngIf=\"!userId\" class=\"mb-0\">Welcome</h4>\n              <h4 *ngIf=\"userId\" class=\"mb-0\">{{user.name}}</h4>\n              <a *ngIf=\"userId && user.phone\" href=\"javascript:void(0);\" class=\"d-inline-block w-100\">{{user.phone}}</a>\n              <p *ngIf=\"!userId\" class=\"mt-1\">To Drugstoc your No 1</p>\n              <p *ngIf=\"!userId\" class=\"mt-1\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>\n              <p *ngIf=\"userId\" class=\"mt-1\">{{user.address}}</p>\n              <hr>\n              <ul class=\"list-inline mb-0 d-flex justify-content-between\">\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Blood</h5>\n                  <p class=\"text-success\">AB+</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <h5 *ngIf=\"!userId\">Virtual Pharmacy</h5>\n                  <h5 *ngIf=\"userId\">Licensed Pharmacy</h5>\n                  <!-- <p class=\"text-success\">161cm</p> -->\n                </li>\n                <li class=\"list-inline-item\">\n                  <!-- <h5>Weight</h5>\n                  <p class=\"text-success\">64kg</p> -->\n                </li>\n              </ul>\n            </div>\n          </app-iq-card>\n    </div>\n    <div [ngClass]=\"{'col-lg-9': userId, 'col-lg-12': !userId }\" class=\"col-md-12\" [ngStyle]=\"!userId?{'filter': 'grayscale(100%)'} : {'filter': 'grayscale(0%)'}\">\n        <app-iq-card cardClass=\"iq-card bg-primary sb-top-banner-card\" cardBodyClass=\"iq-card-body\" [isCardHeader]=false>\n            <div class=\"row\">\n              <div class=\"col-md-8 align-self-center padded\" >\n                <h2 *ngIf=\"!userId\" class=\"text-white padded\" >Welcome to Drugstoc, <br> Nigeria's largest Pharmacy Partner</h2>\n                <h2 *ngIf=\"userId\" class=\"text-white padded\">{{user.name}}</h2>\n                <p class=\"text-white padded\" style=\"font-weight: 600;\">Source all medications, consumables, and small medical devices you need for your patients or practice in one place.</p>\n                <!-- <p *ngIf=\"userId\" class=\"text-white\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->\n                <!-- <button type=\"button\" class=\"btn iq-bg-primary\">Read More</button> -->\n              </div>\n              <div class=\"col-md-4 position-relative\">\n                <div class=\"an-img-two\" style=\"margin-right: 20px;\">\n                  <div class=\"bodymovin\">\n                    <ng-lottie [options]=\"optionsData2\"></ng-lottie>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </app-iq-card>\n    </div>\n    </div>\n    <div class=\"row\">\n        <div *ngIf=\"userId\" class=\"col-md-12\">\n          <app-iq-card cardClass=\"iq-card wow fadeInUp\" data-wow-delay=\"0.6s\">\n            <div card-header class=\"iq-header-title\">\n              <h4 class=\"card-title\">Category Summary</h4>\n            </div>\n            <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n              <div class=\"dropdown\">\n                <a routerLink=\"/my-drugstoc\" class=\"dropdown-toggle text-primary\" data-toggle=\"dropdown\">View All\n                </a>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"!loadCatergory\">\n              <div *ngFor=\"let sale of sumaryItem; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                  <span class=\"font-size-14\">{{sale.category}}</span>\n                  <h2>{{sale.number}}</h2>\n                  <div class=\"iq-progress-bar-linear d-inline-block w-100 mt-3\">\n                    <div class=\"iq-progress-bar\">\n                      <span class=\"bg-primary\" data-percent={{sale.percentage}} style=\"transition: width 2s ease 0s; width: {{sale.percentage}}%\"></span>\n                      <!-- <progressbar class=\"iq-progress-bar\" [value]=\"{{sale.percentage}}\" type=\"primary\" ></progressbar> -->\n                    </div>\n                  </div>\n                </app-iq-card>\n              </div>\n            </div>\n            <div class=\"row\" *ngIf=\"loadCatergory\">\n              <div *ngFor=\"let sale of sumLoading; let i=index;\" class=\"col-md-4\">\n                <app-iq-card cardClass=\"iq-card shadow-none mb-0\" cardBodyClass=\"q-card-body p-1\" [isCardHeader]=false>\n                  <span class=\"text-dark float-right\"><i\n                    class=\"ri-arrow-up-fill mr-1\"></i></span>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '70%',\n                      'border-radius': '12px',\n                      height: '15px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    <p style=\"margin-bottom: 0;\">\n                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                        width: '30%',\n                        'border-radius': '6px',\n                        height: '30px',\n                        'margin-bottom': '-2px',\n                        'margin-right': '20px'\n                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                    </p>\n                    <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                      width: '100%',\n                      'border-radius': '12px',\n                      height: '10px',\n                      'margin-bottom': '-5px',\n                      'margin-right': '20px'\n                    }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                </app-iq-card>\n              </div>\n            </div>\n  \n          </app-iq-card>\n        </div>\n      </div>\n        <div class=\"row\">\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                  <div class=\"col-md-12\">\n                    <div class=\"iq-card\">\n                      <app-iq-card>\n                        <div card-header class=\"iq-header-title\">\n                          <h4 class=\"card-title\">Recommended For you</h4>\n                        </div>\n                        <div card-header class=\"iq-card-header-toolbar d-flex align-items-center\">\n                          <!-- <div class=\"dropdown\">\n                            <span class=\"dropdown-toggle\" id=\"dropdownMenuButton1\" data-toggle=\"dropdown\">\n                              <i class=\"ri-more-2-fill\"></i>\n                            </span>\n                            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenuButton\">\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-eye-fill mr-2\"></i>View</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-delete-bin-6-fill mr-2\"></i>Delete</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-pencil-fill mr-2\"></i>Edit</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-printer-fill mr-2\"></i>Print</a>\n                              <a class=\"dropdown-item\" href=\"javascript:void(0);\"><i class=\"ri-file-download-fill mr-2\"></i>Download</a>\n                            </div>\n                          </div> -->\n                        </div>\n                        <div *ngIf=\"loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\" style=\"width: 100%;\">\n                                    <div class=\"thumbnail-container\">\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '100%',\n                                        'border-radius': '12px',\n                                        height: '200px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '70%',\n                                        'border-radius': '12px',\n                                        height: '20px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '95%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                      <ngx-skeleton-loader count=\"1\" [theme]=\"{\n                                        width: '40%',\n                                        'border-radius': '12px',\n                                        height: '15px',\n                                        'margin-bottom': '-5px',\n                                        'margin-right': '20px'\n                                      }\" appearance=\"circle\" animation=\"progress\"></ngx-skeleton-loader>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                        <div *ngIf=\"!loadingItem\" class=\"iq-card-body\">\n                          <div id=\"js-product-list\">\n                            <div class=\"Products\">\n                              <ul class=\"product_list gridcount grid row\">\n                                <li *ngFor=\"let item of data\" class=\"product_item col-xs-12 col-sm-6 col-md-6 col-lg-4\">\n                                  <div class=\"product-miniature\">\n                                    <div class=\"thumbnail-container\">\n                                      <div class=\"box\">\n                                        <a *ngIf=\"!item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"../../../assets/images/no_image.png\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                        <a *ngIf=\"item.image\" routerLink=\"/products/itemdetail/{{item.id}}\"><img src=\"data:image/jpeg;base64,{{item.image}}\" alt=\"product-image\" class=\"img-fluid\" /> </a>\n                                        <div *ngIf=\"item.qty_available === 0\" class=\"ribbon ribbon-top-right\"><span>Out Of Stock</span></div>\n                                      <a href=\"javascript:void();\" *ngIf=\"item.type == 'New'\" class=\"new\">{{ item.type }}</a>\n                                    </div>\n                                    </div>\n                                    <div class=\"product-description\">\n                                      \n                                      <!-- <h4 *ngIf=\"item.qty_available === 0\" style=\"padding: 5px;\n                                      background: red;\n                                      margin: 10px 0;\n                                      color: #fff;\n                                      text-align: center;\n                                      border-radius: 12px;\">Out Of Stock</h4> -->\n                                      <h4>{{ item.name }}</h4>\n                                      <p class=\"mb-0\">{{ item.x_studio_field_5Gttm }}</p>\n                                      <div *ngIf=\"userId\" class=\"ratting\">\n                                        <!-- <ul class=\"ratting-item d-flex p-0 m-0\">\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                          <li class=\"full\"><i class=\"{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}\"></i></li>\n                                        </ul> -->\n                                      </div>\n                                      <div *ngIf=\"userId\" class=\"d-flex flex-wrap justify-content-between align-items-center\">\n                                        <div class=\"product-price\">\n                                          <div class=\"regular-price\"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>\n                                        </div>\n                                        <div class=\"product-action\" *ngIf=\"item.qty_available > 0\">\n                                          <div *ngIf=\"!check_already_in_cart(item.id)\" class=\"add-to-cart\"><a (click)=\"addToCat(item)\"  data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Add to Cart\"> <i class=\"ri-shopping-cart-2-line\"></i> </a></div>\n                                          <!-- <div class=\"wishlist\"><a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"\" data-original-title=\"Wishlist\"> <i class=\"ri-heart-line\"></i> </a></div> -->\n                                        </div>\n                                      </div>\n                                    </div>\n                                  </div>\n                                </li>\n                              </ul>\n                            </div>\n                          </div>\n                        </div>\n                      </app-iq-card>\n                    <div\n        infiniteScroll\n        [infiniteScrollDistance]=\"2\"\n        [infiniteScrollThrottle]=\"1000\"\n        (scrolled)=\"onScroll()\"\n      ></div>\n    <p *ngIf=\"loading\" style=\"text-align: center;\">Loading....</p>\n                    </div>\n                  </div>\n                </div>\n              </div>\n        </div>\n";
     /***/
   },
 
@@ -2738,18 +2738,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this6.image = _this6.product.photo;
           }, 200);
           this.getSummary();
-          this.product.getAllProducts(this.page).subscribe(function (resp) {
+          this.product.get_recommended_products().subscribe(function (resp) {
             console.log(resp);
             _this6.loadingItem = false; // this.loading = false;
 
             _this6.data = resp;
-            var dat = [];
-
-            for (var i = 0; i < 3; i++) {
-              dat.push(resp[i]);
-            }
-
-            _this6.sales_v = dat;
           });
           this.product.getProfile(this.userId).subscribe(function (resp) {
             console.log(resp);
@@ -4164,10 +4157,264 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case 'Omega Pharma Limited':
               return '../../../assets/images/Manufacturer Names/ Omega Pharma Limited .png';
 
-            case 'Union Swiss':
-              return '../../../assets/images/Manufacturer Names/Union_Swiss.png';
-            // case 'Union Swiss':
+            case 'Optrex':
+              return '../../../assets/images/Manufacturer Names/ Optrex .png';
+
+            case 'Osang Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Osang Healthcare .png';
+            // case 'POM':
             //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Parke Davis and co.':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'PeakPharm':
+              return '../../../assets/images/Manufacturer Names/ PeakPharm .png';
+            // case 'Pemason Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Perigo':
+              return '../../../assets/images/Manufacturer Names/ Perigo .png';
+
+            case 'Pfizer':
+              return '../../../assets/images/Manufacturer Names/ Pfizer .png';
+
+            case 'Pfizer Consumer Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Pfizer Consumer Healthcare .png';
+
+            case 'Phamatex Industries':
+              return '../../../assets/images/Manufacturer Names/ Phamatex Industries .png';
+
+            case 'Pharma Ethics ':
+              return '../../../assets/images/Manufacturer Names/ Pharma Ethics  .png';
+
+            case 'Pharma Max':
+              return '../../../assets/images/Manufacturer Names/ Pharma Max .png';
+
+            case 'Pharma-Deko PLC':
+              return '../../../assets/images/Manufacturer Names/ Pharma Deko .png';
+            // case 'Pharmacy Plus':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Pharmaton':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Pinnacle Health Pharm Ltd':
+              return '../../../assets/images/Manufacturer Names/ Pinnacle Health Pharm Ltd .png';
+
+            case 'Plush Organics':
+              return '../../../assets/images/Manufacturer Names/ Plush Organics .png';
+            // case 'Popular Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Prevail':
+              return '../../../assets/images/Manufacturer Names/ Prevail .svg';
+
+            case 'Prisma Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Prisma Pharmaceuticals .png';
+
+            case 'Procter & Gamble ':
+              return '../../../assets/images/Manufacturer Names/ Procter & Gamble .png';
+
+            case 'Pulse Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Pulse Pharmaceuticals .png';
+            // case 'Qualiphar':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'RICH RESOURCE GLOBAL SUPPLY CHAIN LTD':
+              return '../../../assets/images/Manufacturer Names/   RICH RESOURCE GLOBAL SUPPLY CHAIN LTD .png';
+            // case 'Reagan Remedies':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Reals Pharmaceuticals Limited':
+              return '../../../assets/images/Manufacturer Names/ Reals Pharmaceuticals Limited .png';
+
+            case 'Reckitt Benckiser':
+              return '../../../assets/images/Manufacturer Names/Reckitt Beckinser.png';
+            // case 'Reload':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Reproaid':
+              return '../../../assets/images/Manufacturer Names/ Reproaid .png';
+
+            case 'Roche':
+              return '../../../assets/images/Manufacturer Names/ Roche .png';
+
+            case 'Rohto Pharmaceutical Company':
+              return '../../../assets/images/Manufacturer Names/  Rohto Pharmaceutical Company .png';
+
+            case 'Rossmax Swiss GmbH':
+              return '../../../assets/images/Manufacturer Names/ Rossmax Swiss GmbH .svg';
+            // case 'Rotex Medica':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Ruzu Herbal Products':
+              return '../../../assets/images/Manufacturer Names/ Ruzu Herbal Products .png';
+
+            case 'SD Biosensor':
+              return '../../../assets/images/Manufacturer Names/ SD Biosensor .png';
+
+            case 'SKG Pharma Limited':
+              return '../../../assets/images/Manufacturer Names/ SKG Pharma Limited .png';
+
+            case 'SKT Healthcare':
+              return '../../../assets/images/Manufacturer Names/ SKT Healthcare .png';
+
+            case 'Saffron':
+              return '../../../assets/images/Manufacturer Names/Saffron.png';
+            // case 'Safi':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Sagar Vitaceutical Nig Ltd':
+              return '../../../assets/images/Manufacturer Names/ Sagar Vitaceutical Nig Ltd .png';
+
+            case 'Sam Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Sam Pharmaceuticals .gif';
+
+            case 'Sanofi':
+              return '../../../assets/images/Manufacturer Names/Sanofi.png';
+
+            case 'Sarantis':
+              return '../../../assets/images/Manufacturer Names/ Sarantis .png';
+            // case 'Saro Lifecare ':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Seagreen Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/  Seagreen Pharmaceuticals .png';
+
+            case 'Septona':
+              return '../../../assets/images/Manufacturer Names/ Septona .png';
+
+            case 'Serum Institute Of India':
+              return '../../../assets/images/Manufacturer Names/Serum Institute Of India.png';
+
+            case 'Servier':
+              return '../../../assets/images/Manufacturer Names/ Servier .png';
+
+            case 'Seven Seas':
+              return '../../../assets/images/Manufacturer Names/ Seven Seas .png';
+
+            case 'Shalina Health Care Nigeria Limited':
+              return '../../../assets/images/Manufacturer Names/ Shalina HealthCare Nigeria Limited .png';
+
+            case 'Shalina Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Shalina HealthCare Nigeria Limited .png';
+
+            case 'Sii':
+              return '../../../assets/images/Manufacturer Names/ Sii .png';
+
+            case 'Silver Healthcare ':
+              return '../../../assets/images/Manufacturer Names/ Silver Healthcare  .png';
+            // case 'Society for Family Health':
+            //   return '../../../assets/images/Manufacturer Names/ Seven Seas .png'
+
+            case 'Sri Trang':
+              return '../../../assets/images/Manufacturer Names/Sri Trang.png';
+
+            case 'Standard Generic':
+              return '../../../assets/images/Manufacturer Names/  Standard Generics .png';
+
+            case 'Sterling Drugs':
+              return '../../../assets/images/Manufacturer Names/ Sterling Drugs .png';
+
+            case 'Strides Shasun':
+              return '../../../assets/images/Manufacturer Names/Strides Shasun.png';
+
+            case 'Sumitomo Chemical Company':
+              return '../../../assets/images/Manufacturer Names/sumitomo chemical.png';
+            // case 'Sure Health & Beauty Ltd':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Swipha':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Swiss Precision Diagnostics Gmb':
+              return '../../../assets/images/Manufacturer Names/ Swiss Precision Diagnostics GmbH .png';
+            // case 'Taylek Drugs':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Teva':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'The Mentholatum Company Ltd':
+              return '../../../assets/images/Manufacturer Names/ The Mentholatum Company Ltd .png';
+
+            case 'Thornton and Ross Ltd':
+              return '../../../assets/images/Manufacturer Names/ Thornton and Ross Ltd .png';
+
+            case 'Tiger Balm':
+              return '../../../assets/images/Manufacturer Names/ Tiger Balm .png';
+            // case 'Titan Natural Ltd':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Tricare Pharma':
+              return '../../../assets/images/Manufacturer Names/ Tricare Pharma .png';
+
+            case 'Tuyil Pharm Limited':
+              return '../../../assets/images/Manufacturer Names/ Tuyil Pharm Limited .png';
+
+            case 'U-Mec':
+              return '../../../assets/images/Manufacturer Names/ U-Mec .png';
+
+            case 'UCB Pharma Ltd.':
+              return '../../../assets/images/Manufacturer Names/ UCB Pharma Ltd. .png';
+
+            case 'UST Corporation':
+              return '../../../assets/images/Manufacturer Names/ UST Corporation .png';
+
+            case 'Uni-medical Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Uni-medical Healthcare .png';
+
+            case 'Unichem':
+              return '../../../assets/images/Manufacturer Names/ Unichem.png';
+            // case 'Unicure Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/ Unicure Pharmaceuticals .png'
+
+            case 'Union Swiss':
+              return '../../../assets/images/Manufacturer Names/ Union_Swiss.png';
+
+            case 'Unique Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Unique Pharmaceuticals Limited .png';
+
+            case 'Uvex':
+              return '../../../assets/images/Manufacturer Names/ Uvex .png';
+
+            case 'VSSCO':
+              return '../../../assets/images/Manufacturer Names/ VSSCO .png';
+
+            case 'Valupak':
+              return '../../../assets/images/Manufacturer Names/ Valupak .png';
+
+            case 'Vins':
+              return '../../../assets/images/Manufacturer Names/ Vins .png';
+
+            case 'Vita Care PVT LTD':
+              return '../../../assets/images/Manufacturer Names/ Vita Care PVT LTD .png';
+
+            case 'Vitabiotics':
+              return '../../../assets/images/Manufacturer Names/ Vitabiotics .png';
+
+            case 'Vitane':
+              return '../../../assets/images/Manufacturer Names/  Vitane .png';
+
+            case 'Vixa Pharmaceutical':
+              return '../../../assets/images/Manufacturer Names/ Vixa Pharmaceutical .png';
+
+            case 'Wenzhou Classic Packing Ltd':
+              return '../../../assets/images/Manufacturer Names/ Wenzhou Classic Packing Ltd .png';
+            // case 'White House':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Win-Medicare':
+              return '../../../assets/images/Manufacturer Names/Win-Medicare.png';
+
+            case 'Wockhardt':
+              return '../../../assets/images/Manufacturer Names/ Wockhardt .png';
+
+            case 'Zentiva':
+              return '../../../assets/images/Manufacturer Names/Zentiva.png';
+
+            case 'Zolon Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Zolon Healthcare .png';
+
+            case ' Akums Drugs & Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/Akums Drugs _ Pharmaceuticals.png';
 
             default:
               return 'assets/images/no_image2.png';
@@ -4731,10 +4978,264 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case 'HOVID':
               return '../../../assets/images/Manufacturer Names/HOVID.png';
 
-            case 'Union Swiss':
-              return '../../../assets/images/Manufacturer Names/Union_Swiss.png';
-            // case 'Union Swiss':
+            case 'Optrex':
+              return '../../../assets/images/Manufacturer Names/ Optrex .png';
+
+            case 'Osang Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Osang Healthcare .png';
+            // case 'POM':
             //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Parke Davis and co.':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'PeakPharm':
+              return '../../../assets/images/Manufacturer Names/ PeakPharm .png';
+            // case 'Pemason Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Perigo':
+              return '../../../assets/images/Manufacturer Names/ Perigo .png';
+
+            case 'Pfizer':
+              return '../../../assets/images/Manufacturer Names/ Pfizer .png';
+
+            case 'Pfizer Consumer Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Pfizer Consumer Healthcare .png';
+
+            case 'Phamatex Industries':
+              return '../../../assets/images/Manufacturer Names/ Phamatex Industries .png';
+
+            case 'Pharma Ethics ':
+              return '../../../assets/images/Manufacturer Names/ Pharma Ethics  .png';
+
+            case 'Pharma Max':
+              return '../../../assets/images/Manufacturer Names/ Pharma Max .png';
+
+            case 'Pharma-Deko PLC':
+              return '../../../assets/images/Manufacturer Names/ Pharma Deko .png';
+            // case 'Pharmacy Plus':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Pharmaton':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Pinnacle Health Pharm Ltd':
+              return '../../../assets/images/Manufacturer Names/ Pinnacle Health Pharm Ltd .png';
+
+            case 'Plush Organics':
+              return '../../../assets/images/Manufacturer Names/ Plush Organics .png';
+            // case 'Popular Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Prevail':
+              return '../../../assets/images/Manufacturer Names/ Prevail .svg';
+
+            case 'Prisma Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Prisma Pharmaceuticals .png';
+
+            case 'Procter & Gamble ':
+              return '../../../assets/images/Manufacturer Names/ Procter & Gamble .png';
+
+            case 'Pulse Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Pulse Pharmaceuticals .png';
+            // case 'Qualiphar':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'RICH RESOURCE GLOBAL SUPPLY CHAIN LTD':
+              return '../../../assets/images/Manufacturer Names/   RICH RESOURCE GLOBAL SUPPLY CHAIN LTD .png';
+            // case 'Reagan Remedies':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Reals Pharmaceuticals Limited':
+              return '../../../assets/images/Manufacturer Names/ Reals Pharmaceuticals Limited .png';
+
+            case 'Reckitt Benckiser':
+              return '../../../assets/images/Manufacturer Names/Reckitt Beckinser.png';
+            // case 'Reload':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Reproaid':
+              return '../../../assets/images/Manufacturer Names/ Reproaid .png';
+
+            case 'Roche':
+              return '../../../assets/images/Manufacturer Names/ Roche .png';
+
+            case 'Rohto Pharmaceutical Company':
+              return '../../../assets/images/Manufacturer Names/  Rohto Pharmaceutical Company .png';
+
+            case 'Rossmax Swiss GmbH':
+              return '../../../assets/images/Manufacturer Names/ Rossmax Swiss GmbH .svg';
+            // case 'Rotex Medica':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Ruzu Herbal Products':
+              return '../../../assets/images/Manufacturer Names/ Ruzu Herbal Products .png';
+
+            case 'SD Biosensor':
+              return '../../../assets/images/Manufacturer Names/ SD Biosensor .png';
+
+            case 'SKG Pharma Limited':
+              return '../../../assets/images/Manufacturer Names/ SKG Pharma Limited .png';
+
+            case 'SKT Healthcare':
+              return '../../../assets/images/Manufacturer Names/ SKT Healthcare .png';
+
+            case 'Saffron':
+              return '../../../assets/images/Manufacturer Names/Saffron.png';
+            // case 'Safi':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Sagar Vitaceutical Nig Ltd':
+              return '../../../assets/images/Manufacturer Names/ Sagar Vitaceutical Nig Ltd .png';
+
+            case 'Sam Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Sam Pharmaceuticals .gif';
+
+            case 'Sanofi':
+              return '../../../assets/images/Manufacturer Names/Sanofi.png';
+
+            case 'Sarantis':
+              return '../../../assets/images/Manufacturer Names/ Sarantis .png';
+            // case 'Saro Lifecare ':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Seagreen Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/  Seagreen Pharmaceuticals .png';
+
+            case 'Septona':
+              return '../../../assets/images/Manufacturer Names/ Septona .png';
+
+            case 'Serum Institute Of India':
+              return '../../../assets/images/Manufacturer Names/Serum Institute Of India.png';
+
+            case 'Servier':
+              return '../../../assets/images/Manufacturer Names/ Servier .png';
+
+            case 'Seven Seas':
+              return '../../../assets/images/Manufacturer Names/ Seven Seas .png';
+
+            case 'Shalina Health Care Nigeria Limited':
+              return '../../../assets/images/Manufacturer Names/ Shalina HealthCare Nigeria Limited .png';
+
+            case 'Shalina Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Shalina HealthCare Nigeria Limited .png';
+
+            case 'Sii':
+              return '../../../assets/images/Manufacturer Names/ Sii .png';
+
+            case 'Silver Healthcare ':
+              return '../../../assets/images/Manufacturer Names/ Silver Healthcare  .png';
+            // case 'Society for Family Health':
+            //   return '../../../assets/images/Manufacturer Names/ Seven Seas .png'
+
+            case 'Sri Trang':
+              return '../../../assets/images/Manufacturer Names/Sri Trang.png';
+
+            case 'Standard Generic':
+              return '../../../assets/images/Manufacturer Names/  Standard Generics .png';
+
+            case 'Sterling Drugs':
+              return '../../../assets/images/Manufacturer Names/ Sterling Drugs .png';
+
+            case 'Strides Shasun':
+              return '../../../assets/images/Manufacturer Names/Strides Shasun.png';
+
+            case 'Sumitomo Chemical Company':
+              return '../../../assets/images/Manufacturer Names/sumitomo chemical.png';
+            // case 'Sure Health & Beauty Ltd':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Swipha':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Swiss Precision Diagnostics Gmb':
+              return '../../../assets/images/Manufacturer Names/ Swiss Precision Diagnostics GmbH .png';
+            // case 'Taylek Drugs':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+            // case 'Teva':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'The Mentholatum Company Ltd':
+              return '../../../assets/images/Manufacturer Names/ The Mentholatum Company Ltd .png';
+
+            case 'Thornton and Ross Ltd':
+              return '../../../assets/images/Manufacturer Names/ Thornton and Ross Ltd .png';
+
+            case 'Tiger Balm':
+              return '../../../assets/images/Manufacturer Names/ Tiger Balm .png';
+            // case 'Titan Natural Ltd':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Tricare Pharma':
+              return '../../../assets/images/Manufacturer Names/ Tricare Pharma .png';
+
+            case 'Tuyil Pharm Limited':
+              return '../../../assets/images/Manufacturer Names/ Tuyil Pharm Limited .png';
+
+            case 'U-Mec':
+              return '../../../assets/images/Manufacturer Names/ U-Mec .png';
+
+            case 'UCB Pharma Ltd.':
+              return '../../../assets/images/Manufacturer Names/ UCB Pharma Ltd. .png';
+
+            case 'UST Corporation':
+              return '../../../assets/images/Manufacturer Names/ UST Corporation .png';
+
+            case 'Uni-medical Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Uni-medical Healthcare .png';
+
+            case 'Unichem':
+              return '../../../assets/images/Manufacturer Names/ Unichem.png';
+            // case 'Unicure Pharmaceuticals':
+            //   return '../../../assets/images/Manufacturer Names/ Unicure Pharmaceuticals .png'
+
+            case 'Union Swiss':
+              return '../../../assets/images/Manufacturer Names/Union Swiss.png';
+
+            case 'Unique Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/ Unique Pharmaceuticals Limited .png';
+
+            case 'Uvex':
+              return '../../../assets/images/Manufacturer Names/ Uvex .png';
+
+            case 'VSSCO':
+              return '../../../assets/images/Manufacturer Names/ VSSCO .png';
+
+            case 'Valupak':
+              return '../../../assets/images/Manufacturer Names/ Valupak .png';
+
+            case 'Vins':
+              return '../../../assets/images/Manufacturer Names/ Vins .png';
+
+            case 'Vita Care PVT LTD':
+              return '../../../assets/images/Manufacturer Names/ Vita Care PVT LTD .png';
+
+            case 'Vitabiotics':
+              return '../../../assets/images/Manufacturer Names/ Vitabiotics .png';
+
+            case 'Vitane':
+              return '../../../assets/images/Manufacturer Names/  Vitane .png';
+
+            case 'Vixa Pharmaceutical':
+              return '../../../assets/images/Manufacturer Names/ Vixa Pharmaceutical .png';
+
+            case 'Wenzhou Classic Packing Ltd':
+              return '../../../assets/images/Manufacturer Names/ Wenzhou Classic Packing Ltd .png';
+            // case 'White House':
+            //   return '../../../assets/images/Manufacturer Names/Union Swiss.png'
+
+            case 'Win-Medicare':
+              return '../../../assets/images/Manufacturer Names/Win-Medicare.png';
+
+            case 'Wockhardt':
+              return '../../../assets/images/Manufacturer Names/ Wockhardt .png';
+
+            case 'Zentiva':
+              return '../../../assets/images/Manufacturer Names/Zentiva.png';
+
+            case 'Zolon Healthcare':
+              return '../../../assets/images/Manufacturer Names/ Zolon Healthcare .png';
+
+            case ' Akums Drugs & Pharmaceuticals':
+              return '../../../assets/images/Manufacturer Names/Akums Drugs _ Pharmaceuticals.png';
 
             default:
               return 'assets/images/drugstoc.png';
@@ -5974,6 +6475,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var id = localStorage.getItem('user');
           return this.http.post("".concat(this.BASE_URL, "/mycart/").concat(id), data);
         }
+      }, {
+        key: "get_recommended_products",
+        value: function get_recommended_products() {
+          return this.http.get("".concat(this.BASE_URL, "/recommended"));
+        }
       }]);
 
       return ProductService;
@@ -6251,8 +6757,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       production: false,
       // apiEndpoint: 'http://3.129.99.242:3200',
       // apiEndpoint: 'https://localhost/api',
-      // apiEndpoint: 'https://localhost:3200',
-      apiEndpoint: 'https://shop.drugstoc.com:3200',
+      apiEndpoint: 'https://localhost:3200',
+      // apiEndpoint: 'https://shop.drugstoc.com:3200',
       mapbox: {
         accessToken: 'pk.eyJ1IjoiZ29sZGVubWFjZWRldiIsImEiOiJjazBnYnFxb3AwNWdqM2JuNWRwazZxMWY0In0._I3zpcM9QTHNqcXWjWpD6Q',
         mapStyle: 'mapbox://styles/goldenmacedev/ck49vpeap08b61cnubglcag7l'
