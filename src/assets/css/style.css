@@ -1146,3 +1146,8 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
   font-size: 18px !important;
   word-wrap: break-word;
 }
+
+.product-miniature:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.12);
+  transition: ease-in;
+}
