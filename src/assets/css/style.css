@@ -1132,3 +1132,17 @@ body.two-sidebar.sidebar-main .iq-sidebar-logo { width: 60px }
   display: none !important;
 }
 
+.swal2-title {
+  position: relative;
+  max-width: 100%;
+  margin: 0 0 .4em;
+  padding: 0;
+  color: #595959;
+  font-size: 1.875em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  display: block !important;
+  font-size: 18px !important;
+  word-wrap: break-word;
+}
