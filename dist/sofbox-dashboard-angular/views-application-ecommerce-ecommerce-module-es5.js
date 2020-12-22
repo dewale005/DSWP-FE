@@ -569,9 +569,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function addToCat(item) {
           item.quantity = this.quantity;
           this.product.addToCart(item);
-          this.toastr.info('Item has been added to cart', 'Added to Cart', {
-            positionClass: 'toast-bottom-left'
-          });
+          this.toastr.info('Item has been added to cart', 'Added to Cart');
         }
       }, {
         key: "check_already_in_cart",

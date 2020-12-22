@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -13,7 +15,7 @@ export class SignInComponent implements OnInit {
 
   isProcessing: boolean = false;
 
-  constructor(public fb: FormBuilder, private auth: AuthService) {
+  constructor(public fb: FormBuilder, private auth: AuthService, private toastr: ToastrService, private router: Router) {
     this.ngform = this.fb.group({
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
@@ -25,8 +27,17 @@ export class SignInComponent implements OnInit {
 
   onSubmit() {
     this.isProcessing = true;
-    this.auth.login(this.ngform.value)
-    this.isProcessing = false;
+    this.auth.login(this.ngform.value).subscribe(resp => {
+      console.log(resp)
+      localStorage.setItem('user', resp['user'])
+      localStorage.setItem('token', resp['token'])
+      this.isProcessing = false;
+      this.router.navigate(['/']);
+    }, err => {
+      this.toastr.error(err.error.message)
+      this.isProcessing = false;
+      console.log(err)
+    });
   }
 
 }

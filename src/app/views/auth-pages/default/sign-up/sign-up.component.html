@@ -41,12 +41,18 @@
         <label class="custom-control-label" for="customCheck1">I accept <a href="javascript:void(0);">Terms and Conditions</a></label>
       </div> -->
       <span class="dark-color d-inline-block line-height-2">Already Have Account ? <a routerLink="/auth/sign-in">Log In</a></span>
-      <button *ngIf="!isProcessing" type="submit" class="btn btn-primary float-right">{{!isProcessing ? 'Sign Up' : "Registering...."}}</button>
-        <div *ngIf="isProcessing" class="spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
+      <button type="submit" class="btn btn-primary float-right">
+        <div *ngIf="isProcessing">
+          <div class="lds-ring" style="margin-right: 10px;">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          Loading...
         </div>
+        <div *ngIf="!isProcessing">Register</div>
+      </button>
     </div>
     <div class="sign-info">
       <ul class="iq-social-media">

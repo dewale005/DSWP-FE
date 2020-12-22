@@ -200,9 +200,7 @@ export class ItemDetailComponent implements OnInit {
 	addToCat(item) {
 		item.quantity = this.quantity;
 		this.product.addToCart(item);
-		this.toastr.info('Item has been added to cart', 'Added to Cart', {
-			positionClass: 'toast-bottom-left'
-		});
+		this.toastr.info('Item has been added to cart', 'Added to Cart', );
   }
   
   public check_already_in_cart(id) {

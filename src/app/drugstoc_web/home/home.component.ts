@@ -86,6 +86,23 @@ export class HomeComponent implements OnInit {
 		this.cartItem = this.product.getCatItem();
   }
   
+
+  decreaseQty(item) {
+	if(item.quantity > 1) {
+		item.quantity-= 1
+	} 
+	// this.cartData[id].quantity = number;
+}
+
+increaseQty(item) {
+	if(item.quantity) {
+		item.quantity+= 1
+	} else {
+		item.quantity = 1
+	}
+	console.log(item)
+}
+
   getSummary() {
 	  let arr: any = []
     this.product.getMyDrugstoc(this.userId).subscribe(resp => {
@@ -109,12 +126,9 @@ export class HomeComponent implements OnInit {
   }
 
 	addToCat(item) {
-		item.quantity = 1;
     this.product.addToCart(item);
     this.cartValue.emit(this.cartItem.length)
-		this.toastr.info('Item has been added to cart', 'Added to Cart', {
-			positionClass: 'toast-bottom-left'
-		});
+		this.toastr.info('Item has been added to cart', 'Added to Cart',);
 	}
 
 	public check_already_in_cart(id) {

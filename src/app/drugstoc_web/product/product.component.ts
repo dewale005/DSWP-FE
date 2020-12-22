@@ -43,9 +43,7 @@ export class ProductComponent implements OnInit {
   addToCat(item) {
 		item.quantity = 1;
     this.product.addToCart(item);
-		this.toastr.info('Item has been added to cart', 'Added to Cart', {
-			positionClass: 'toast-bottom-left'
-		});
+		this.toastr.info('Item has been added to cart', 'Added to Cart', );
 	}
 
 }

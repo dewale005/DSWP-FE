@@ -12,17 +12,10 @@ export class AuthService {
 
   private BASE_URL = environment.apiEndpoint;
 
-  constructor(private http: HttpClient, private toastr: ToastrService, private router: Router) { }
+  constructor(private http: HttpClient) { }
 
   login(payload) {
-    this.http.post(`${this.BASE_URL}/login`, payload).subscribe(resp => {
-      localStorage.setItem('user', resp['user'])
-      localStorage.setItem('token', resp['token'])
-      this.router.navigate(['/']);
-    }, err => {
-      this.toastr.error(err.error.message)
-      console.log()
-    });
+    return this.http.post(`${this.BASE_URL}/login`, payload)
   }
 
   register(payload) {

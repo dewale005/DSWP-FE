@@ -398,9 +398,7 @@ let ItemDetailComponent = class ItemDetailComponent {
     addToCat(item) {
         item.quantity = this.quantity;
         this.product.addToCart(item);
-        this.toastr.info('Item has been added to cart', 'Added to Cart', {
-            positionClass: 'toast-bottom-left'
-        });
+        this.toastr.info('Item has been added to cart', 'Added to Cart');
     }
     check_already_in_cart(id) {
         if (this.dataItem.length === 0) {
