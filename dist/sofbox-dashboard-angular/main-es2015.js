@@ -676,7 +676,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             ngx_lottie__WEBPACK_IMPORTED_MODULE_27__["LottieModule"].forRoot({ player: playerFactory }),
             ngx_slick_carousel__WEBPACK_IMPORTED_MODULE_24__["SlickCarouselModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_22__["BrowserAnimationsModule"],
-            angular_rave__WEBPACK_IMPORTED_MODULE_37__["AngularRaveModule"].forRoot('FLWPUBK_TEST-cf76417bee6d832f8caa419a15864f1b-X'),
+            angular_rave__WEBPACK_IMPORTED_MODULE_37__["AngularRaveModule"].forRoot('FLWPUBK-dac71dcb2884cfa4d397b2fbbc33abb7-X'),
             ngx_wow__WEBPACK_IMPORTED_MODULE_25__["NgwWowModule"],
             ngx_toastr__WEBPACK_IMPORTED_MODULE_40__["ToastrModule"].forRoot(),
         ],
