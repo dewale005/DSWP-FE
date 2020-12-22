@@ -109,7 +109,7 @@ export function playerFactory() {
     LottieModule.forRoot({player: playerFactory}),
     SlickCarouselModule,
     BrowserAnimationsModule,
-    AngularRaveModule.forRoot('FLWPUBK_TEST-cf76417bee6d832f8caa419a15864f1b-X'),
+    AngularRaveModule.forRoot('FLWPUBK-dac71dcb2884cfa4d397b2fbbc33abb7-X'),
     NgwWowModule,
     ToastrModule.forRoot(),
   ],
