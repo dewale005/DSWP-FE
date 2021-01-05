@@ -1,132 +1,136 @@
 <div class="row row-eq-height">
-    <div *ngIf="userId" class="col-lg-3 col-md-12">
-        <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
-            <div style="min-height: 329px" class="iq-team text-center p-0">
-              <img *ngIf="!userId" src="assets/images/no_logo.png" style="filter: grayscale(100%);" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
-              <a routerLink="/update-profile" ><img *ngIf="userId" src="{{image}}" class="img-fluid mb-3 avatar-120 rounded-circle" alt=""></a>
-              <h4 *ngIf="!userId" class="mb-0">Welcome</h4>
-              <h4 *ngIf="userId" class="mb-0">{{user.name}}</h4>
-              <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">{{user.phone}}</a>
-              <p *ngIf="!userId" class="mt-1">To Drugstoc your No 1</p>
-              <p *ngIf="!userId" class="mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p>
-              <p *ngIf="userId" class="mt-1">{{user.address}}</p>
-              <hr>
-              <ul class="list-inline mb-0 d-flex justify-content-between">
-                <li class="list-inline-item">
-                  <!-- <h5>Blood</h5>
+  <div *ngIf="userId" class="col-lg-3 col-md-12">
+    <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
+      <div style="min-height: 329px" class="iq-team text-center p-0">
+        <img *ngIf="!userId" src="assets/images/no_logo.png" style="filter: grayscale(100%);"
+          class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
+        <a routerLink="/update-profile"><img *ngIf="userId" src="{{image}}"
+            class="img-fluid mb-3 avatar-120 rounded-circle" alt=""></a>
+        <h4 *ngIf="!userId" class="mb-0">Welcome</h4>
+        <h4 *ngIf="userId" class="mb-0">{{user.name}}</h4>
+        <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">{{user.phone}}</a>
+        <p *ngIf="!userId" class="mt-1">To Drugstoc your No 1</p>
+        <p *ngIf="!userId" class="mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          remaining essentially unchanged.</p>
+        <p *ngIf="userId" class="mt-1">{{user.address}}</p>
+        <hr>
+        <ul class="list-inline mb-0 d-flex justify-content-between">
+          <li class="list-inline-item">
+            <!-- <h5>Blood</h5>
                   <p class="text-success">AB+</p> -->
-                </li>
-                <li class="list-inline-item">
-                  <h5 *ngIf="!userId">Virtual Pharmacy</h5>
-                  <h5 *ngIf="userId">Licensed Pharmacy</h5>
-                  <!-- <p class="text-success">161cm</p> -->
-                </li>
-                <li class="list-inline-item">
-                  <!-- <h5>Weight</h5>
+          </li>
+          <li class="list-inline-item">
+            <h5 *ngIf="!userId">Virtual Pharmacy</h5>
+            <h5 *ngIf="userId">Licensed Pharmacy</h5>
+            <!-- <p class="text-success">161cm</p> -->
+          </li>
+          <li class="list-inline-item">
+            <!-- <h5>Weight</h5>
                   <p class="text-success">64kg</p> -->
-                </li>
-              </ul>
+          </li>
+        </ul>
+      </div>
+    </app-iq-card>
+  </div>
+  <div [ngClass]="{'col-lg-9': userId, 'col-lg-12': !userId }" class="col-md-12">
+    <app-iq-card style="background-color: #4b70d6;" cardClass="iq-card bg-primary sb-top-banner-card"
+      cardBodyClass="iq-card-body" [isCardHeader]=false>
+      <div class="row" style="min-height: 329px">
+        <div class="col-md-7 align-self-center padded">
+          <h2 *ngIf="!userId" class="text-white padded">Welcome to Drugstoc, Nigeria's<br> largest Pharmacy Partner</h2>
+          <h2 *ngIf="userId" class="text-white padded">{{user.name}}</h2>
+          <p class="text-white padded" style="font-weight: 600;">Source all medications, consumables, and small medical
+            devices you need for your patients or <br>practice in one place.</p>
+          <!-- <p *ngIf="userId" class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->
+          <!-- <button type="button" class="btn iq-bg-primary">Read More</button> -->
+        </div>
+        <div class="col-md-5 position-relative">
+          <div>
+            <img src="../../../assets/images/homepage.png" style="width: 100%" alt="Welcome">
+          </div>
+          <!-- <div class="an-img-two"> -->
+          <!-- <div class="bodymovin"> -->
+          <!-- <ng-lottie [options]="optionsData2"></ng-lottie> -->
+          <!-- </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </app-iq-card>
+  </div>
+</div>
+<div class="row">
+  <div *ngIf="userId" class="col-md-12">
+    <app-iq-card cardClass="iq-card wow fadeInUp" data-wow-delay="0.6s">
+      <div card-header class="iq-header-title">
+        <h4 class="card-title">Category Summary</h4>
+      </div>
+      <div card-header class="iq-card-header-toolbar d-flex align-items-center">
+        <div class="dropdown">
+          <a routerLink="/my-drugstoc" class="dropdown-toggle text-primary" data-toggle="dropdown">View All
+          </a>
+        </div>
+      </div>
+      <div class="row" *ngIf="!loadCatergory">
+        <div *ngFor="let sale of sumaryItem; let i=index;" class="col-md-4">
+          <app-iq-card cardClass="iq-card shadow-none mb-0" cardBodyClass="q-card-body p-1" [isCardHeader]=false>
+            <span class="text-dark float-right"><i class="ri-arrow-up-fill mr-1"></i></span>
+            <span class="font-size-14">{{sale.category}}</span>
+            <h2>{{sale.number}}</h2>
+            <div class="iq-progress-bar-linear d-inline-block w-100 mt-3">
+              <div class="iq-progress-bar">
+                <span class="bg-primary" data-percent={{sale.percentage}}
+                  style="transition: width 2s ease 0s; width: {{sale.percentage}}%"></span>
+                <!-- <progressbar class="iq-progress-bar" [value]="{{sale.percentage}}" type="primary" ></progressbar> -->
+              </div>
             </div>
           </app-iq-card>
-    </div>
-    <div [ngClass]="{'col-lg-9': userId, 'col-lg-12': !userId }" class="col-md-12" >
-        <app-iq-card style="background-color: #4b70d6;" cardClass="iq-card bg-primary sb-top-banner-card" cardBodyClass="iq-card-body" [isCardHeader]=false>
-            <div class="row" style="min-height: 329px">
-              <div class="col-md-7 align-self-center padded" >
-                <h2 *ngIf="!userId" class="text-white padded" >Welcome to Drugstoc, Nigeria's<br> largest Pharmacy Partner</h2>
-                <h2 *ngIf="userId" class="text-white padded">{{user.name}}</h2>
-                <p class="text-white padded" style="font-weight: 600;">Source all medications, consumables, and small medical devices you need for your patients or <br>practice in one place.</p>
-                <!-- <p *ngIf="userId" class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->
-                <!-- <button type="button" class="btn iq-bg-primary">Read More</button> -->
-              </div>
-              <div class="col-md-5 position-relative">
-                <div>
-                  <img src="../../../assets/images/homepage.png" style="width: 100%" alt="Welcome">
-                </div>
-                <!-- <div class="an-img-two"> -->
-                  <!-- <div class="bodymovin"> -->
-                    <!-- <ng-lottie [options]="optionsData2"></ng-lottie> -->
-                  <!-- </div> -->
-                <!-- </div> -->
-              </div>
-            </div>
-          </app-iq-card>
-    </div>
-    </div>
-    <div class="row">
-        <div *ngIf="userId" class="col-md-12">
-          <app-iq-card cardClass="iq-card wow fadeInUp" data-wow-delay="0.6s">
-            <div card-header class="iq-header-title">
-              <h4 class="card-title">Category Summary</h4>
-            </div>
-            <div card-header class="iq-card-header-toolbar d-flex align-items-center">
-              <div class="dropdown">
-                <a routerLink="/my-drugstoc" class="dropdown-toggle text-primary" data-toggle="dropdown">View All
-                </a>
-              </div>
-            </div>
-            <div class="row" *ngIf="!loadCatergory">
-              <div *ngFor="let sale of sumaryItem; let i=index;" class="col-md-4">
-                <app-iq-card cardClass="iq-card shadow-none mb-0" cardBodyClass="q-card-body p-1" [isCardHeader]=false>
-                  <span class="text-dark float-right"><i
-                    class="ri-arrow-up-fill mr-1"></i></span>
-                  <span class="font-size-14">{{sale.category}}</span>
-                  <h2>{{sale.number}}</h2>
-                  <div class="iq-progress-bar-linear d-inline-block w-100 mt-3">
-                    <div class="iq-progress-bar">
-                      <span class="bg-primary" data-percent={{sale.percentage}} style="transition: width 2s ease 0s; width: {{sale.percentage}}%"></span>
-                      <!-- <progressbar class="iq-progress-bar" [value]="{{sale.percentage}}" type="primary" ></progressbar> -->
-                    </div>
-                  </div>
-                </app-iq-card>
-              </div>
-            </div>
-            <div class="row" *ngIf="loadCatergory">
-              <div *ngFor="let sale of sumLoading; let i=index;" class="col-md-4">
-                <app-iq-card cardClass="iq-card shadow-none mb-0" cardBodyClass="q-card-body p-1" [isCardHeader]=false>
-                  <span class="text-dark float-right"><i
-                    class="ri-arrow-up-fill mr-1"></i></span>
-                    <ngx-skeleton-loader count="1" [theme]="{
+        </div>
+      </div>
+      <div class="row" *ngIf="loadCatergory">
+        <div *ngFor="let sale of sumLoading; let i=index;" class="col-md-4">
+          <app-iq-card cardClass="iq-card shadow-none mb-0" cardBodyClass="q-card-body p-1" [isCardHeader]=false>
+            <span class="text-dark float-right"><i class="ri-arrow-up-fill mr-1"></i></span>
+            <ngx-skeleton-loader count="1" [theme]="{
                       width: '70%',
                       'border-radius': '12px',
                       height: '15px',
                       'margin-bottom': '-5px',
                       'margin-right': '20px'
                     }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                    <p style="margin-bottom: 0;">
-                      <ngx-skeleton-loader count="1" [theme]="{
+            <p style="margin-bottom: 0;">
+              <ngx-skeleton-loader count="1" [theme]="{
                         width: '30%',
                         'border-radius': '6px',
                         height: '30px',
                         'margin-bottom': '-2px',
                         'margin-right': '20px'
                       }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                    </p>
-                    <ngx-skeleton-loader count="1" [theme]="{
+            </p>
+            <ngx-skeleton-loader count="1" [theme]="{
                       width: '100%',
                       'border-radius': '12px',
                       height: '10px',
                       'margin-bottom': '-5px',
                       'margin-right': '20px'
                     }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                </app-iq-card>
-              </div>
-            </div>
-  
           </app-iq-card>
         </div>
       </div>
-        <div class="row">
-            <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="iq-card">
-                      <app-iq-card>
-                        <div card-header class="iq-header-title">
-                          <h4 class="card-title">Recommended For you</h4>
-                        </div>
-                        <div card-header class="iq-card-header-toolbar d-flex align-items-center">
-                          <!-- <div class="dropdown">
+
+    </app-iq-card>
+  </div>
+</div>
+<div class="row">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="iq-card">
+          <app-iq-card>
+            <div card-header class="iq-header-title">
+              <h4 class="card-title">Recommended For you</h4>
+            </div>
+            <div card-header class="iq-card-header-toolbar d-flex align-items-center">
+              <!-- <div class="dropdown">
                             <span class="dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown">
                               <i class="ri-more-2-fill"></i>
                             </span>
@@ -138,113 +142,128 @@
                               <a class="dropdown-item" href="javascript:void(0);"><i class="ri-file-download-fill mr-2"></i>Download</a>
                             </div>
                           </div> -->
-                        </div>
-                        <div *ngIf="loadingItem" class="iq-card-body">
-                          <div id="js-product-list">
-                            <div class="Products">
-                              <ul class="product_list gridcount grid row">
-                                <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                  <div class="product-miniature" style="width: 100%;">
-                                    <div class="thumbnail-container">
-                                      <ngx-skeleton-loader count="1" [theme]="{
+            </div>
+            <div *ngIf="loadingItem" class="iq-card-body">
+              <div id="js-product-list">
+                <div class="Products">
+                  <ul class="product_list gridcount grid row">
+                    <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <div class="product-miniature" style="width: 100%;">
+                        <div class="thumbnail-container">
+                          <ngx-skeleton-loader count="1" [theme]="{
                                         width: '100%',
                                         'border-radius': '12px',
                                         height: '200px',
                                         'margin-bottom': '-5px',
                                         'margin-right': '20px'
                                       }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                                      <ngx-skeleton-loader count="1" [theme]="{
+                          <ngx-skeleton-loader count="1" [theme]="{
                                         width: '70%',
                                         'border-radius': '12px',
                                         height: '20px',
                                         'margin-bottom': '-5px',
                                         'margin-right': '20px'
                                       }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                                      <ngx-skeleton-loader count="1" [theme]="{
+                          <ngx-skeleton-loader count="1" [theme]="{
                                         width: '95%',
                                         'border-radius': '12px',
                                         height: '15px',
                                         'margin-bottom': '-5px',
                                         'margin-right': '20px'
                                       }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                                      <ngx-skeleton-loader count="1" [theme]="{
+                          <ngx-skeleton-loader count="1" [theme]="{
                                         width: '40%',
                                         'border-radius': '12px',
                                         height: '15px',
                                         'margin-bottom': '-5px',
                                         'margin-right': '20px'
                                       }" appearance="circle" animation="progress"></ngx-skeleton-loader>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="!loadingItem" class="iq-card-body">
+              <div id="js-product-list">
+                <div class="Products">
+                  <ul class="product_list gridcount grid row">
+                    <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                      <div class="product-miniature">
+                        <div class="thumbnail-container">
+                          <div class="box">
+                            <a *ngIf="!item.image" routerLink="/products/itemdetail/{{item.id}}"><img
+                                src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" /> </a>
+                            <a *ngIf="item.image" routerLink="/products/itemdetail/{{item.id}}"><img
+                                src="data:image/jpeg;base64,{{item.image}}" alt="product-image" class="img-fluid" />
+                            </a>
+                            <div *ngIf="item.qty_available === 0" class="ribbon ribbon-top-right"><span>Out Of
+                                Stock</span></div>
+                            <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
                           </div>
                         </div>
-                        <div *ngIf="!loadingItem" class="iq-card-body">
-                          <div id="js-product-list">
-                            <div class="Products">
-                              <ul class="product_list gridcount grid row">
-                                <li *ngFor="let item of data" class="product_item col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                  <div class="product-miniature">
-                                    <div class="thumbnail-container">
-                                      <div class="box">
-                                        <a *ngIf="!item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="../../../assets/images/no_image.png" alt="product-image" class="img-fluid" /> </a>
-                                        <a *ngIf="item.image" routerLink="/products/itemdetail/{{item.id}}"><img src="data:image/jpeg;base64,{{item.image}}" alt="product-image" class="img-fluid" /> </a>
-                                        <div *ngIf="item.qty_available === 0" class="ribbon ribbon-top-right"><span>Out Of Stock</span></div>
-                                      <a href="javascript:void();" *ngIf="item.type == 'New'" class="new">{{ item.type }}</a>
-                                    </div>
-                                    </div>
-                                    <div class="product-description">
-                                      
-                                      <!-- <h4 *ngIf="item.qty_available === 0" style="padding: 5px;
+                        <div class="product-description">
+
+                          <!-- <h4 *ngIf="item.qty_available === 0" style="padding: 5px;
                                       background: red;
                                       margin: 10px 0;
                                       color: #fff;
                                       text-align: center;
                                       border-radius: 12px;">Out Of Stock</h4> -->
-                                      <h4>{{ item.name }}</h4>
-                                      <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
-                                      <div *ngIf="userId" class="ratting">
-                                        <!-- <ul class="ratting-item d-flex p-0 m-0">
+                          <h4>{{ item.name }}</h4>
+                          <p class="mb-0">{{ item.x_studio_field_5Gttm }}</p>
+                          <div *ngIf="userId" class="ratting">
+                            <!-- <ul class="ratting-item d-flex p-0 m-0">
                                           <li class="full"><i class="{{ item.rating >= 1 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
                                           <li class="full"><i class="{{ item.rating >= 2 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
                                           <li class="full"><i class="{{ item.rating >= 3 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
                                           <li class="full"><i class="{{ item.rating >= 4 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
                                           <li class="full"><i class="{{ item.rating >= 5 ? 'ri-star-fill' : 'ri-star-line'}}"></i></li>
                                         </ul> -->
-                                      </div>
-                                      <div *ngIf="userId" class="d-flex flex-wrap justify-content-between align-items-center">
-                                        <div class="product-price">
-                                          <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
-                                        </div>
-                                        <div class="input-box" *ngIf="item.qty_available > 0">
-                                          <button (click)="decreaseQty(item)" type="button" class="btn-less btn btn-primary d-block mt-1 next"><i class="ri-subtract-fill"></i></button>
+                          </div>
+                          <div *ngIf="userId" class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="product-price">
+                              <div class="regular-price"><b> ₦{{ item.list_price | number : '1.2-2'}}</b></div>
+                            </div>
+                            <div class="input-box" *ngIf="item.qty_available > 0">
+                              <select *ngIf="!check_already_in_cart(item.id)" (change)="ChangingValue($event, item)" [value]='1' >
+                                <!-- <option *ngFor="let item of data: let i=index" [value]="item">{{i}}</option> -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                              <!-- <button (click)="decreaseQty(item)" type="button" class="btn-less btn btn-primary d-block mt-1 next"><i class="ri-subtract-fill"></i></button>
                                           <input disabled type="number" min="1" max="10" value="{{item.quantity}}" class="increment">
-                                          <button (click)="increaseQty(item)" type="button" class="btn-plus btn btn-primary d-block mt-1 next"><i class="ri-add-fill"></i></button>
-                                        </div>
-                                        <div class="product-action" *ngIf="item.qty_available > 0">
-                                          <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a (click)="addToCat(item)"  data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
-                                          <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
+                                          <button (click)="increaseQty(item)" type="button" class="btn-plus btn btn-primary d-block mt-1 next"><i class="ri-add-fill"></i></button> -->
+                            </div>
+                            <div class="product-action" *ngIf="item.qty_available > 0">
+                              <div *ngIf="!check_already_in_cart(item.id)" class="add-to-cart"><a
+                                  (click)="addToCat(item)" data-toggle="tooltip" data-placement="top" title=""
+                                  data-original-title="Add to Cart"> <i class="ri-shopping-cart-2-line"></i> </a></div>
+                              <!-- <div class="wishlist"><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wishlist"> <i class="ri-heart-line"></i> </a></div> -->
                             </div>
                           </div>
                         </div>
-                      </app-iq-card>
-                    <div
-        infiniteScroll
-        [infiniteScrollDistance]="2"
-        [infiniteScrollThrottle]="1000"
-        (scrolled)="onScroll()"
-      ></div>
-    <p *ngIf="loading" style="text-align: center;">Loading....</p>
-                    </div>
-                  </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+            </div>
+          </app-iq-card>
+          <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()">
+          </div>
+          <p *ngIf="loading" style="text-align: center;">Loading....</p>
         </div>
+      </div>
+    </div>
+  </div>
+</div>

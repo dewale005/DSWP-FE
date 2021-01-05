@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
 	) {
 		this.data.length = 21
 		this.sumLoading.length = 3
+		this.itemsValue.length = 10
 	}
 
   public sales_v: any;
@@ -43,6 +44,9 @@ export class HomeComponent implements OnInit {
 	usersData: any;
 
 	page: number = 0;
+
+	public itemsValue: any = [];
+
 
 	public loading: boolean = false;
 
@@ -125,7 +129,15 @@ increaseQty(item) {
     })
   }
 
+  ChangingValue($event, item) {
+	  item.quantity = $event.target.value
+	  console.log($event.target.value, item)
+  }
 	addToCat(item) {
+	if(!item.quantity) {
+		item.quantity = 1
+	} 
+	console.log(item.quantity)
     this.product.addToCart(item);
     this.cartValue.emit(this.cartItem.length)
 		this.toastr.info('Item has been added to cart', 'Added to Cart',);
