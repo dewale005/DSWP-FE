@@ -33,11 +33,11 @@
     <div *ngFor="let item of data; let i=index;" class="col-lg-3 col-md-12">
         <app-iq-card cardClass="iq-card iq-profile-card text-center" [isCardHeader]=false>
             <a routerLink="/company/{{item}}" class="iq-team text-center p-0">
-              <img *ngIf="!userId" src="{{getImage(item)}}" onerror="this.src='/Users/adewale/Desktop/drugstoc web/angular/src/assets/images/no_image2.png'" class="img-fluid mb-3 avatar-120" alt="">
-              <img *ngIf="userId" src="assets/images/medplus.jpeg" class="img-fluid mb-3 avatar-120 rounded-circle" alt="">
+              <img src="{{getImage(item)}}" onerror="this.src='/Users/adewale/Desktop/drugstoc web/angular/src/assets/images/no_image2.png'" class="img-fluid mb-3 avatar-120" alt="">
+              <!-- <img *ngIf="userId" src="assets/images/medplus.jpeg" class="img-fluid mb-3 avatar-120 rounded-circle" alt=""> -->
               <!-- <h4 *ngIf="!userId" class="mb-0">Welcome</h4> -->
               <h4 class="mb-0">{{item}}</h4>
-              <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">0{{user.phone}}</a>
+              <!-- <a *ngIf="userId && user.phone" href="javascript:void(0);" class="d-inline-block w-100">0{{user.phone}}</a> -->
               <!-- <p *ngIf="!userId" class="mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. remaining essentially unchanged.</p> -->
               <!-- <p *ngIf="userId" class="mt-1">{{user.address}}</p> -->
               <hr>

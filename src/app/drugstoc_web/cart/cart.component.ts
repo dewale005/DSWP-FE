@@ -55,13 +55,15 @@ export class CartComponent implements OnInit, OnDestroy {
 
 	decreaseQty(item) {
 		if(item.quantity > 0) {
-			item.quantity-= 1
+			(item.quantity)-= 1
 		} 
 		// this.cartData[id].quantity = number;
 	}
 
 	increaseQty(item) {
-		item.quantity+= 1
+		let i = parseFloat(item.quantity)
+		i+= 1;
+		item.quantity = i;
 		console.log(item)
 		// this.product.editItemAQuantity()
 	}
@@ -127,5 +129,9 @@ export class CartComponent implements OnInit, OnDestroy {
 			this.router.navigate([ '/' ]);
 			console.log(resp);
 		});
+	}
+
+	paymentInit(){
+
 	}
 }

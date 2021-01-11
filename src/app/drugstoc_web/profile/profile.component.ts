@@ -59,4 +59,6 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  onSubmmit() {}
+
 }

@@ -32,7 +32,7 @@ export class ProductService {
 	}
 
 	addToCart(item) {
-		return this.cartItem.push(item);
+		return this.cartItem.unshift(item);
 	}
 
 	getCart() {
