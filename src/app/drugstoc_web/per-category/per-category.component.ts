@@ -47,6 +47,11 @@ export class PerCategoryComponent implements OnInit {
     
   }
 
+  ChangingValue($event, item) {
+	  item.quantity = $event.target.value
+	  console.log($event.target.value, item)
+  }
+
   public check_already_in_cart(id) {
 		if (this.cartItem.length === 0) {
 			return false;
@@ -61,7 +66,9 @@ export class PerCategoryComponent implements OnInit {
   }
 
   addToCat(item) {
-		item.quantity = 1;
+    if(!item.quantity) {
+      item.quantity = 1
+    } 
     this.product.addToCart(item);
 		this.toastr.info('Item has been added to cart', 'Added to Cart', );
 	}
