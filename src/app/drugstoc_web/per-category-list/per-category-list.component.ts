@@ -14,6 +14,8 @@ export class PerCategoryListComponent implements OnInit {
   data: any = []
   data2: any = []
 
+  user
+
   ngOnInit(){
     this.list.per_company().subscribe(res => {
       this.loading = false;

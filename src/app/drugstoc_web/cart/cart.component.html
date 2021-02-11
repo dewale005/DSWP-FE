@@ -17,8 +17,7 @@
                         <div class="d-flex align-items-center justify-content-between">
                           <div class="d-flex align-items-center">
                             <div class="ckeckout-product">
-                              <img *ngIf="item.image === false"  src="https://dummyimage.com/180x180/000/fff">
-                              <img *ngIf="item.image != false"  src="data:image/jpg;base64,{{ item.image }}" style="width: 250px;">
+                              <img src="https://drugstoc.odoo.com/web/image/product.product/{{item.id}}/image" style="width: 250px;">
                             </div>
                             <div class="ml-3 checkout-product-details">
                               <h5>{{ item.name }}</h5>

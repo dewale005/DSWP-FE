@@ -21,7 +21,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<app-loader></app-loader>\n\n<!-- Wrapper [START] -->\n<div class=\"wrapper\">\n  <app-side-bar1></app-side-bar1>\n  <app-nav-bar1 (cartValue)=\"getValue($event)\"></app-nav-bar1>\n  <!--Content [START]-->\n  <div id=\"content-page\" class=\"content-page\">\n    <div class=\"container-fluid\">\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n  <!-- Content [END] -->\n</div>\n<!-- Wrapper [END] -->\n\n\n";
+    __webpack_exports__["default"] = "<!-- <!-- <app-loader></app-loader> -->-->\n\n<!-- Wrapper [START] -->\n<div class=\"wrapper\">\n  <app-side-bar1></app-side-bar1>\n  <app-nav-bar1 (cartValue)=\"getValue($event)\"></app-nav-bar1>\n  <!--Content [START]-->\n  <div id=\"content-page\" class=\"content-page\">\n    <div class=\"container-fluid\">\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n  <!-- Content [END] -->\n</div>\n<!-- Wrapper [END] -->\n\n\n";
     /***/
   },
 
